@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // KPI cards: total, killed, injured, abducted, crsv, sgbv — with animated counters and % change vs Q3
   const setEl = (id, val) => { const e = document.getElementById(id); if (e) e.textContent = val; };
+  const setElHtml = (id, val) => { const e = document.getElementById(id); if (e) e.innerHTML = val; };
   const setCount = (id, n) => { const e = document.getElementById(id); if (e) { e.dataset.count = n; animateCounter(e, n); } };
 
   setCount('kpi-total',   q4.total);
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const cls = d > 0 ? 'up' : 'down';
     return `<span class="change ${cls}">${d>0?'↑':'↓'} ${Math.abs(d)}%</span>`;
   };
-  setEl('kpi-total-change', chgHtml(q4.total, q3.total));
+  setElHtml('kpi-total-change', chgHtml(q4.total, q3.total));
 
   // ── % Bars ────────────────────────────────────────────────
   const barsEl = document.getElementById('kpi-bars');

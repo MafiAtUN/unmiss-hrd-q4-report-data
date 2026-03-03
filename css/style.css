@@ -177,7 +177,8 @@ img { max-width: 100%; }
   flex-direction: column;
   gap: 2px;
 }
-.dropdown:hover .dropdown-menu { display: block; }
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu { display: block; }
 .dropdown-item {
   padding: 8px 12px;
   border-radius: 6px;
