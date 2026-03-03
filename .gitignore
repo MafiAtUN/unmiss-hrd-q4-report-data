@@ -2,7 +2,5 @@
 __pycache__/
 *.pyc
 .DS_Store
-# Raw data - keep local but don't version
-Yearly 2025.xlsx
-*.xlsx
-*.xls
+# Documents - keep local, do not upload to GitHub
+documents/

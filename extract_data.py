@@ -8,7 +8,7 @@ import json
 import os
 from datetime import datetime
 
-EXCEL_PATH = os.path.join(os.path.dirname(__file__), 'Yearly 2025 updates.xlsx')
+EXCEL_PATH = os.path.join(os.path.dirname(__file__), 'documents', 'Yearly 2025 updates.xlsx')
 OUTPUT_DIR = os.path.dirname(__file__)
 
 # Brief reference numbers for validation (Draft Q4 Brief)
