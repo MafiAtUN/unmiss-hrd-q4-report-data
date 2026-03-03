@@ -18,11 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
   setCount('kpi-girls',    g.girls);
   setCount('kpi-children', g.boys + g.girls);
 
-  setEl('kpi-male-pct',     `${(g.male/total*100).toFixed(1)}%`);
-  setEl('kpi-female-pct',   `${(g.female/total*100).toFixed(1)}%`);
-  setEl('kpi-boys-pct',     `${(g.boys/total*100).toFixed(1)}%`);
-  setEl('kpi-girls-pct',    `${(g.girls/total*100).toFixed(1)}%`);
-  setEl('kpi-children-pct', `${((g.boys+g.girls)/total*100).toFixed(1)}%`);
+  setEl('kpi-male-pct',     pct(g.male, total));
+  setEl('kpi-female-pct',   pct(g.female, total));
+  setEl('kpi-boys-pct',     pct(g.boys, total));
+  setEl('kpi-girls-pct',    pct(g.girls, total));
+  setEl('kpi-children-pct', pct(g.boys + g.girls, total));
 
   // ── Overall Gender Pie ────────────────────────────────────
   Plotly.newPlot('chart-gender-pie', [
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
     return {
       type:'bar', name: gLabels[i],
       y: vLabels,
-      x: vals.map(v => gTotal ? +(v/gTotal*100).toFixed(1) : 0),
+      x: vals.map(v => gTotal ? pctNum(v, gTotal) : 0),
       orientation:'h',
       marker:{color: vKeys.map(v=>vColorByKey(v))},
       showlegend: false,
@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
     x: vLabels,
     y: vKeys.map(v => {
       const tot = gKeys.reduce((s,gk) => s + (q4.by_violation_gender[v]?.[gk]||0), 0);
-      return tot ? +(( q4.by_violation_gender[v]?.[k]||0)/tot*100).toFixed(1) : 0;
+      return tot ? pctNum(q4.by_violation_gender[v]?.[k]||0, tot) : 0;
     }),
     marker:{color: gCols[i]},
     hovertemplate:`<b>${gLabels[i]}</b><br>%{x}: %{y:.1f}%<extra></extra>`,
@@ -97,12 +97,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Violation profile per gender — heatmap ────────────────
   const heatZ = gKeys.map(k => {
     const tot = vKeys.reduce((s,v) => s+(q4.by_violation_gender[v]?.[k]||0), 0);
-    return vKeys.map(v => tot ? +(( q4.by_violation_gender[v]?.[k]||0)/tot*100).toFixed(1) : 0);
+    return vKeys.map(v => tot ? pctNum(q4.by_violation_gender[v]?.[k]||0, tot) : 0);
   });
   const heatColors = [
     [0.0, 'rgba(6,11,24,1)'],
-    [0.3, 'rgba(56,189,248,0.3)'],
-    [0.6, 'rgba(129,140,248,0.7)'],
+    [0.3, 'rgba(0,158,219,0.35)'],
+    [0.6, 'rgba(77,166,232,0.7)'],
     [1.0, 'rgba(244,63,94,1)'],
   ];
   Plotly.newPlot('chart-gender-violation-heatmap', [{
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Radar chart ───────────────────────────────────────────
   const radarTraces = gKeys.map((k,i) => {
     const tot = vKeys.reduce((s,v) => s+(q4.by_violation_gender[v]?.[k]||0), 0);
-    const vals = vKeys.map(v => tot ? +(( q4.by_violation_gender[v]?.[k]||0)/tot*100).toFixed(1) : 0);
+    const vals = vKeys.map(v => tot ? pctNum(q4.by_violation_gender[v]?.[k]||0, tot) : 0);
     return {
       type:'scatterpolar',
       name: gLabels[i],
@@ -147,8 +147,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ...baseLayout({height:300}),
     polar:{
       bgcolor:'rgba(0,0,0,0)',
-      radialaxis:{visible:true, color:C.textMuted, gridcolor:'rgba(99,132,200,0.15)', ticksuffix:'%', tickfont:{size:9}},
-      angularaxis:{color:C.textMuted, gridcolor:'rgba(99,132,200,0.15)'},
+      radialaxis:{visible:true, color:C.textMuted, gridcolor:'rgba(0,158,219,0.15)', ticksuffix:'%', tickfont:{size:9}},
+      angularaxis:{color:C.textMuted, gridcolor:'rgba(0,158,219,0.15)'},
     },
     margin:{t:30,r:40,b:30,l:40},
     legend:{orientation:'h',x:0,y:-0.12,font:{size:11}},
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }, plotlyConfig);
 
   // ── Perpetrator × Gender stacked ─────────────────────────
-  const perpLabels = PERPS.map(pShort);
+  const perpLabels = PERPS;
   const pgTraces = gKeys.map((k,i) => ({
     type:'bar', name:gLabels[i],
     x: perpLabels,
@@ -213,16 +213,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const pd = d.q4_by_perpetrator[p];
     if(!pd) return null;
     return {
-      type:'bar', name: pShort(p),
+      type:'bar', name: p,
       x: vLabels,
       y: vKeys.map(v => {
         const tot = (pd.by_violation_gender?.[v]?.male||0) + (pd.by_violation_gender?.[v]?.female||0)
                   + (pd.by_violation_gender?.[v]?.boys||0) + (pd.by_violation_gender?.[v]?.girls||0);
         const wc  = (pd.by_violation_gender?.[v]?.female||0) + (pd.by_violation_gender?.[v]?.girls||0);
-        return tot ? +(wc/tot*100).toFixed(1) : 0;
+        return tot ? pctNum(wc, tot) : 0;
       }),
       marker:{color: pColor(p)},
-      hovertemplate:`<b>${pShort(p)}</b><br>%{x}: %{y:.1f}% women+girls<extra></extra>`,
+      hovertemplate:`<b>${p}</b><br>%{x}: %{y:.1f}% women+girls<extra></extra>`,
     };
   }).filter(Boolean);
   Plotly.newPlot('chart-perp-viol-gender', pvgTraces, {
@@ -332,13 +332,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const topGender = Object.entries({
     Men:g.male, Women:g.female, Boys:g.boys, Girls:g.girls
   }).sort((a,b)=>b[1]-a[1])[0];
-  const womenChildPct = ((g.female+g.boys+g.girls)/total*100).toFixed(1);
+  const womenChildPct = pctRound(g.female+g.boys+g.girls, total);
   const crsvFemPct = q4.by_violation_gender?.crsv
-    ? (((q4.by_violation_gender.crsv.female||0)+(q4.by_violation_gender.crsv.girls||0))/
-       Math.max(q4.crsv,1)*100).toFixed(1) : '—';
+    ? pctRound((q4.by_violation_gender.crsv.female||0)+(q4.by_violation_gender.crsv.girls||0),
+               Math.max(q4.crsv,1)) : '—';
 
   document.getElementById('insight-gender-1').innerHTML = `<ul class="insight-list">
-    <li><strong class="highlight">${topGender[0]}</strong> are the most affected gender with <strong class="highlight">${fmt(topGender[1])} victims</strong> (${(topGender[1]/total*100).toFixed(1)}% of total).</li>
+    <li><strong class="highlight">${topGender[0]}</strong> are the most affected gender with <strong class="highlight">${fmt(topGender[1])} victims</strong> (${pctRound(topGender[1], total)}% of total).</li>
     <li>Women and children combined represent <strong class="highlight">${womenChildPct}%</strong> of all Q4 victims.</li>
     <li>CRSV disproportionately affects women and girls: <strong class="highlight">${crsvFemPct}%</strong> of CRSV victims are female.</li>
     <li>Killing is the primary form of harm against <strong class="highlight">men</strong>, while women are more often subjected to CRSV.</li>

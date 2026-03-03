@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="css/style.css"/>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="js/data.js" defer></script>
 <script src="js/utils.js" defer></script>
 <script src="js/maps.js" defer></script>
@@ -18,13 +19,13 @@
     font-weight:600; cursor:pointer; font-family:inherit; transition:all 0.15s;
   }
   .map-tab-btn.active {
-    background:rgba(56,189,248,0.12); color:var(--accent);
-    border-color:rgba(56,189,248,0.3);
+    background:rgba(0,158,219,0.15); color:var(--accent);
+    border-color:rgba(0,158,219,0.35);
   }
   .map-tab-btn:hover { background:var(--bg-card2); color:var(--text); }
   .map-panel { display:none; }
   .map-panel.active { display:block; }
-  #map, #sgbv-map { height:560px; border-radius:14px; border:1px solid var(--border); }
+  #map, #sgbv-map, #perp-map { height:560px; border:none; }
   .map-controls {
     display:flex; gap:10px; flex-wrap:wrap; align-items:center;
     margin-bottom:16px;
@@ -45,30 +46,58 @@
   .stat-card-label { font-size:11px; color:var(--text-muted); margin-bottom:4px; font-weight:600; letter-spacing:0.04em; text-transform:uppercase; }
   .stat-card-val { font-size:20px; font-weight:700; font-family:'Space Grotesk',sans-serif; color:var(--text); }
   .stat-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .map-disclaimer {
+    font-size:10px; line-height:1.5; color:var(--text-muted);
+    background:rgba(12,31,58,0.9); border:1px solid var(--border);
+    border-radius:8px 8px 0 0; padding:8px 12px; margin-bottom:0;
+    border-bottom:none;
+  }
+  .map-wrapper { border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+  .map-wrapper .map-disclaimer + div { border-radius:0; }
+  .map-export-title {
+    font-size:14px; font-weight:700; color:var(--text);
+    padding:10px 12px; background:rgba(12,31,58,0.95); border-bottom:1px solid var(--border);
+  }
+  .map-export-source {
+    font-size:10px; color:var(--text-muted); padding:8px 12px;
+    background:rgba(12,31,58,0.95); border-top:1px solid var(--border);
+    border-radius:0 0 14px 14px;
+  }
+  .map-dl-btn {
+    padding:6px 14px; font-size:12px; font-weight:600; border-radius:6px;
+    border:1px solid var(--border); background:var(--bg-card2);
+    color:var(--text-muted); cursor:pointer; font-family:inherit;
+  }
+  .map-dl-btn:hover { background:rgba(0,158,219,0.15); color:var(--accent); }
+  /* South Sudan boundary — subtle glow for better visibility */
+  .ss-boundary-layer path {
+    filter: drop-shadow(0 0 4px rgba(0,158,219,0.4));
+  }
 </style>
 </head>
 <body>
 
 <nav class="navbar">
   <a class="navbar-brand" href="index.html">
-    <img src="assets/logo.png" alt="UNMISS HRD"/>
+    <img src="assets/logo.png" alt="UNMISS HRD Logo"/>
     <div class="brand-text">
       <span class="brand-title">UNMISS Human Rights Division</span>
-      <span class="brand-sub">Violence Against Civilians — 2025 Dashboard</span>
+      <span class="brand-sub">Violence Affecting Civilians — 2025 Dashboard</span>
     </div>
   </a>
   <div class="navbar-divider"></div>
   <div class="nav-links">
-    <a class="nav-link" href="index.html">📊 Overview</a>
+    <a class="nav-link" href="index.html">📋 Overview</a>
     <a class="nav-link" href="gender.html">⚧ Gender</a>
     <a class="nav-link" href="perpetrators.html">🎯 Perpetrators</a>
     <a class="nav-link" href="geographic.html">📍 Geographic</a>
-    <a class="nav-link" href="sgbv.html">🔴 SGBV</a>
+    <a class="nav-link" href="sgbv.html">🛡 SGBV</a>
     <div class="dropdown">
       <a class="nav-link active" href="maps.html">🗺 Maps ▾</a>
       <div class="dropdown-menu"><div class="dropdown-menu-inner">
         <a class="dropdown-item active" href="maps.html#casualty">Casualty Map</a>
-        <a class="dropdown-item" href="maps.html#sgbv">🔴 SGBV Map</a>
+        <a class="dropdown-item" href="maps.html#perp">Perpetrator Map</a>
+        <a class="dropdown-item" href="maps.html#sgbv">🛡 SGBV Map</a>
       </div></div>
     </div>
   </div>
@@ -79,7 +108,7 @@
     <div class="page-tag">🗺 Interactive Maps</div>
     <h1 class="page-title">Maps — <span>Spatial Analysis</span></h1>
     <p class="page-subtitle">
-      Interactive maps showing the geographic distribution of civilian casualties and SGBV cases
+      Interactive maps showing the geographic distribution of civilian casualties, perpetrator groups, and SGBV cases
       across South Sudan. Bubble size represents victim count. Use filters to explore by quarter,
       violation type, or perpetrator group.
     </p>
@@ -96,7 +125,8 @@
   <!-- Map tabs -->
   <div class="map-tabs">
     <button class="map-tab-btn active" onclick="showMapTab('casualty',this)">Casualty Map</button>
-    <button class="map-tab-btn" onclick="showMapTab('sgbv-panel',this)">🔴 SGBV Map</button>
+    <button class="map-tab-btn" onclick="showMapTab('perp-panel',this)">Perpetrator Map</button>
+    <button class="map-tab-btn" onclick="showMapTab('sgbv-panel',this)">🛡 SGBV Map</button>
   </div>
 
   <!-- Casualty Map -->
@@ -121,34 +151,38 @@
       <span class="filter-label" style="margin-left:8px">Perpetrator:</span>
       <select class="map-select" id="cas-perp-filter" onchange="updateCasualtyMap()">
         <option value="all">All Groups</option>
-        <option value="Community-based Militias">Community Militias</option>
+        <option value="Community-based Militias">Community-based Militias</option>
         <option value="Conventional Parties">Conventional Parties</option>
         <option value="Unidentified/Opportunistic">Unidentified/Opportunistic</option>
       </select>
+      <button type="button" class="map-dl-btn" id="dl-casualty-map" title="Download map as PNG">Download map (PNG)</button>
+      <button type="button" class="map-dl-btn" id="dl-casualty-data" title="Download location data as CSV">Download data (CSV)</button>
     </div>
 
     <div class="map-layout">
       <div>
-        <div id="map"></div>
+        <div class="map-wrapper map-export-wrapper">
+          <div class="map-export-title">Casualty Map — Civilian Victims by Violation Type (South Sudan)</div>
+          <div class="map-disclaimer">The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</div>
+          <div id="map"></div>
+          <div class="map-export-source">Data source: Human Rights Division, United Nations Mission in South Sudan (UNMISS HRD)</div>
+        </div>
       </div>
       <div class="map-sidebar">
         <div class="map-legend-box">
           <div class="card-title">Legend</div>
           <div style="margin-bottom:12px">
-            <div class="legend-row"><div class="legend-circle" style="width:8px;height:8px;background:#f43f5e"></div> Killed</div>
-            <div class="legend-row"><div class="legend-circle" style="width:8px;height:8px;background:#fb923c"></div> Injured</div>
-            <div class="legend-row"><div class="legend-circle" style="width:8px;height:8px;background:#c084fc"></div> Abducted</div>
-            <div class="legend-row"><div class="legend-circle" style="width:8px;height:8px;background:#34d399"></div> CRSV</div>
-            <hr style="border-color:var(--border);margin:10px 0"/>
-            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(251,191,36,0.7)"></div> Community Militias</div>
-            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(129,140,248,0.7)"></div> Conventional Parties</div>
-            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(52,211,153,0.7)"></div> Unidentified</div>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px">Bubbles colored by violation type</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(244,63,94,0.75)"></div> Killed</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(251,146,60,0.75)"></div> Injured</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(192,132,252,0.75)"></div> Abducted</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(52,211,153,0.75)"></div> CRSV</div>
             <hr style="border-color:var(--border);margin:10px 0"/>
             <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px">Bubble Size = Victims</div>
             <div style="display:flex;gap:10px;align-items:flex-end">
-              <div style="text-align:center"><div class="legend-circle" style="width:14px;height:14px;background:rgba(244,63,94,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">1-10</div></div>
-              <div style="text-align:center"><div class="legend-circle" style="width:22px;height:22px;background:rgba(244,63,94,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">10-50</div></div>
-              <div style="text-align:center"><div class="legend-circle" style="width:34px;height:34px;background:rgba(244,63,94,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">50+</div></div>
+              <div style="text-align:center"><div class="legend-circle" style="width:14px;height:14px;background:rgba(244,63,94,0.65);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">1-10</div></div>
+              <div style="text-align:center"><div class="legend-circle" style="width:22px;height:22px;background:rgba(244,63,94,0.65);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">10-50</div></div>
+              <div style="text-align:center"><div class="legend-circle" style="width:34px;height:34px;background:rgba(244,63,94,0.65);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">50+</div></div>
             </div>
           </div>
         </div>
@@ -183,6 +217,88 @@
     </div>
   </div>
 
+  <!-- Perpetrator Map -->
+  <div class="map-panel" id="perp-panel">
+    <div class="map-controls">
+      <span class="filter-label">Quarter:</span>
+      <select class="map-select" id="perp-quarter-filter" onchange="updatePerpetratorMap()">
+        <option value="Q4">Q4 2025</option>
+        <option value="all">All Quarters</option>
+        <option value="Q1">Q1 2025</option>
+        <option value="Q2">Q2 2025</option>
+        <option value="Q3">Q3 2025</option>
+      </select>
+      <span class="filter-label" style="margin-left:8px">Perpetrator:</span>
+      <select class="map-select" id="perp-perp-filter" onchange="updatePerpetratorMap()">
+        <option value="all">All Groups</option>
+        <option value="Community-based Militias">Community-based Militias</option>
+        <option value="Conventional Parties">Conventional Parties</option>
+        <option value="Unidentified/Opportunistic">Unidentified/Opportunistic</option>
+      </select>
+      <button type="button" class="map-dl-btn" id="dl-perp-map" title="Download map as PNG">Download map (PNG)</button>
+      <button type="button" class="map-dl-btn" id="dl-perp-data" title="Download location data as CSV">Download data (CSV)</button>
+    </div>
+
+    <div class="map-layout">
+      <div>
+        <div class="map-wrapper map-export-wrapper">
+          <div class="map-export-title">Perpetrator Map — Civilian Victims by Perpetrator Group (South Sudan)</div>
+          <div class="map-disclaimer">The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</div>
+          <div id="perp-map"></div>
+          <div class="map-export-source">Data source: Human Rights Division, United Nations Mission in South Sudan (UNMISS HRD)</div>
+        </div>
+      </div>
+      <div class="map-sidebar">
+        <div class="map-legend-box">
+          <div class="card-title">Perpetrator Legend</div>
+          <div style="margin-bottom:12px">
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(251,191,36,0.7)"></div> Community-based Militias</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(129,140,248,0.7)"></div> Conventional Parties</div>
+            <div class="legend-row"><div class="legend-circle" style="width:10px;height:10px;background:rgba(52,211,153,0.7)"></div> Unidentified/Opportunistic</div>
+            <hr style="border-color:var(--border);margin:10px 0"/>
+            <div style="font-size:11px;color:var(--text-muted);margin-bottom:6px">Bubble Size = Victims</div>
+            <div style="display:flex;gap:10px;align-items:flex-end">
+              <div style="text-align:center"><div class="legend-circle" style="width:14px;height:14px;background:rgba(251,191,36,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">1-10</div></div>
+              <div style="text-align:center"><div class="legend-circle" style="width:22px;height:22px;background:rgba(251,191,36,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">10-50</div></div>
+              <div style="text-align:center"><div class="legend-circle" style="width:34px;height:34px;background:rgba(251,191,36,0.5);margin:auto"></div><div style="font-size:10px;color:var(--text-dim);margin-top:3px">50+</div></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-legend-box">
+          <div class="card-title">Perpetrator Summary</div>
+          <div class="stat-cards">
+            <div class="stat-card">
+              <div class="stat-card-label">Locations</div>
+              <div class="stat-card-val" id="perp-loc-count">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">Total Victims</div>
+              <div class="stat-card-val" id="perp-total-count">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">Community-based Militias</div>
+              <div class="stat-card-val" id="perp-militia-count" style="color:#fbbf24">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">Conventional Parties</div>
+              <div class="stat-card-val" id="perp-conventional-count" style="color:#818cf8">—</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-card-label">Unidentified/Opportunistic</div>
+              <div class="stat-card-val" id="perp-opportunistic-count" style="color:#34d399">—</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-legend-box">
+          <div class="card-title">Top Hotspots by Perpetrator</div>
+          <div id="perp-top-hotspots" style="font-size:12px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- SGBV Map -->
   <div class="map-panel" id="sgbv-panel">
     <div class="map-controls">
@@ -190,12 +306,22 @@
       <select class="map-select" id="sgbv-quarter-filter" onchange="updateSGBVMap()">
         <option value="Q4">Q4 2025</option>
         <option value="all">All Quarters</option>
+        <option value="Q1">Q1 2025</option>
+        <option value="Q2">Q2 2025</option>
+        <option value="Q3">Q3 2025</option>
       </select>
+      <button type="button" class="map-dl-btn" id="dl-sgbv-map" title="Download map as PNG">Download map (PNG)</button>
+      <button type="button" class="map-dl-btn" id="dl-sgbv-data" title="Download location data as CSV">Download data (CSV)</button>
     </div>
 
     <div class="map-layout">
       <div>
-        <div id="sgbv-map"></div>
+        <div class="map-wrapper map-export-wrapper">
+          <div class="map-export-title">SGBV Map — Documented SGBV and CRSV Cases (South Sudan)</div>
+          <div class="map-disclaimer">The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</div>
+          <div id="sgbv-map"></div>
+          <div class="map-export-source">Data source: Human Rights Division, United Nations Mission in South Sudan (UNMISS HRD)</div>
+        </div>
       </div>
       <div class="map-sidebar">
         <div class="map-legend-box">
@@ -242,8 +368,14 @@
 
 <footer>
   <div class="container footer-inner">
-    <p>© 2025 <strong>UNMISS Human Rights Division</strong> · Violence Against Civilians Dashboard</p>
+    <p>© 2025 UNMISS Human Rights Division. All rights reserved. Data and methodology © UNMISS HRD. When citing or reproducing this data, please attribute to UNMISS Human Rights Division.</p>
     <p>Coordinates reflect county/payam centroid positions from UNMISS HRD incident data</p>
+    <p class="footer-downloads">
+      <a href="#" class="footer-dl-link" id="dl-all-json">Download all data (JSON)</a>
+      <span class="footer-dl-sep">·</span>
+      <a href="#" class="footer-dl-link" id="dl-q4-csv">Download Q4 summary (CSV)</a>
+    </p>
+    <p>For queries: <a href="mailto:islam50@un.org">Mafizul Islam</a>, UNMISS HRD · Developed by UNMISS HRD</p>
   </div>
 </footer>
 
@@ -256,25 +388,51 @@ function showMapTab(id, btn) {
   // Invalidate map sizes after display
   setTimeout(()=>{
     if(id==='casualty' && window._casualtyMap) window._casualtyMap.invalidateSize();
+    if(id==='perp-panel' && window._perpMap) window._perpMap.invalidateSize();
     if(id==='sgbv-panel' && window._sgbvMap) { window._sgbvMap.invalidateSize(); }
   }, 80);
-  // Build SGBV map lazily on first show
+  // Build maps lazily on first show
+  if (id==='perp-panel' && !window._perpMap && typeof buildPerpetratorMap === 'function') {
+    setTimeout(buildPerpetratorMap, 100);
+  }
   if (id==='sgbv-panel' && !window._sgbvMap && typeof buildSGBVMap === 'function') {
     setTimeout(buildSGBVMap, 100);
   }
   // Update browser hash
-  history.replaceState(null, '', id === 'casualty' ? '#casualty' : '#sgbv');
+  const hashMap = { casualty: '#casualty', 'perp-panel': '#perp', 'sgbv-panel': '#sgbv' };
+  history.replaceState(null, '', hashMap[id] || '#casualty');
 }
 
-// Handle hash on page load — e.g. maps.html#sgbv opens SGBV tab directly
-window.addEventListener('DOMContentLoaded', () => {
+function syncMapTabFromHash() {
   const hash = window.location.hash;
   const tabs = document.querySelectorAll('.map-tab-btn');
-  if (hash === '#sgbv') {
-    // Activate SGBV tab button
-    showMapTab('sgbv-panel', tabs[1]);
-  }
+  const dropItems = document.querySelectorAll('.dropdown-item[href*="maps.html"]');
+  let panelId, tabIdx, dropIdx;
+  if (hash === '#perp') { panelId = 'perp-panel'; tabIdx = 1; dropIdx = 1; }
+  else if (hash === '#sgbv') { panelId = 'sgbv-panel'; tabIdx = 2; dropIdx = 2; }
+  else { panelId = 'casualty'; tabIdx = 0; dropIdx = 0; }
+  showMapTab(panelId, tabs[tabIdx]);
+  dropItems.forEach((d, i) => d.classList.toggle('active', i === dropIdx));
+}
+
+// Handle hash on page load and when hash changes (dropdown clicks, back/forward)
+window.addEventListener('DOMContentLoaded', () => {
+  syncMapTabFromHash();
+  // Make dropdown links switch tab when already on maps page
+  document.querySelectorAll('.dropdown-item[href*="maps.html"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const href = this.getAttribute('href') || '';
+      const hash = href.split('#')[1];
+      const onMapsPage = window.location.href.includes('maps.html');
+      if (hash && onMapsPage) {
+        e.preventDefault();
+        history.replaceState(null, '', '#' + hash);
+        syncMapTabFromHash();
+      }
+    });
+  });
 });
+window.addEventListener('hashchange', syncMapTabFromHash);
 </script>
 </body>
 </html>

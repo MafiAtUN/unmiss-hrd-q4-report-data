@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const topPayamEntry  = payams[0];
 
   setEl('kpi-top-state', topState);
-  setEl('kpi-top-state-sub', `${fmt(topStateData.total||0)} victims · ${((topStateData.total||0)/q4.total*100).toFixed(1)}% of national`);
+  setEl('kpi-top-state-sub', `${fmt(topStateData.total||0)} victims · ${pctRound(topStateData.total||0, q4.total)}% of national`);
   setEl('kpi-top-county', topCountyEntry?.[0] || '—');
   setEl('kpi-top-county-sub', topCountyEntry ? `${fmt(topCountyEntry[1].total)} victims · ${topCountyEntry[1].state}` : '');
   setEl('kpi-top-payam', topPayamEntry?.[0] || '—');
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ...baseLayout({height:380}),
     margin:{t:20,r:60,b:40,l:175},
     yaxis:{automargin:true, tickfont:{size:11}},
-    xaxis:{gridcolor:'rgba(99,132,200,0.1)'},
+    xaxis:{gridcolor:'rgba(0,158,219,0.12)'},
   }, plotlyConfig);
 
   // ── State % donut ─────────────────────────────────────────
@@ -78,12 +78,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── State × Perpetrator stacked ───────────────────────────
   const spTraces = PERPS.map(p => ({
-    type:'bar', name:pShort(p),
+    type:'bar', name:p,
     y: sts,
     x: sts.map(s => d.q4_by_state[s]?.by_perpetrator?.[p] || 0),
     orientation:'h',
     marker:{color:pColor(p)},
-    hovertemplate:`<b>${pShort(p)}</b><br>%{y}: %{x:,}<extra></extra>`,
+    hovertemplate:`<b>${p}</b><br>%{y}: %{x:,}<extra></extra>`,
   }));
   Plotly.newPlot('chart-state-perpetrator', spTraces, {
     ...baseLayout({barmode:'stack', height:400}),
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
     x: QUARTERS,
     y: sts,
     colorscale:[
-      [0,'rgba(6,11,24,1)'],[0.25,'rgba(56,189,248,0.3)'],
+      [0,'rgba(12,31,58,1)'],[0.25,'rgba(0,158,219,0.35)'],
       [0.6,'rgba(251,191,36,0.6)'],[1,'rgba(244,63,94,1)']
     ],
     text: heatZ.map(row => row.map(v => v > 0 ? fmt(v) : '')),
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ...baseLayout({height:460}),
     margin:{t:20,r:60,b:30,l:145},
     yaxis:{automargin:true, tickfont:{size:10}},
-    xaxis:{gridcolor:'rgba(99,132,200,0.1)'},
+    xaxis:{gridcolor:'rgba(0,158,219,0.12)'},
   }, plotlyConfig);
 
   // ── County violation breakdown (top 10) ───────────────────
@@ -195,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ...baseLayout({height:480}),
     margin:{t:20,r:60,b:30,l:155},
     yaxis:{automargin:true, tickfont:{size:10}},
-    xaxis:{gridcolor:'rgba(99,132,200,0.1)'},
+    xaxis:{gridcolor:'rgba(0,158,219,0.12)'},
   }, plotlyConfig);
 
   // ── Data table ────────────────────────────────────────────
@@ -247,8 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Insights ──────────────────────────────────────────────
   const st1 = sts[0], st2 = sts[1];
-  const st1pct = ((d.q4_by_state[st1]?.total||0)/q4.total*100).toFixed(1);
-  const st2pct = ((d.q4_by_state[st2]?.total||0)/q4.total*100).toFixed(1);
+  const st1pct = pctRound(d.q4_by_state[st1]?.total||0, q4.total);
+  const st2pct = pctRound(d.q4_by_state[st2]?.total||0, q4.total);
 
   setEl('insight-geo-1', `<ul class="insight-list">
     <li><strong class="highlight">${st1}</strong> is the most affected state with <strong class="highlight">${fmt(d.q4_by_state[st1]?.total||0)} victims</strong> — ${st1pct}% of national Q4 total.</li>
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <li>${st1} saw a <strong class="highlight">${st1chg}</strong> change in victims from Q3 to Q4 — ${q3st1>0?`from ${fmt(q3st1)} to ${fmt(d.q4_by_state[st1]?.total||0)}`:'new data in Q4'}.</li>
     <li>Q4 documented casualties across <strong class="highlight">${Object.keys(d.q4_by_county).length} counties</strong> and <strong class="highlight">${Object.keys(d.q4_by_payam).length} payams</strong>.</li>
     <li>Northern Bahr el Ghazal has no Q4 data — an absence that may reflect access constraints rather than absence of violence.</li>
-    <li>The five most affected states account for <strong class="highlight">${(sts.slice(0,5).reduce((s,st)=>s+(d.q4_by_state[st]?.total||0),0)/q4.total*100).toFixed(1)}%</strong> of all Q4 casualties.</li>
+    <li>The five most affected states account for <strong class="highlight">${pctRound(sts.slice(0,5).reduce((s,st)=>s+(d.q4_by_state[st]?.total||0),0), q4.total)}%</strong> of all Q4 casualties.</li>
   </ul>`);
 
 });

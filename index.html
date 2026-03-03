@@ -6,6 +6,7 @@
 <title>UNMISS HRD – Q4 2025 Violence Dashboard</title>
 <link rel="stylesheet" href="css/style.css"/>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="js/data.js" defer></script>
 <script src="js/utils.js" defer></script>
 <script src="js/overview.js" defer></script>
@@ -18,21 +19,21 @@
     <img src="assets/logo.png" alt="UNMISS HRD Logo"/>
     <div class="brand-text">
       <span class="brand-title">UNMISS Human Rights Division</span>
-      <span class="brand-sub">Violence Against Civilians — 2025 Dashboard</span>
+      <span class="brand-sub">Violence Affecting Civilians — 2025 Dashboard</span>
     </div>
   </a>
   <div class="navbar-divider"></div>
   <div class="nav-links">
-    <a class="nav-link active" href="index.html">📊 Overview</a>
+    <a class="nav-link active" href="index.html">📋 Overview</a>
     <a class="nav-link" href="gender.html">⚧ Gender</a>
     <a class="nav-link" href="perpetrators.html">🎯 Perpetrators</a>
     <a class="nav-link" href="geographic.html">📍 Geographic</a>
-    <a class="nav-link" href="sgbv.html">🔴 SGBV</a>
+    <a class="nav-link" href="sgbv.html">🛡 SGBV</a>
     <div class="dropdown">
       <a class="nav-link" href="maps.html">🗺 Maps ▾</a>
       <div class="dropdown-menu"><div class="dropdown-menu-inner">
         <a class="dropdown-item" href="maps.html#casualty">Casualty Map</a>
-        <a class="dropdown-item" href="maps.html#sgbv">🔴 SGBV Map</a>
+        <a class="dropdown-item" href="maps.html#sgbv">🛡 SGBV Map</a>
       </div></div>
     </div>
   </div>
@@ -41,7 +42,7 @@
 <!-- Page Header -->
 <div class="page-header">
   <div class="container page-header-inner">
-    <div class="page-tag">📊 Q4 2025 — October to December</div>
+    <div class="page-tag">📋 Q4 2025 — October to December</div>
     <h1 class="page-title">Violence Affecting Civilians — <span>Overview</span></h1>
     <p class="page-subtitle">
       Comprehensive analysis of conflict-related civilian casualties documented by UNMISS Human Rights Division
@@ -62,7 +63,7 @@
   <!-- KPI Row -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(56,189,248,0.12)">💥</span>
+      <span class="section-icon" style="background:rgba(0,158,219,0.12)">📋</span>
       Q4 2025 Key Casualties
     </div>
     <div class="grid grid-kpi" style="grid-template-columns:repeat(auto-fit,minmax(170px,1fr))">
@@ -76,7 +77,7 @@
         </div>
       </div>
       <div class="kpi-card killed fade-up stagger-1">
-        <div class="kpi-icon">☠</div>
+        <div class="kpi-icon">■</div>
         <div class="kpi-label">Killed</div>
         <div class="kpi-value" id="kpi-killed">—</div>
         <div class="kpi-sub"><span id="kpi-killed-pct" class="kpi-pct"></span> of total</div>
@@ -88,7 +89,7 @@
         <div class="kpi-sub"><span id="kpi-injured-pct" class="kpi-pct"></span> of total</div>
       </div>
       <div class="kpi-card abducted fade-up stagger-3">
-        <div class="kpi-icon">⛓</div>
+        <div class="kpi-icon">■</div>
         <div class="kpi-label">Abducted</div>
         <div class="kpi-value" id="kpi-abducted">—</div>
         <div class="kpi-sub"><span id="kpi-abducted-pct" class="kpi-pct"></span> of total</div>
@@ -103,7 +104,7 @@
 
     <!-- SGBV note — separately counted, not included in the victim total above -->
     <div class="sgbv-note fade-up">
-      <div class="sgbv-note-icon">🔴</div>
+      <div class="sgbv-note-icon">🛡</div>
       <div class="sgbv-note-body">
         <strong>In addition:</strong> <span id="kpi-sgbv" class="sgbv-note-count">—</span> cases of
         Sexual and Gender-Based Violence (SGBV) were separately documented in Q4 2025.
@@ -128,7 +129,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Violation Type Distribution</div>
-            <div class="chart-subtitle">Share of each harm type — Q4 2025</div>
+            <div class="chart-subtitle">Donut chart showing how Q4 civilian casualties break down by harm type: killed, injured, abducted, and conflict-related sexual violence (CRSV). Each segment represents the proportion of total victims.</div>
           </div>
           <span class="chart-badge q4">Q4 2025</span>
         </div>
@@ -140,7 +141,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Casualty Percentages</div>
-            <div class="chart-subtitle">Each form of violence as % of all victims</div>
+            <div class="chart-subtitle">Horizontal bars show what percentage of all Q4 victims suffered each form of harm. Use this to compare the relative prevalence of killing, injury, abduction, and CRSV.</div>
           </div>
         </div>
         <div id="kpi-bars" style="margin-top:8px"></div>
@@ -154,7 +155,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims by Gender/Sex</div>
-            <div class="chart-subtitle">Men · Women · Boys · Girls</div>
+            <div class="chart-subtitle">Distribution of Q4 civilian victims across demographic groups (men, women, boys, girls). Shows which groups are most affected by conflict-related violence.</div>
           </div>
           <span class="chart-badge q4">Q4 2025</span>
         </div>
@@ -175,7 +176,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims by Quarter (Q1–Q4 2025)</div>
-            <div class="chart-subtitle">All four major forms of harm</div>
+            <div class="chart-subtitle">Grouped bar chart comparing casualty counts across all four quarters. Each quarter shows stacked bars for killed, injured, abducted, and CRSV—allowing quarter-on-quarter comparison of harm types.</div>
           </div>
           <span class="chart-badge yearly">Full Year</span>
         </div>
@@ -185,7 +186,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Total Victims — Quarterly Trend</div>
-            <div class="chart-subtitle">Stacked area showing all violations</div>
+            <div class="chart-subtitle">Stacked area chart showing how total civilian casualties evolved month-by-month in 2025. The layers represent each violation type; the top line shows cumulative monthly totals.</div>
           </div>
           <span class="chart-badge yearly">2025</span>
         </div>
@@ -197,14 +198,14 @@
   <!-- Monthly Trend -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(129,140,248,0.12)">📈</span>
+      <span class="section-icon" style="background:rgba(77,166,232,0.12)">📈</span>
       Monthly Trend — Full Year 2025
     </div>
     <div class="chart-wrap">
       <div class="chart-header">
         <div>
-          <div class="chart-title">Monthly Civilian Casualties by Violation Type</div>
-          <div class="chart-subtitle">January through December 2025 — Q4 months highlighted</div>
+<div class="chart-title">Monthly Civilian Casualties by Violation Type</div>
+            <div class="chart-subtitle">Month-by-month breakdown of victims (killed, injured, abducted, CRSV) across 2025. Identifies seasonal patterns and spikes; October–December (Q4) are emphasized for focus.</div>
         </div>
         <span class="chart-badge yearly">2025</span>
       </div>
@@ -224,7 +225,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims by Perpetrator Group</div>
-            <div class="chart-subtitle">Q4 2025 — share by actor type</div>
+            <div class="chart-subtitle">Donut chart showing which actor types—community-based militias, conventional parties to the conflict, or unidentified/opportunistic armed elements—caused most harm in Q4.</div>
           </div>
           <span class="chart-badge q4">Q4</span>
         </div>
@@ -235,7 +236,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Most Affected States — Q4 2025</div>
-            <div class="chart-subtitle">Total civilian victims by state (stacked by violation)</div>
+            <div class="chart-subtitle">States ranked by total civilian victims. Horizontal bars show each state's casualty count, stacked by violation type to show the mix of harm (killed, injured, abducted, CRSV) in each location.</div>
           </div>
           <span class="chart-badge q4">Q4</span>
         </div>
@@ -254,8 +255,8 @@
     <div class="chart-wrap">
       <div class="chart-header">
         <div>
-          <div class="chart-title">Monthly Victims 2023 – 2025 by Perpetrator Group</div>
-          <div class="chart-subtitle">Multi-year comparison showing changing violence patterns</div>
+<div class="chart-title">Monthly Victims 2023 – 2025 by Perpetrator Group</div>
+            <div class="chart-subtitle">Line chart comparing how different perpetrator groups' impact evolved from 2023 to 2025. Helps identify shifts in attribution—e.g. whether militias or conventional forces are increasingly responsible.</div>
         </div>
         <span class="chart-badge yearly">2023–2025</span>
       </div>
@@ -266,7 +267,7 @@
   <!-- Perpetrator quarterly comparison -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(192,132,252,0.12)">⚔</span>
+      <span class="section-icon" style="background:rgba(192,132,252,0.12)">📊</span>
       Perpetrator Group — Quarterly Comparison
     </div>
     <div class="grid grid-2">
@@ -274,7 +275,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims by Perpetrator Across Quarters</div>
-            <div class="chart-subtitle">How each actor's impact changed Q1 through Q4</div>
+            <div class="chart-subtitle">Grouped bars showing each perpetrator group's victim count for Q1–Q4 2025. Compare how militias, conventional parties, and unidentified elements' impact changed across the year.</div>
           </div>
         </div>
         <div id="chart-perp-quarterly" class="plotly-chart"></div>
@@ -283,7 +284,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Quarterly Totals with Gender Split</div>
-            <div class="chart-subtitle">Men · Women · Boys · Girls across all four quarters</div>
+            <div class="chart-subtitle">Stacked bars showing total victims per quarter, broken down by men, women, boys, and girls. Reveals whether gender balance of victims changed across 2025.</div>
           </div>
         </div>
         <div id="chart-quarterly-gender" class="plotly-chart"></div>
@@ -294,7 +295,7 @@
   <!-- Key Insights -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(56,189,248,0.12)">💡</span>
+      <span class="section-icon" style="background:rgba(0,158,219,0.12)">💡</span>
       Key Insights — Q4 2025
     </div>
     <div class="grid grid-2">
@@ -308,8 +309,14 @@
 
 <footer>
   <div class="container footer-inner">
-    <p>© 2025 <strong>UNMISS Human Rights Division</strong> · Violence Against Civilians Dashboard</p>
+    <p>© 2025 UNMISS Human Rights Division. All rights reserved. Data and methodology © UNMISS HRD. When citing or reproducing this data, please attribute to UNMISS Human Rights Division.</p>
     <p>Data: UNMISS HRD Incident Database 2025 · Non-exhaustive; likely underrepresents actual harm</p>
+    <p class="footer-downloads">
+      <a href="#" class="footer-dl-link" id="dl-all-json">Download all data (JSON)</a>
+      <span class="footer-dl-sep">·</span>
+      <a href="#" class="footer-dl-link" id="dl-q4-csv">Download Q4 summary (CSV)</a>
+    </p>
+    <p>For queries: <a href="mailto:islam50@un.org">Mafizul Islam</a>, UNMISS HRD · Developed by UNMISS HRD</p>
   </div>
 </footer>
 

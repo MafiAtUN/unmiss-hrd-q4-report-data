@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = d.q4_by_perpetrator[p]?.total || 0;
     const key   = p.includes('Community') ? 'militia' : p.includes('Conventional') ? 'conventional' : 'opportunistic';
     setCount(`kpi-${key}`, total);
-    setEl(`kpi-${key}-pct`, `${(total/q4.total*100).toFixed(1)}%`);
+    setEl(`kpi-${key}-pct`, pct(total, q4.total));
   });
 
   // ── Perpetrator Donut ─────────────────────────────────────
   const perpTotals = PERPS.map(p => d.q4_by_perpetrator[p]?.total || 0);
   Plotly.newPlot('chart-perp-donut', [
-    donutTrace(PERPS.map(pShort), perpTotals, PERPS.map(pColor), 0.52)
+    donutTrace(PERPS, perpTotals, PERPS.map(pColor), 0.52)
   ], {
     ...pieLayout(310),
     annotations:[{
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Violation grouped by perpetrator ─────────────────────
   const pvGroupedTraces = vKeys.map((v,i) => ({
     type:'bar', name: vLabels[i],
-    x: PERPS.map(pShort),
+    x: PERPS,
     y: PERPS.map(p => d.q4_by_perpetrator[p]?.[v] || 0),
     marker:{color:[C.killed,C.injured,C.abducted,C.crsv][i]},
     hovertemplate:`<b>${vLabels[i]}</b><br>%{x}: %{y:,}<extra></extra>`,
@@ -54,10 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Violation % per perpetrator (100% stacked) ────────────
   const pvPctTraces = vKeys.map((v,i) => ({
     type:'bar', name: vLabels[i],
-    x: PERPS.map(pShort),
+    x: PERPS,
     y: PERPS.map(p => {
       const tot = d.q4_by_perpetrator[p]?.total || 1;
-      return +((d.q4_by_perpetrator[p]?.[v]||0)/tot*100).toFixed(1);
+      return pctNum(d.q4_by_perpetrator[p]?.[v]||0, tot);
     }),
     marker:{color:[C.killed,C.injured,C.abducted,C.crsv][i]},
     hovertemplate:`<b>${vLabels[i]}</b><br>%{x}: %{y:.1f}%<extra></extra>`,
@@ -73,12 +73,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── State stacked by perpetrator ─────────────────────────
   const sts = sortedStates();
   const spTraces = PERPS.map(p => ({
-    type:'bar', name: pShort(p),
+    type:'bar', name: p,
     y: sts,
     x: sts.map(s => d.q4_by_state[s]?.by_perpetrator?.[p] || 0),
     orientation:'h',
     marker:{color:pColor(p)},
-    hovertemplate:`<b>${pShort(p)}</b><br>%{y}: %{x:,}<extra></extra>`,
+    hovertemplate:`<b>${p}</b><br>%{y}: %{x:,}<extra></extra>`,
   }));
   Plotly.newPlot('chart-state-perp-stacked', spTraces, {
     ...baseLayout({barmode:'stack', height:400}),
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
     type:'heatmap',
     z: heatZ,
     x: sts,
-    y: PERPS.map(pShort),
+    y: PERPS,
     colorscale:[
       [0,'rgba(6,11,24,1)'],[0.3,'rgba(251,191,36,0.4)'],
       [0.7,'rgba(251,146,60,0.7)'],[1,'rgba(244,63,94,1)']
@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const tmColors  = [C.accent];
 
   PERPS.forEach(p => {
-    const pId = pShort(p);
-    tmIds.push(pId); tmLabels.push(pShort(p));
+    const pId = p.replace(/\//g, '-');
+    tmIds.push(pId); tmLabels.push(p);
     tmParents.push('South Sudan');
     tmValues.push(d.q4_by_perpetrator[p]?.total || 0);
     tmColors.push(pColor(p));
@@ -155,11 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ── Quarterly grouped ─────────────────────────────────────
   const pqTraces = PERPS.map(p => ({
-    type:'bar', name:pShort(p),
+    type:'bar', name:p,
     x: QUARTERS,
     y: QUARTERS.map(q => d.quarterly_by_perpetrator[q][p] || 0),
     marker:{color:pColor(p)},
-    hovertemplate:`<b>${pShort(p)}</b><br>%{x}: %{y:,}<extra></extra>`,
+    hovertemplate:`<b>${p}</b><br>%{x}: %{y:,}<extra></extra>`,
   }));
   Plotly.newPlot('chart-perp-quarterly-grouped', pqTraces, {
     ...baseLayout({barmode:'group', height:300}),
@@ -170,12 +170,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Quarterly % stacked area ──────────────────────────────
   const pqPctTraces = PERPS.map(p => ({
     type:'scatter', mode:'lines', stackgroup:'one', groupnorm:'percent',
-    name:pShort(p),
+    name:p,
     x: QUARTERS,
     y: QUARTERS.map(q => d.quarterly_by_perpetrator[q][p] || 0),
     line:{color:pColor(p), width:1.5},
     fillcolor: pColor(p)+'44',
-    hovertemplate:`<b>${pShort(p)}</b><br>%{x}: %{stackedpercent:.1f}%<extra></extra>`,
+    hovertemplate:`<b>${p}</b><br>%{x}: %{stackedpercent:.1f}%<extra></extra>`,
   }));
   Plotly.newPlot('chart-perp-quarterly-pct', pqPctTraces, {
     ...baseLayout({height:300}),
@@ -196,19 +196,19 @@ document.addEventListener('DOMContentLoaded', () => {
       marker:{color: byState.map(r=>stColor(r.state)), opacity:0.85},
       text: byState.map(r=>fmt(r.val)),
       textposition:'outside',
-      hovertemplate:`<b>%{y}</b><br>${pShort(p)}: %{x:,}<extra></extra>`,
+      hovertemplate:`<b>%{y}</b><br>${p}: %{x:,}<extra></extra>`,
     }], {
       ...baseLayout({height:280}),
       margin:{t:10,r:50,b:30,l:150},
       yaxis:{automargin:true,tickfont:{size:10}},
-      xaxis:{gridcolor:'rgba(99,132,200,0.1)'},
+      xaxis:{gridcolor:'rgba(0,158,219,0.12)'},
     }, plotlyConfig);
   });
 
   // ── Gender by perpetrator ─────────────────────────────────
   const pgTraces = gKeys.map((k,i) => ({
     type:'bar', name:gLabels[i],
-    x: PERPS.map(pShort),
+    x: PERPS,
     y: PERPS.map(p => d.q4_by_perpetrator[p]?.gender?.[k] || 0),
     marker:{color:gCols[i]},
     hovertemplate:`<b>${gLabels[i]}</b><br>%{x}: %{y:,}<extra></extra>`,
@@ -225,11 +225,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const pd = d.q4_by_perpetrator[p];
     if(!pd) return {p,pct:0};
     const wc = (pd.gender?.female||0)+(pd.gender?.boys||0)+(pd.gender?.girls||0);
-    return {p, pct: pd.total ? +(wc/pd.total*100).toFixed(1) : 0};
+    return {p, pct: pd.total ? pctNum(wc, pd.total) : 0};
   });
   Plotly.newPlot('chart-perp-vulnerable', [{
     type:'bar',
-    x: vulnData.map(r=>pShort(r.p)),
+    x: vulnData.map(r=>r.p),
     y: vulnData.map(r=>r.pct),
     marker:{
       color: vulnData.map(r=>r.p).map(pColor),
@@ -248,20 +248,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Insights ──────────────────────────────────────────────
   const topPerp = PERPS.reduce((a,b)=>(d.q4_by_perpetrator[a]?.total||0)>(d.q4_by_perpetrator[b]?.total||0)?a:b);
   const topPerpData = d.q4_by_perpetrator[topPerp] || {};
-  const topPerpPct  = (topPerpData.total/q4.total*100).toFixed(1);
-  const topPerpKillPct = topPerpData.total ? (topPerpData.killed/topPerpData.total*100).toFixed(1) : '—';
+  const topPerpPct  = pctRound(topPerpData.total, q4.total);
+  const topPerpKillPct = topPerpData.total ? pctRound(topPerpData.killed, topPerpData.total) : '—';
 
   setEl('insight-perp-1', `<ul class="insight-list">
-    <li><strong class="highlight">${pShort(topPerp)}</strong> are responsible for <strong class="highlight">${topPerpPct}%</strong> of all Q4 2025 civilian casualties (${fmt(topPerpData.total)} victims).</li>
+    <li><strong class="highlight">${topPerp}</strong> are responsible for <strong class="highlight">${topPerpPct}%</strong> of all Q4 2025 civilian casualties (${fmt(topPerpData.total)} victims).</li>
     <li>Within this group, <strong class="highlight">${topPerpKillPct}%</strong> of their victims were killed — the most lethal form of harm.</li>
-    <li>Q4 saw a ${changePct(d.quarterly_by_perpetrator['Q4'][topPerp], d.quarterly_by_perpetrator['Q3'][topPerp])} change in victims attributed to ${pShort(topPerp)} vs Q3.</li>
+    <li>Q4 saw a ${changePct(d.quarterly_by_perpetrator['Q4'][topPerp], d.quarterly_by_perpetrator['Q3'][topPerp])} change in victims attributed to ${topPerp} vs Q3.</li>
     <li>Warrap and Lakes states are consistently the most affected by community militia violence.</li>
   </ul>`);
 
   const convData = d.q4_by_perpetrator['Conventional Parties'] || {};
   const convTopState = sts.sort((a,b)=>(d.q4_by_state[b]?.by_perpetrator?.['Conventional Parties']||0)-(d.q4_by_state[a]?.by_perpetrator?.['Conventional Parties']||0))[0];
   setEl('insight-perp-2', `<ul class="insight-list">
-    <li>Conventional parties to the armed conflict caused <strong class="highlight">${fmt(convData.total||0)} victims</strong> in Q4 (${((convData.total||0)/q4.total*100).toFixed(1)}% of total), primarily in <strong class="highlight">${convTopState}</strong>.</li>
+    <li>Conventional parties to the armed conflict caused <strong class="highlight">${fmt(convData.total||0)} victims</strong> in Q4 (${pctRound(convData.total||0, q4.total)}% of total), primarily in <strong class="highlight">${convTopState}</strong>.</li>
     <li>CRSV by conventional parties: <strong class="highlight">${fmt(convData.crsv||0)}</strong> victims — primarily perpetrated by government security forces.</li>
     <li>Unidentified/opportunistic elements accounted for <strong class="highlight">${fmt(d.q4_by_perpetrator['Unidentified/Opportunistic']?.total||0)}</strong> victims — likely underreported due to attribution challenges.</li>
     <li>Across all quarters, community militias consistently represent the largest share of civilian harm.</li>

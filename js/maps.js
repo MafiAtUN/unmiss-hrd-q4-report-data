@@ -22,10 +22,40 @@ const TILE_ATTR  = '© OpenStreetMap contributors © CARTO';
 const MAP_CENTER = [7.5, 30.5];
 const MAP_ZOOM   = 6;
 
+// South Sudan bounds (from GeoJSON bbox: [minLng, minLat, maxLng, maxLat])
+const SS_BOUNDS = L.latLngBounds([[3.51, 23.89], [12.25, 35.30]]);
+function inSouthSudan(lat, lng) {
+  if (lat == null || lng == null || isNaN(lat) || isNaN(lng)) return false;
+  return SS_BOUNDS.contains([lat, lng]);
+}
+
+// South Sudan boundary — subtle fill + visible border for country prominence
+const SS_BOUNDARY_STYLE = {
+  fillColor: '#009EDB',
+  fillOpacity: 0.09,
+  color: '#4da6e8',
+  weight: 2.5,
+  opacity: 0.7,
+  className: 'ss-boundary-layer',
+};
+function addSouthSudanBoundary(map) {
+  fetch('assets/south-sudan.geojson')
+    .then(r => r.json())
+    .then(geojson => {
+      L.geoJSON(geojson, {
+        style: () => SS_BOUNDARY_STYLE,
+        interactive: false,
+      }).addTo(map);
+    })
+    .catch(() => {});
+}
+
 let casualtyMap  = null;
 let sgbvMap      = null;
+let perpMap      = null;
 let casMarkers   = [];
 let sgbvMarkers  = [];
+let perpMarkers  = [];
 
 // ── Radius from victim count ──────────────────────────────────
 function bubbleRadius(n) {
@@ -50,7 +80,35 @@ function perpFill(p) {
 function violFill(key) {
   return {killed:'rgba(244,63,94,0.7)', injured:'rgba(251,146,60,0.7)',
           abducted:'rgba(192,132,252,0.7)', crsv:'rgba(52,211,153,0.7)',
-          total:'rgba(56,189,248,0.6)'}[key] || 'rgba(56,189,248,0.6)';
+          total:'rgba(0,158,219,0.6)'}[key] || 'rgba(0,158,219,0.6)';
+}
+
+// Small offset per perpetrator so multiple circles at same location are visible
+const PERP_OFFSETS = {
+  'Community-based Militias':      [0, 0],
+  'Conventional Parties':          [0.018, 0.010],
+  'Unidentified/Opportunistic':     [-0.018, 0.010],
+};
+function offsetForPerp(perp, hasMultiple) {
+  if (!hasMultiple) return [0, 0];
+  const o = PERP_OFFSETS[perp || 'Unidentified/Opportunistic'];
+  return o || [0, 0];
+}
+
+// Violation offsets for casualty map (when multiple violation types at same location)
+const VIOL_OFFSETS = { killed:[0,0], injured:[0.018,0.010], abducted:[-0.018,0.010], crsv:[0.012,-0.012] };
+function offsetForViol(viol, hasMultiple) {
+  if (!hasMultiple) return [0, 0];
+  return VIOL_OFFSETS[viol] || [0, 0];
+}
+
+// Ensure full perpetrator name for display
+function perpFullName(p) {
+  if (!p) return 'Unidentified/Opportunistic';
+  const pl = (p+'').toLowerCase();
+  if (pl.includes('community')) return 'Community-based Militias';
+  if (pl.includes('conventional')) return 'Conventional Parties';
+  return 'Unidentified/Opportunistic';
 }
 
 // ── Popup HTML ────────────────────────────────────────────────
@@ -59,13 +117,13 @@ function casPopup(loc, violKey) {
   const locName = [loc.payam, loc.county, loc.state].filter(Boolean).join(' › ');
   return `
     <div class="popup-title">${locName || 'Unknown location'}</div>
-    <div class="popup-row"><span>Victims (${violKey})</span><span style="color:#38bdf8">${fmt(total)}</span></div>
+    <div class="popup-row"><span>Victims (${violKey})</span><span style="color:#009EDB">${fmt(total)}</span></div>
     <div class="popup-row"><span>Killed</span><span style="color:#f43f5e">${fmt(loc.killed||0)}</span></div>
     <div class="popup-row"><span>Injured</span><span style="color:#fb923c">${fmt(loc.injured||0)}</span></div>
     <div class="popup-row"><span>Abducted</span><span style="color:#c084fc">${fmt(loc.abducted||0)}</span></div>
     <div class="popup-row"><span>CRSV</span><span style="color:#34d399">${fmt(loc.crsv||0)}</span></div>
-    <div class="popup-row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(99,132,200,0.2)">
-      <span>Perpetrator</span><span style="color:#fbbf24;font-size:11px">${loc.perpetrator||'—'}</span>
+    <div class="popup-row" style="margin-top:6px;padding-top:6px;border-top:1px solid rgba(0,158,219,0.25)">
+      <span>Perpetrator</span><span style="color:${pColor(loc.perpetrator||'')};font-size:11px">${loc.perpetrator||'Unidentified/Opportunistic'}</span>
     </div>`;
 }
 
@@ -76,12 +134,27 @@ function sgbvPopup(loc) {
     <div class="popup-row"><span>SGBV Cases</span><span style="color:#f472b6">${fmt(loc.total||0)}</span></div>`;
 }
 
+// ── Perpetrator popup ────────────────────────────────────────
+function perpPopup(loc) {
+  const locName = [loc.payam, loc.county, loc.state].filter(Boolean).join(' › ');
+  const perp = loc.perpetrator || 'Unidentified/Opportunistic';
+  return `
+    <div class="popup-title">${locName || 'Unknown location'}</div>
+    <div class="popup-row"><span>Perpetrator</span><span style="color:${pColor(perp)}">${perpFullName(perp)}</span></div>
+    <div class="popup-row"><span>Victims</span><span style="color:#009EDB">${fmt(loc.total||0)}</span></div>
+    <div class="popup-row"><span>Killed</span><span style="color:#f43f5e">${fmt(loc.killed||0)}</span></div>
+    <div class="popup-row"><span>Injured</span><span style="color:#fb923c">${fmt(loc.injured||0)}</span></div>
+    <div class="popup-row"><span>Abducted</span><span style="color:#c084fc">${fmt(loc.abducted||0)}</span></div>
+    <div class="popup-row"><span>CRSV</span><span style="color:#34d399">${fmt(loc.crsv||0)}</span></div>`;
+}
+
 // ── Build casualty map ────────────────────────────────────────
 function buildCasualtyMap() {
   if (casualtyMap) return;
   casualtyMap = L.map('map', { center: MAP_CENTER, zoom: MAP_ZOOM });
   window._casualtyMap = casualtyMap;
   L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(casualtyMap);
+  addSouthSudanBoundary(casualtyMap);
 
   // State boundary labels (lightweight: just text markers at centroids)
   Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
@@ -105,7 +178,6 @@ function buildCasualtyMap() {
 function updateCasualtyMap() {
   if (!casualtyMap) { buildCasualtyMap(); return; }
 
-  // Remove old markers
   casMarkers.forEach(m => m.remove());
   casMarkers = [];
 
@@ -113,7 +185,6 @@ function updateCasualtyMap() {
   const violKey  = document.getElementById('cas-violation-filter')?.value || 'total';
   const perpFilt = document.getElementById('cas-perp-filter')?.value     || 'all';
 
-  // Choose data source
   let locations;
   if (quarter === 'Q4') {
     locations = D.q4_locations;
@@ -123,66 +194,80 @@ function updateCasualtyMap() {
     locations = D.all_locations.filter(l => l.quarter === quarter);
   }
 
-  // Apply perpetrator filter (only for Q4 which has perpetrator data)
   if (perpFilt !== 'all') {
     locations = locations.filter(l => l.perpetrator === perpFilt);
   }
+  locations = locations.filter(l => inSouthSudan(l.lat, l.long));
 
-  // Group by lat/long to merge duplicate positions
-  const byPos = {};
+  // Group by position AND violation — one circle per violation type at each location
+  const byPosViol = {};
   locations.forEach(loc => {
     const key = `${loc.lat},${loc.long}`;
-    if (!byPos[key]) byPos[key] = { ...loc };
-    else {
-      ['total','killed','injured','abducted','crsv'].forEach(k => {
-        byPos[key][k] = (byPos[key][k]||0) + (loc[k]||0);
-      });
+    if (!byPosViol[key]) {
+      byPosViol[key] = { payam: loc.payam, county: loc.county, state: loc.state, lat: loc.lat, long: loc.long, by_viol: {} };
     }
+    const bv = byPosViol[key].by_viol;
+    ['killed','injured','abducted','crsv'].forEach(k => {
+      bv[k] = (bv[k]||0) + (loc[k]||0);
+    });
   });
 
-  const merged = Object.values(byPos).filter(l => (l[violKey]||0) > 0);
-
+  const violKeys = ['killed','injured','abducted','crsv'];
+  const activeViols = violKey === 'total' ? violKeys : [violKey];
+  const locKeys = Object.keys(byPosViol);
   let totalVics = 0, totalKilled = 0, totalInjured = 0;
+  const locTotals = [];
 
-  merged.forEach(loc => {
-    const r = bubbleRadius(loc[violKey] || 0);
-    if (r === 0) return;
+  locKeys.forEach(posKey => {
+    const loc = byPosViol[posKey];
+    const bv = loc.by_viol;
+    const locTotal = (bv.killed||0)+(bv.injured||0)+(bv.abducted||0)+(bv.crsv||0);
+    if (locTotal <= 0) return;
 
-    const fillColor = perpFilt !== 'all' ? perpFill(loc.perpetrator) : violFill(violKey);
-    totalVics   += loc.total  || 0;
-    totalKilled += loc.killed || 0;
-    totalInjured+= loc.injured|| 0;
+    const violsPresent = activeViols.filter(v => (bv[v]||0) > 0);
+    const hasMultipleAtLoc = violKey === 'total' && violsPresent.length > 1;
+    const popupData = { ...loc, killed: bv.killed||0, injured: bv.injured||0, abducted: bv.abducted||0, crsv: bv.crsv||0, total: locTotal, perpetrator: '—' };
 
-    const circle = L.circleMarker([loc.lat, loc.long], {
-      radius: r,
-      fillColor,
-      color: 'rgba(255,255,255,0.25)',
-      weight: 1,
-      fillOpacity: 0.75,
-    }).addTo(casualtyMap).bindPopup(casPopup(loc, violKey), {
-      maxWidth: 240,
-      className: 'dark-popup',
+    violsPresent.forEach(viol => {
+      const count = bv[viol] || 0;
+      if (count <= 0) return;
+      const r = bubbleRadius(count);
+      const [dLat, dLng] = offsetForViol(viol, hasMultipleAtLoc);
+      const circle = L.circleMarker([loc.lat + dLat, loc.long + dLng], {
+        radius: r,
+        fillColor: violFill(viol),
+        color: 'rgba(255,255,255,0.25)',
+        weight: 1,
+        fillOpacity: 0.75,
+      }).addTo(casualtyMap).bindPopup(casPopup(popupData, viol), {
+        maxWidth: 240,
+        className: 'dark-popup',
+      });
+      casMarkers.push(circle);
     });
 
-    casMarkers.push(circle);
+    const violVal = violKey === 'total' ? locTotal : (bv[violKey]||0);
+    if (violVal <= 0) return;
+    totalVics += locTotal;
+    totalKilled += bv.killed || 0;
+    totalInjured += bv.injured || 0;
+    locTotals.push({ ...loc, violVal });
   });
 
-  // Update sidebar stats
   const setEl = (id, v) => { const e=document.getElementById(id); if(e) e.textContent=v; };
-  setEl('map-loc-count',    merged.length);
+  setEl('map-loc-count',    locTotals.length);
   setEl('map-total-count',  fmt(totalVics));
   setEl('map-killed-count', fmt(totalKilled));
   setEl('map-injured-count',fmt(totalInjured));
 
-  // Top hotspots
-  const top5 = merged.sort((a,b)=>(b[violKey]||0)-(a[violKey]||0)).slice(0,5);
+  const top5 = locTotals.sort((a,b)=>b.violVal-a.violVal).slice(0,5);
   const hEl = document.getElementById('map-top-hotspots');
   if (hEl) {
     hEl.innerHTML = top5.map((l,i) => {
       const name = [l.payam||l.county, l.state].filter(Boolean).join(', ');
       return `<div class="stat-row">
         <span class="stat-row-label" style="font-size:11px">${i+1}. ${name||'Unknown'}</span>
-        <span class="stat-row-value" style="font-size:13px;color:#38bdf8">${fmt(l[violKey]||0)}</span>
+        <span class="stat-row-value" style="font-size:13px;color:#38bdf8">${fmt(l.violVal)}</span>
       </div>`;
     }).join('');
   }
@@ -194,6 +279,7 @@ function buildSGBVMap() {
   sgbvMap = L.map('sgbv-map', { center: MAP_CENTER, zoom: MAP_ZOOM });
   window._sgbvMap = sgbvMap;
   L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(sgbvMap);
+  addSouthSudanBoundary(sgbvMap);
 
   // State labels
   Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
@@ -220,7 +306,16 @@ function updateSGBVMap() {
   sgbvMarkers.forEach(m => m.remove());
   sgbvMarkers = [];
 
-  const locs = D.sgbv.q4_locations || [];
+  const quarter = document.getElementById('sgbv-quarter-filter')?.value || 'Q4';
+  let locs;
+  if (quarter === 'Q4') {
+    locs = D.sgbv.q4_locations || [];
+  } else if (quarter === 'all') {
+    locs = D.sgbv.all_locations || [];
+  } else {
+    locs = (D.sgbv.all_locations || []).filter(l => l.quarter === quarter);
+  }
+  locs = locs.filter(l => inSouthSudan(l.lat, l.long));
 
   let totalCases = 0;
 
@@ -242,7 +337,12 @@ function updateSGBVMap() {
 
   // Also add state-level bubbles for states with data but no county coordinates
   const coveredStates = new Set(locs.map(l=>l.state).filter(Boolean));
-  Object.entries(D.sgbv.q4_by_state).forEach(([state, sd]) => {
+  const getStateEntries = () => {
+    if (quarter === 'Q4') return Object.entries(D.sgbv.q4_by_state || {});
+    const qs = D.sgbv.quarterly_by_state?.[quarter] || {};
+    return Object.entries(qs).map(([s, v]) => [s, { total: v }]);
+  };
+  getStateEntries().forEach(([state, sd]) => {
     if (!coveredStates.has(state) && sd.total > 0) {
       const pos = STATE_CENTROIDS[state];
       if (!pos) return;
@@ -264,9 +364,14 @@ function updateSGBVMap() {
     }
   });
 
-  // ── CRSV bubbles (teal) from main casualty data ───────────────
+  // ── CRSV bubbles (teal) from main casualty data ─────────────────
+  const crsvSource = (quarter === 'Q4')
+    ? (D.q4_locations || [])
+    : (quarter === 'all')
+      ? (D.all_locations || [])
+      : (D.all_locations || []).filter(l => l.quarter === quarter);
   const crsvByPos = {};
-  (D.q4_locations || []).forEach(loc => {
+  crsvSource.forEach(loc => {
     if (!loc.crsv || loc.crsv <= 0) return;
     const key = `${loc.lat},${loc.long}`;
     if (!crsvByPos[key]) crsvByPos[key] = { ...loc, crsv: loc.crsv };
@@ -293,9 +398,14 @@ function updateSGBVMap() {
     sgbvMarkers.push(circle);
   });
 
+  const sgbvTotal = quarter === 'Q4'
+    ? (D.sgbv.q4?.total || 0)
+    : (quarter === 'all')
+      ? locs.reduce((s,l)=>s+(l.total||0),0)
+      : (D.sgbv.quarterly?.[quarter] || locs.reduce((s,l)=>s+(l.total||0),0));
   const setEl = (id, v) => { const e=document.getElementById(id); if(e) e.textContent=v; };
   setEl('sgbv-loc-count',   locs.filter(l=>l.total>0).length);
-  setEl('sgbv-total-count', fmt(D.sgbv.q4.total));
+  setEl('sgbv-total-count', fmt(sgbvTotal));
   setEl('sgbv-crsv-count',  fmt(totalCrsv));
 
   // Top hotspots
@@ -312,6 +422,207 @@ function updateSGBVMap() {
   }
 }
 
+// ── Build Perpetrator map ────────────────────────────────────────
+function buildPerpetratorMap() {
+  if (perpMap) return;
+  perpMap = L.map('perp-map', { center: MAP_CENTER, zoom: MAP_ZOOM });
+  window._perpMap = perpMap;
+  L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(perpMap);
+  addSouthSudanBoundary(perpMap);
+
+  Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
+    L.marker([pos.lat, pos.lng], {
+      icon: L.divIcon({
+        className:'',
+        html:`<div style="color:rgba(255,255,255,0.2);font-size:10px;font-weight:700;
+                          white-space:nowrap;text-shadow:0 1px 3px #000;pointer-events:none">
+                ${name.toUpperCase()}
+              </div>`,
+        iconAnchor:[0,0],
+      }),
+      interactive:false,
+    }).addTo(perpMap);
+  });
+
+  updatePerpetratorMap();
+}
+
+// ── Update Perpetrator map ───────────────────────────────────────
+function updatePerpetratorMap() {
+  if (!perpMap) { buildPerpetratorMap(); return; }
+
+  perpMarkers.forEach(m => m.remove());
+  perpMarkers = [];
+
+  const quarter = document.getElementById('perp-quarter-filter')?.value || 'Q4';
+  const perpFilt = document.getElementById('perp-perp-filter')?.value || 'all';
+
+  let locations;
+  if (quarter === 'Q4') {
+    locations = D.q4_locations || [];
+  } else if (quarter === 'all') {
+    locations = D.all_locations || [];
+  } else {
+    locations = (D.all_locations || []).filter(l => l.quarter === quarter);
+  }
+
+  if (perpFilt !== 'all') {
+    locations = locations.filter(l => l.perpetrator === perpFilt);
+  }
+  locations = locations.filter(l => inSouthSudan(l.lat, l.long));
+
+  let militiaTotal = 0, convTotal = 0, oppTotal = 0;
+  locations.forEach(loc => {
+    const perp = loc.perpetrator || 'Unidentified/Opportunistic';
+    const v = loc.total || 0;
+    if (perp.includes('Community')) militiaTotal += v;
+    else if (perp.includes('Conventional')) convTotal += v;
+    else oppTotal += v;
+  });
+
+  // Use state centroid when lat/long missing
+  locations = locations.map(loc => {
+    if (loc.lat != null && loc.long != null) return loc;
+    const pos = STATE_CENTROIDS[loc.state];
+    if (pos) return { ...loc, lat: pos.lat, long: pos.lng };
+    return null;
+  }).filter(Boolean);
+
+  // Group by position AND perpetrator — one circle per perpetrator at each location
+  const byPosPerp = {};
+  locations.forEach(loc => {
+    const key = `${loc.lat},${loc.long}`;
+    const perp = loc.perpetrator || 'Unidentified/Opportunistic';
+    if (!byPosPerp[key]) {
+      byPosPerp[key] = { payam: loc.payam, county: loc.county, state: loc.state, lat: loc.lat, long: loc.long, by_perp: {} };
+    }
+    const bp = byPosPerp[key].by_perp;
+    if (!bp[perp]) bp[perp] = { total: 0, killed: 0, injured: 0, abducted: 0, crsv: 0 };
+    ['total','killed','injured','abducted','crsv'].forEach(k => {
+      bp[perp][k] = (bp[perp][k]||0) + (loc[k]||0);
+    });
+  });
+
+  let totalVics = 0;
+  const locTotals = [];
+
+  Object.entries(byPosPerp).forEach(([posKey, loc]) => {
+    const perps = Object.entries(loc.by_perp).filter(([,d]) => (d.total||0) > 0);
+    const hasMultipleAtLoc = perpFilt === 'all' && perps.length > 1;
+    let locTotal = 0;
+
+    perps.forEach(([perp, data]) => {
+      const count = data.total || 0;
+      if (count <= 0) return;
+      locTotal += count;
+      totalVics += count;
+
+      const r = bubbleRadius(count);
+      const [dLat, dLng] = offsetForPerp(perp, hasMultipleAtLoc);
+      const circle = L.circleMarker([loc.lat + dLat, loc.long + dLng], {
+        radius: r,
+        fillColor: perpFill(perp),
+        color: 'rgba(255,255,255,0.25)',
+        weight: 1,
+        fillOpacity: 0.75,
+      }).addTo(perpMap).bindPopup(perpPopup({ ...loc, ...data, perpetrator: perp }), {
+        maxWidth: 240,
+        className: 'dark-popup',
+      });
+      perpMarkers.push(circle);
+    });
+
+    locTotals.push({ ...loc, total: locTotal });
+  });
+
+  const setEl = (id, v) => { const e=document.getElementById(id); if(e) e.textContent=v; };
+  setEl('perp-loc-count', Object.keys(byPosPerp).length);
+  setEl('perp-total-count', fmt(totalVics));
+  setEl('perp-militia-count', fmt(militiaTotal));
+  setEl('perp-conventional-count', fmt(convTotal));
+  setEl('perp-opportunistic-count', fmt(oppTotal));
+
+  const top5 = locTotals.sort((a,b)=>b.total-a.total).slice(0,5);
+  const hEl = document.getElementById('perp-top-hotspots');
+  if (hEl) {
+    hEl.innerHTML = top5.map((l,i) => {
+      const name = [l.payam||l.county, l.state].filter(Boolean).join(', ');
+      const perpsAtLoc = Object.entries(l.by_perp || {}).filter(([,d])=>(d.total||0)>0).sort((a,b)=>(b[1].total||0)-(a[1].total||0));
+      const perpSummary = perpsAtLoc.map(([p,d]) => `${perpFullName(p)}: ${fmt(d.total)}`).join(' · ');
+      return `<div class="stat-row">
+        <span class="stat-row-label" style="font-size:11px">${i+1}. ${name||'Unknown'}</span>
+        <span class="stat-row-value" style="font-size:12px;color:var(--text-muted)">${perpSummary}</span>
+      </div>`;
+    }).join('');
+  }
+}
+
+// ── Map download (PNG + data CSV) ───────────────────────────────────────────
+function getMapFromWrapper(wrapper) {
+  const mapEl = wrapper?.querySelector('#map, #perp-map, #sgbv-map');
+  if (!mapEl) return null;
+  const id = mapEl.id;
+  if (id === 'map') return window._casualtyMap;
+  if (id === 'perp-map') return window._perpMap;
+  if (id === 'sgbv-map') return window._sgbvMap;
+  return null;
+}
+
+function captureMapAsPNG(mapWrapper, filename) {
+  if (typeof html2canvas === 'undefined') {
+    console.warn('html2canvas not loaded');
+    return;
+  }
+  const map = getMapFromWrapper(mapWrapper);
+  const doCapture = () => {
+    html2canvas(mapWrapper, { useCORS: true, allowTaint: true, backgroundColor: '#0c1f3a', scale: 1 })
+      .then(canvas => {
+        const link = document.createElement('a');
+        link.download = (filename || 'map') + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      })
+      .catch(err => console.warn('Map capture failed:', err));
+  };
+
+  if (map) {
+    map.fitBounds(SS_BOUNDS, { padding: [20, 20], maxZoom: 8 });
+    map.invalidateSize();
+    setTimeout(doCapture, 500);
+  } else {
+    doCapture();
+  }
+}
+
+function downloadMapData(type) {
+  if (type === 'casualty') {
+    const locs = D.q4_locations || [];
+    const rows = [['lat','long','state','county','payam','total','killed','injured','abducted','crsv','perpetrator']];
+    locs.forEach(l => rows.push([l.lat, l.long, l.state, l.county, l.payam, l.total, l.killed, l.injured, l.abducted, l.crsv, l.perpetrator]));
+    if (typeof downloadCSV === 'function') {
+      downloadCSV(rows, 'unmiss-q4-casualty-locations.csv');
+    }
+  } else if (type === 'sgbv') {
+    const locs = D.sgbv?.q4_locations || [];
+    const rows = [['lat','long','state','county','total']];
+    locs.forEach(l => rows.push([l.lat, l.long, l.state, l.county, l.total]));
+    if (typeof downloadCSV === 'function') {
+      downloadCSV(rows, 'unmiss-q4-sgbv-locations.csv');
+    }
+  } else if (type === 'perp') {
+    const quarter = document.getElementById('perp-quarter-filter')?.value || 'Q4';
+    let locs;
+    if (quarter === 'Q4') locs = D.q4_locations || [];
+    else if (quarter === 'all') locs = D.all_locations || [];
+    else locs = (D.all_locations || []).filter(l => l.quarter === quarter);
+    const rows = [['lat','long','state','county','payam','total','killed','injured','abducted','crsv','perpetrator']];
+    locs.forEach(l => rows.push([l.lat, l.long, l.state, l.county, l.payam, l.total, l.killed, l.injured, l.abducted, l.crsv, l.perpetrator]));
+    if (typeof downloadCSV === 'function') {
+      downloadCSV(rows, 'unmiss-perpetrator-locations.csv');
+    }
+  }
+}
+
 // ── Init on load ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Build casualty map if casualty panel is active (default)
@@ -319,4 +630,33 @@ document.addEventListener('DOMContentLoaded', () => {
     buildCasualtyMap();
   }
   // If page was loaded with #sgbv hash, showMapTab already handles buildSGBVMap
+
+  // Map download buttons
+  const dlCas = document.getElementById('dl-casualty-map');
+  const dlPerp = document.getElementById('dl-perp-map');
+  const dlSgbv = document.getElementById('dl-sgbv-map');
+  if (dlCas) {
+    dlCas.onclick = () => {
+      const wrap = document.querySelector('#casualty .map-wrapper');
+      if (wrap) captureMapAsPNG(wrap, 'unmiss-q4-casualty-map');
+    };
+  }
+  if (dlPerp) {
+    dlPerp.onclick = () => {
+      const wrap = document.querySelector('#perp-panel .map-wrapper');
+      if (wrap) captureMapAsPNG(wrap, 'unmiss-perpetrator-map');
+    };
+  }
+  if (dlSgbv) {
+    dlSgbv.onclick = () => {
+      const wrap = document.querySelector('#sgbv-panel .map-wrapper');
+      if (wrap) captureMapAsPNG(wrap, 'unmiss-q4-sgbv-map');
+    };
+  }
+  const dlCasData = document.getElementById('dl-casualty-data');
+  const dlPerpData = document.getElementById('dl-perp-data');
+  const dlSgbvData = document.getElementById('dl-sgbv-data');
+  if (dlCasData) dlCasData.onclick = () => downloadMapData('casualty');
+  if (dlPerpData) dlPerpData.onclick = () => downloadMapData('perp');
+  if (dlSgbvData) dlSgbvData.onclick = () => downloadMapData('sgbv');
 });

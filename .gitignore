@@ -2,5 +2,7 @@
 __pycache__/
 *.pyc
 .DS_Store
+# Raw data - keep local but don't version
+Yearly 2025.xlsx
 *.xlsx
 *.xls

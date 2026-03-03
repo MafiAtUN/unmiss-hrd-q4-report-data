@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
 """
 UNMISS HRD 2025 Data Extraction Script
-Extracts data from 'Yearly 2025.xlsx' and generates js/data.js
+Extracts data from 'Yearly 2025 updates.xlsx' and generates js/data.js
 """
 import pandas as pd
 import json
 import os
 from datetime import datetime
 
-EXCEL_PATH = os.path.join(os.path.dirname(__file__), 'Yearly 2025.xlsx')
+EXCEL_PATH = os.path.join(os.path.dirname(__file__), 'Yearly 2025 updates.xlsx')
 OUTPUT_DIR = os.path.dirname(__file__)
+
+# Brief reference numbers for validation (Draft Q4 Brief)
+BRIEF_Q4 = {'total': 830, 'killed': 406, 'injured': 264, 'abducted': 106, 'crsv': 54,
+            'male': 591, 'female': 123, 'boys': 56, 'girls': 60, 'sgbv_q4': 58}
 
 VIOLATIONS = ['Killed', 'Injured', 'Abducted', 'CRSV']
 QUARTERS = ['Q1', 'Q2', 'Q3', 'Q4']
@@ -61,10 +65,24 @@ def int_safe(v):
 # ── Load Matrix ──────────────────────────────────────────────────────────────
 xl = pd.ExcelFile(EXCEL_PATH)
 df_raw = pd.read_excel(xl, sheet_name='Matrix')
-df = df_raw.iloc[:, :16].copy()
-df.columns = ['month','violation','total','male','female','boys','girls',
-              'state','location','lat','long','payam','county','perpetrator',
-              'casualty','quarter']
+# Support both 'Yearly 2025 updates.xlsx' (named cols) and legacy format
+MATRIX_RENAME = {
+    'Month of Report': 'month', 'Forms of Violations': 'violation',
+    'Total Victims': 'total', 'Male': 'male', 'Female': 'female',
+    'Boys': 'boys', 'Girls': 'girls', 'State': 'state',
+    'Location of Incident': 'location', 'Lat': 'lat', 'long': 'long',
+    'Payam': 'payam', 'County': 'county',
+    'Generalized Perpetrator Group': 'perpetrator',
+    'Reporting Quarter': 'quarter',
+}
+if set(MATRIX_RENAME.keys()).issubset(set(df_raw.columns)):
+    df = df_raw[list(MATRIX_RENAME.keys())].copy()
+    df = df.rename(columns=MATRIX_RENAME)
+else:
+    df = df_raw.iloc[:, :16].copy()
+    df.columns = ['month','violation','total','male','female','boys','girls',
+                  'state','location','lat','long','payam','county','perpetrator',
+                  'casualty','quarter']
 
 df['month']      = df['month'].apply(normalize_month)
 df['violation']  = df['violation'].apply(normalize_violation)
@@ -86,9 +104,30 @@ df_q4 = df[df['quarter'] == 'Q4'].copy()
 # ── SGBV Sheet ────────────────────────────────────────────────────────────────
 df_sgbv_raw = pd.read_excel(xl, sheet_name='SGBV')
 sg = df_sgbv_raw.copy()
-sg.columns = ['month','violation','total','male','female','boys','girls',
-              'state','location','lat','long','payam','county','perpetrator',
-              'region','medical_care','psychosocial','reported','arrested','pregnancy']
+SGBV_RENAME = {
+    'Month of Report': 'month', 'Forms of Violations': 'violation',
+    'Total Victims': 'total', 'Male': 'male', 'Female': 'female',
+    'Boys': 'boys', 'Girls': 'girls', 'State': 'state',
+    'Location of Incident': 'location', 'Lat': 'lat', 'long': 'long',
+    'Payam': 'payam', 'County': 'county', 'Perpetrator Group': 'perpetrator',
+    'Medical care': 'medical_care', 'Psycosocial support': 'psychosocial',
+    'Report to authority': 'reported', 'Perpetrators arrested?': 'arrested',
+    'PREGNANCIES RESULTING': 'pregnancy',
+}
+if set(SGBV_RENAME.keys()).issubset(set(sg.columns)):
+    sg = sg[[c for c in SGBV_RENAME if c in sg.columns]].copy()
+    sg = sg.rename(columns={k:v for k,v in SGBV_RENAME.items() if k in sg.columns})
+    for c in ['medical_care','psychosocial','reported','arrested','pregnancy']:
+        if c in sg.columns:
+            sg[c] = sg[c].apply(normalize_bool)
+        else:
+            sg[c] = 'Unknown'
+else:
+    sg.columns = ['month','violation','total','male','female','boys','girls',
+                  'state','location','lat','long','payam','county','perpetrator',
+                  'region','medical_care','psychosocial','reported','arrested','pregnancy']
+    for col in ['medical_care','psychosocial','reported','arrested','pregnancy']:
+        sg[col] = sg[col].apply(normalize_bool)
 
 sg['month']       = sg['month'].apply(normalize_month)
 sg['perpetrator'] = sg['perpetrator'].apply(normalize_perp)
@@ -223,15 +262,18 @@ for (lat, lng, state, county, payam, perp), sub in locs.groupby(
     loc_list.append(d)
 data['q4_locations'] = loc_list
 
-# All-year locations
+# All-year locations (include perpetrator for map coloring)
 all_locs = df[df['lat'].notna() & df['long'].notna()].copy()
+all_locs['perpetrator'] = all_locs['perpetrator'].fillna('Unidentified/Opportunistic')
+all_locs['payam'] = all_locs['payam'].fillna('')
 all_loc_list = []
-for (lat, lng, state, county, quarter), sub in all_locs.groupby(
-        ['lat','long','state','county','quarter'], dropna=False):
+for (lat, lng, state, county, payam, quarter, perp), sub in all_locs.groupby(
+        ['lat','long','state','county','payam','quarter','perpetrator'], dropna=False):
     entry = agg_total(sub)
     entry.update({
         'lat': round(float(lat),6), 'long': round(float(lng),6),
-        'state': state, 'county': county, 'quarter': quarter
+        'state': state, 'county': county, 'payam': payam or None,
+        'quarter': quarter, 'perpetrator': perp
     })
     all_loc_list.append(entry)
 data['all_locations'] = all_loc_list
@@ -273,6 +315,7 @@ for q in QUARTERS:
         sgbv['quarterly_by_state'][q][state] = int_safe(
             sg[(sg['quarter']==q)&(sg['state']==state)]['total'].sum())
 
+# SGBV Q4 locations
 sg_locs = sg_q4[sg_q4['lat'].notna() & sg_q4['long'].notna()].copy()
 sgbv_loc_list = []
 for (lat, lng, state, county), sub in sg_locs.groupby(['lat','long','state','county'], dropna=False):
@@ -281,6 +324,18 @@ for (lat, lng, state, county), sub in sg_locs.groupby(['lat','long','state','cou
         'state': state, 'county': county, 'total': int_safe(sub['total'].sum())
     })
 sgbv['q4_locations'] = sgbv_loc_list
+
+# SGBV all-year locations (with quarter) for map filter
+sg_all = sg[sg['lat'].notna() & sg['long'].notna()].copy()
+sgbv_all_loc_list = []
+for (lat, lng, state, county, quarter), sub in sg_all.groupby(
+        ['lat','long','state','county','quarter'], dropna=False):
+    sgbv_all_loc_list.append({
+        'lat': round(float(lat),6), 'long': round(float(lng),6),
+        'state': state, 'county': county, 'quarter': quarter,
+        'total': int_safe(sub['total'].sum())
+    })
+sgbv['all_locations'] = sgbv_all_loc_list
 data['sgbv'] = sgbv
 
 # ── CRSV vs SGBV ─────────────────────────────────────────────────────────────
@@ -314,7 +369,7 @@ os.makedirs(os.path.join(OUTPUT_DIR, 'assets'), exist_ok=True)
 
 output = f"""// UNMISS HRD Q4 2025 – Auto-generated data file
 // Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
-// Source: Yearly 2025.xlsx
+// Source: Yearly 2025 updates.xlsx
 const UNMISS_DATA = {json.dumps(data, indent=2, ensure_ascii=False)};
 """
 
@@ -343,3 +398,20 @@ print(f"\n🔴 SGBV Q4: {data['sgbv']['q4']['total']}")
 print(f"\n✅ Quarterly:")
 for q in QUARTERS:
     print(f"   {q}: {data['quarterly'][q]['total']:,} victims")
+
+# ── Brief validation ─────────────────────────────────────────────────────────
+print(f"\n📋 BRIEF VALIDATION (vs Draft Q4 Brief):")
+def check(name, extracted, brief_val):
+    m = "✓" if extracted == brief_val else "⚠"
+    return f"   {m} {name}: extracted={extracted}, brief={brief_val}"
+
+print(check("Q4 total", q4['total'], BRIEF_Q4['total']))
+print(check("Q4 killed", q4['killed'], BRIEF_Q4['killed']))
+print(check("Q4 injured", q4['injured'], BRIEF_Q4['injured']))
+print(check("Q4 abducted", q4['abducted'], BRIEF_Q4['abducted']))
+print(check("Q4 CRSV", q4['crsv'], BRIEF_Q4['crsv']))
+print(check("Q4 male", q4['gender']['male'], BRIEF_Q4['male']))
+print(check("Q4 female", q4['gender']['female'], BRIEF_Q4['female']))
+print(check("Q4 boys", q4['gender']['boys'], BRIEF_Q4['boys']))
+print(check("Q4 girls", q4['gender']['girls'], BRIEF_Q4['girls']))
+print(check("SGBV Q4", data['sgbv']['q4']['total'], BRIEF_Q4['sgbv_q4']))

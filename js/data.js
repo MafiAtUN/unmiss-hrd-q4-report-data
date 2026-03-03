@@ -1,6 +1,6 @@
 // UNMISS HRD Q4 2025 – Auto-generated data file
-// Generated: 2026-02-18 20:07
-// Source: Yearly 2025.xlsx
+// Generated: 2026-03-03 10:13
+// Source: Yearly 2025 updates.xlsx
 const UNMISS_DATA = {
   "q4": {
     "total": 830,
@@ -4355,6 +4355,20 @@ const UNMISS_DATA = {
   "all_locations": [
     {
       "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 0.0,
+      "long": 28.51365,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Ngabagok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
       "killed": 0,
       "injured": 1,
       "abducted": 0,
@@ -4363,19 +4377,9 @@ const UNMISS_DATA = {
       "long": 28.51365,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
-    },
-    {
-      "total": 1,
-      "killed": 0,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 1,
-      "lat": 3.59693,
-      "long": 32.06014,
-      "state": "Eastern Equatoria",
-      "county": "Magwi",
-      "quarter": "Q2"
+      "payam": "Ngabagok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -4387,7 +4391,9 @@ const UNMISS_DATA = {
       "long": 32.059,
       "state": "Eastern Equatoria",
       "county": "Magwi",
-      "quarter": "Q3"
+      "payam": "Nimule",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 6,
@@ -4399,7 +4405,9 @@ const UNMISS_DATA = {
       "long": 30.667307,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q4"
+      "payam": "Lujulo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -4411,7 +4419,9 @@ const UNMISS_DATA = {
       "long": 30.649773,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q3"
+      "payam": "Wudabi",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 24,
@@ -4423,19 +4433,37 @@ const UNMISS_DATA = {
       "long": 30.70227,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q1"
+      "payam": "Lojulo",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 11,
+      "total": 1,
       "killed": 0,
       "injured": 0,
-      "abducted": 10,
+      "abducted": 0,
       "crsv": 1,
       "lat": 3.698644,
       "long": 30.70227,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q2"
+      "payam": "Lojulo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 10,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 10,
+      "crsv": 0,
+      "lat": 3.698644,
+      "long": 30.70227,
+      "state": "Central Equatoria",
+      "county": "Morobo",
+      "payam": "Lujulo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -4447,7 +4475,9 @@ const UNMISS_DATA = {
       "long": 30.807167,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q4"
+      "payam": "Gulumbi",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 6,
@@ -4459,7 +4489,9 @@ const UNMISS_DATA = {
       "long": 30.807,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q2"
+      "payam": "Gulumbi Payam",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4471,7 +4503,9 @@ const UNMISS_DATA = {
       "long": 30.807,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q3"
+      "payam": "Gulumbi Payam",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4483,19 +4517,37 @@ const UNMISS_DATA = {
       "long": 31.370745,
       "state": "Central Equatoria",
       "county": "Kajo keji",
-      "quarter": "Q3"
+      "payam": "Liwolo",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 4,
+      "total": 3,
       "killed": 0,
       "injured": 0,
       "abducted": 3,
+      "crsv": 0,
+      "lat": 3.779847,
+      "long": 30.950746,
+      "state": "Central Equatoria",
+      "county": "Morobo",
+      "payam": "Panyume",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
       "crsv": 1,
       "lat": 3.779847,
       "long": 30.950746,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q3"
+      "payam": "Panyume",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -4507,7 +4559,9 @@ const UNMISS_DATA = {
       "long": 30.785,
       "state": "Central Equatoria",
       "county": "Morobo",
-      "quarter": "Q3"
+      "payam": "Kanja",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4519,7 +4573,9 @@ const UNMISS_DATA = {
       "long": 30.78,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Mugwo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4531,7 +4587,9 @@ const UNMISS_DATA = {
       "long": 31.707126,
       "state": "Central Equatoria",
       "county": "Kajo-Keji",
-      "quarter": "Q1"
+      "payam": "Kangapo II",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -4543,7 +4601,9 @@ const UNMISS_DATA = {
       "long": 31.707126,
       "state": "Central Equatoria",
       "county": "Kajo-Keji",
-      "quarter": "Q2"
+      "payam": "Kangopo II",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -4555,7 +4615,9 @@ const UNMISS_DATA = {
       "long": 29.3732,
       "state": "Central Equatoria",
       "county": "Kajo-Keji",
-      "quarter": "Q1"
+      "payam": "Kajo Keji",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4567,7 +4629,9 @@ const UNMISS_DATA = {
       "long": 31.51,
       "state": "Central Equatoria",
       "county": "Kajo-Keji",
-      "quarter": "Q3"
+      "payam": "Nyepo",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 13,
@@ -4579,7 +4643,9 @@ const UNMISS_DATA = {
       "long": 30.754458,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q1"
+      "payam": "Mugwo",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 15,
@@ -4591,7 +4657,9 @@ const UNMISS_DATA = {
       "long": 30.754458,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q2"
+      "payam": "Mugwo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4603,7 +4671,9 @@ const UNMISS_DATA = {
       "long": 30.754458,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q2"
+      "payam": "Mugwo",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -4615,7 +4685,9 @@ const UNMISS_DATA = {
       "long": 30.754458,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q3"
+      "payam": "Mugwo",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4627,7 +4699,9 @@ const UNMISS_DATA = {
       "long": 30.42727,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Lasu",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4639,7 +4713,9 @@ const UNMISS_DATA = {
       "long": 32.029633,
       "state": "Eastern Equatoria",
       "county": "Magwi",
-      "quarter": "Q1"
+      "payam": "Pagei",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4651,7 +4727,9 @@ const UNMISS_DATA = {
       "long": 30.739525,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Mugwo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 7,
@@ -4663,7 +4741,9 @@ const UNMISS_DATA = {
       "long": 30.592858,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q1"
+      "payam": "Otogo",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 9,
@@ -4675,7 +4755,9 @@ const UNMISS_DATA = {
       "long": 30.592858,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q2"
+      "payam": "Otogo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4687,19 +4769,23 @@ const UNMISS_DATA = {
       "long": 30.592858,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q2"
+      "payam": "Otogo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 11,
+      "total": 10,
       "killed": 1,
       "injured": 2,
       "abducted": 5,
-      "crsv": 3,
+      "crsv": 2,
       "lat": 3.975335,
       "long": 30.592858,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q3"
+      "payam": "Otogo",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4711,7 +4797,23 @@ const UNMISS_DATA = {
       "long": 30.592858,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q4"
+      "payam": "Otogo",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 3.975335,
+      "long": 30.592858,
+      "state": "Central Equatoria",
+      "county": "Yei river",
+      "payam": "Otogo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4723,7 +4825,9 @@ const UNMISS_DATA = {
       "long": 30.736443,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Mugwo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 5,
@@ -4735,11 +4839,13 @@ const UNMISS_DATA = {
       "long": 30.737313,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Mugwo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 10,
-      "killed": 7,
+      "total": 7,
+      "killed": 4,
       "injured": 2,
       "abducted": 0,
       "crsv": 1,
@@ -4747,7 +4853,9 @@ const UNMISS_DATA = {
       "long": 33.091826,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q1"
+      "payam": "Chahari",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -4759,19 +4867,23 @@ const UNMISS_DATA = {
       "long": 33.091826,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q2"
+      "payam": "Chahari",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 18,
+      "total": 17,
       "killed": 16,
-      "injured": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 4.027278,
       "long": 33.091826,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q3"
+      "payam": "Chahari",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -4783,7 +4895,51 @@ const UNMISS_DATA = {
       "long": 33.091826,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q4"
+      "payam": "Chahari",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.027278,
+      "long": 33.091826,
+      "state": "Eastern Equatoria",
+      "county": "Ikotos",
+      "payam": "Ikotos",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.027278,
+      "long": 33.091826,
+      "state": "Eastern Equatoria",
+      "county": "Ikotos",
+      "payam": "Ikotos",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.027278,
+      "long": 33.091826,
+      "state": "Eastern Equatoria",
+      "county": "Ikotos",
+      "payam": "Ramula",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 31,
@@ -4795,7 +4951,9 @@ const UNMISS_DATA = {
       "long": 30.383358,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q2"
+      "payam": "Lasu",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 15,
@@ -4807,7 +4965,9 @@ const UNMISS_DATA = {
       "long": 30.383358,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q3"
+      "payam": "Lasu",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4819,7 +4979,9 @@ const UNMISS_DATA = {
       "long": 32.801,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q2"
+      "payam": "Katire",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -4831,11 +4993,27 @@ const UNMISS_DATA = {
       "long": 32.524308,
       "state": "Eastern Equatoria",
       "county": "Magwi",
-      "quarter": "Q4"
+      "payam": "Magwi",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 13,
-      "killed": 4,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.075802,
+      "long": 30.751168,
+      "state": "Central Equatoria",
+      "county": "Yei River",
+      "payam": "Yei town",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 12,
+      "killed": 3,
       "injured": 0,
       "abducted": 7,
       "crsv": 2,
@@ -4843,11 +5021,27 @@ const UNMISS_DATA = {
       "long": 30.751168,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q1"
+      "payam": "Yei town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.075802,
+      "long": 30.751168,
+      "state": "Central Equatoria",
+      "county": "Yei River",
+      "payam": "Yei town",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -4855,7 +5049,23 @@ const UNMISS_DATA = {
       "long": 30.751168,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q2"
+      "payam": "Yei town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 4.075802,
+      "long": 30.751168,
+      "state": "Central Equatoria",
+      "county": "Yei river",
+      "payam": "Roni",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -4867,19 +5077,37 @@ const UNMISS_DATA = {
       "long": 30.751168,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q2"
+      "payam": "Yei town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 17,
+      "total": 15,
       "killed": 0,
-      "injured": 1,
+      "injured": 0,
       "abducted": 13,
-      "crsv": 3,
+      "crsv": 2,
       "lat": 4.075802,
       "long": 30.751168,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q3"
+      "payam": "Yei town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.075802,
+      "long": 30.751168,
+      "state": "Central Equatoria",
+      "county": "Yei river",
+      "payam": "Yei town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -4891,11 +5119,13 @@ const UNMISS_DATA = {
       "long": 30.751168,
       "state": "Central Equatoria",
       "county": "Yei river",
-      "quarter": "Q4"
+      "payam": "Yei town",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 2,
-      "killed": 1,
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -4903,7 +5133,23 @@ const UNMISS_DATA = {
       "long": 32.596876,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q1"
+      "payam": "Ifwoto",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.092311,
+      "long": 32.596876,
+      "state": "Eastern Equatoria",
+      "county": "Torit",
+      "payam": "Ifwotu",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -4915,19 +5161,9 @@ const UNMISS_DATA = {
       "long": 30.676506,
       "state": "Central Equatoria",
       "county": "Yei",
-      "quarter": "Q3"
-    },
-    {
-      "total": 2,
-      "killed": 0,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 2,
-      "lat": 4.09417,
-      "long": 30.67569,
-      "state": "Central Equatoria",
-      "county": "Yei",
-      "quarter": "Q3"
+      "payam": "Yei Town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -4939,11 +5175,27 @@ const UNMISS_DATA = {
       "long": 30.694489,
       "state": "Central Equatoria",
       "county": "Lainya",
-      "quarter": "Q3"
+      "payam": "Mukaya",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.113677,
+      "long": 32.487064,
+      "state": "Eastern Equatoria",
+      "county": "Torit",
+      "payam": "Ifwotu",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -4951,7 +5203,9 @@ const UNMISS_DATA = {
       "long": 32.487064,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q4"
+      "payam": "Ifwotu",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -4963,7 +5217,9 @@ const UNMISS_DATA = {
       "long": 33.472323,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q1"
+      "payam": "Homiri",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -4975,19 +5231,37 @@ const UNMISS_DATA = {
       "long": 32.297,
       "state": "Eastern Equatoria",
       "county": "Magwi",
-      "quarter": "Q1"
+      "payam": "Iwire",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 21,
+      "total": 19,
       "killed": 0,
       "injured": 0,
       "abducted": 19,
+      "crsv": 0,
+      "lat": 4.147333,
+      "long": 30.943583,
+      "state": "Central Equatoria",
+      "county": "Lainya",
+      "payam": "Kupera",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
       "crsv": 2,
       "lat": 4.147333,
       "long": 30.943583,
       "state": "Central Equatoria",
       "county": "Lainya",
-      "quarter": "Q3"
+      "payam": "Kupera",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -4999,7 +5273,9 @@ const UNMISS_DATA = {
       "long": 33.77426,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q1"
+      "payam": "Lotukei",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5011,7 +5287,9 @@ const UNMISS_DATA = {
       "long": 33.77426,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q2"
+      "payam": "Lotukei",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5023,7 +5301,9 @@ const UNMISS_DATA = {
       "long": 33.64,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Lotukei",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5035,7 +5315,9 @@ const UNMISS_DATA = {
       "long": 32.231,
       "state": "Eastern Equatoria",
       "county": "Magwi",
-      "quarter": "Q1"
+      "payam": "Agoro",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5047,7 +5329,9 @@ const UNMISS_DATA = {
       "long": 33.193286,
       "state": "Eastern Equatoria",
       "county": "Ikotos",
-      "quarter": "Q1"
+      "payam": "Chorokol",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5059,7 +5343,9 @@ const UNMISS_DATA = {
       "long": 33.496,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q2"
+      "payam": "Chukudum",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5071,7 +5357,9 @@ const UNMISS_DATA = {
       "long": 33.496,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Chukudum",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -5083,7 +5371,9 @@ const UNMISS_DATA = {
       "long": 32.520857,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q1"
+      "payam": "Hiyala",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -5095,7 +5385,9 @@ const UNMISS_DATA = {
       "long": 32.520857,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q2"
+      "payam": "Hiyala",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5107,7 +5399,9 @@ const UNMISS_DATA = {
       "long": 32.520857,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q3"
+      "payam": "Hiyala",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5119,7 +5413,9 @@ const UNMISS_DATA = {
       "long": 31.619,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q1"
+      "payam": "Lobonok",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5131,11 +5427,13 @@ const UNMISS_DATA = {
       "long": 31.555628,
       "state": "Central Equatoria",
       "county": "Lobonok",
-      "quarter": "Q1"
+      "payam": "Lobonok",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 3,
-      "killed": 1,
+      "total": 2,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 2,
@@ -5143,7 +5441,23 @@ const UNMISS_DATA = {
       "long": 30.38,
       "state": "Central Equatoria",
       "county": "Wonduruba",
-      "quarter": "Q3"
+      "payam": "Wonduruba",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.315,
+      "long": 30.38,
+      "state": "Central Equatoria",
+      "county": "Wonduruba",
+      "payam": "Wonduruba",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 9,
@@ -5155,7 +5469,9 @@ const UNMISS_DATA = {
       "long": 30.5143,
       "state": "Unity",
       "county": "Yei",
-      "quarter": "Q4"
+      "payam": "Adior",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5167,7 +5483,9 @@ const UNMISS_DATA = {
       "long": 31.072,
       "state": "Central Equatoria",
       "county": "Lainya",
-      "quarter": "Q2"
+      "payam": "Lainya",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5179,7 +5497,9 @@ const UNMISS_DATA = {
       "long": 33.775,
       "state": "Eastern Equatoria",
       "county": "Kapoeta South",
-      "quarter": "Q3"
+      "payam": "Pwata",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 5,
@@ -5191,11 +5511,27 @@ const UNMISS_DATA = {
       "long": 33.65423,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Nauro",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 3,
-      "killed": 2,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.394934,
+      "long": 32.282272,
+      "state": "Eastern Equatoria",
+      "county": "Torit",
+      "payam": "Kudo",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
       "injured": 0,
       "abducted": 1,
       "crsv": 0,
@@ -5203,7 +5539,9 @@ const UNMISS_DATA = {
       "long": 32.282272,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q3"
+      "payam": "Kudo",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5215,11 +5553,27 @@ const UNMISS_DATA = {
       "long": 32.5836,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q1"
+      "payam": "Nyong",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 10,
+      "total": 1,
       "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.407,
+      "long": 30.200736,
+      "state": "Central Equatoria",
+      "county": "Yei River",
+      "payam": "Tore",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 9,
+      "killed": 0,
       "injured": 0,
       "abducted": 9,
       "crsv": 0,
@@ -5227,7 +5581,9 @@ const UNMISS_DATA = {
       "long": 30.200736,
       "state": "Central Equatoria",
       "county": "Yei River",
-      "quarter": "Q1"
+      "payam": "Tore",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -5239,7 +5595,9 @@ const UNMISS_DATA = {
       "long": 32.572131,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q4"
+      "payam": "Torit",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5251,19 +5609,37 @@ const UNMISS_DATA = {
       "long": 27.939,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q1"
+      "payam": "Lirangu",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 5,
+      "total": 4,
       "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 5,
+      "crsv": 4,
       "lat": 4.411,
       "long": 27.939,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q2"
+      "payam": "Lirangu",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 4.411,
+      "long": 27.939,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Lirangu",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -5275,7 +5651,9 @@ const UNMISS_DATA = {
       "long": 32.54474,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q3"
+      "payam": "Torit",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -5287,7 +5665,9 @@ const UNMISS_DATA = {
       "long": 32.644107,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q3"
+      "payam": "Hiyala",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5299,7 +5679,9 @@ const UNMISS_DATA = {
       "long": 33.578008,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q1"
+      "payam": "Ngauro",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -5311,19 +5693,37 @@ const UNMISS_DATA = {
       "long": 33.578008,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q2"
+      "payam": "Ngauro",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 0,
-      "injured": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 4.431749,
       "long": 33.578008,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Ngauro",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.431749,
+      "long": 33.578008,
+      "state": "Eastern Equatoria",
+      "county": "Budi",
+      "payam": "Ngauro",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 7,
@@ -5335,7 +5735,9 @@ const UNMISS_DATA = {
       "long": 33.578008,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q4"
+      "payam": "Ngauro",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5347,7 +5749,9 @@ const UNMISS_DATA = {
       "long": 34.16259,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q4"
+      "payam": "Narus",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5359,7 +5763,9 @@ const UNMISS_DATA = {
       "long": 34.171,
       "state": "Eastern Equatoria",
       "county": "kapoeta East",
-      "quarter": "Q3"
+      "payam": "Naruz",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 23,
@@ -5371,7 +5777,9 @@ const UNMISS_DATA = {
       "long": 31.03273,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Wonduruba",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -5383,7 +5791,9 @@ const UNMISS_DATA = {
       "long": 33.323,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q1"
+      "payam": "loriyok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5395,7 +5805,9 @@ const UNMISS_DATA = {
       "long": 33.360992,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Loriyok",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5407,11 +5819,13 @@ const UNMISS_DATA = {
       "long": 33.360992,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q4"
+      "payam": "Loriyok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 2,
-      "killed": 2,
+      "total": 1,
+      "killed": 1,
       "injured": 0,
       "abducted": 0,
       "crsv": 0,
@@ -5419,19 +5833,51 @@ const UNMISS_DATA = {
       "long": 31.967,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q2"
+      "payam": "Lokiliri",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 11,
-      "killed": 4,
-      "injured": 2,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.547,
+      "long": 31.967,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Lokiliri",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 8,
+      "killed": 3,
+      "injured": 0,
       "abducted": 5,
       "crsv": 0,
       "lat": 4.547,
       "long": 31.967,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Lokiliri",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.547,
+      "long": 31.967,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Lokiliri",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 6,
@@ -5443,31 +5889,37 @@ const UNMISS_DATA = {
       "long": 31.967,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q4"
+      "payam": "Lokiliri",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 1,
-      "killed": 0,
-      "injured": 1,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 4.56807,
-      "long": 28.39767,
-      "state": "Western Equatoria",
-      "county": "Yambio",
-      "quarter": "Q1"
-    },
-    {
-      "total": 22,
+      "total": 11,
       "killed": 4,
-      "injured": 9,
+      "injured": 6,
       "abducted": 0,
-      "crsv": 9,
+      "crsv": 1,
       "lat": 4.56807,
       "long": 28.39767,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q4"
+      "payam": "Yambio Town",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 11,
+      "killed": 0,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 8,
+      "lat": 4.56807,
+      "long": 28.39767,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Yambio Town",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 3,
@@ -5479,7 +5931,9 @@ const UNMISS_DATA = {
       "long": 4.585531,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q1"
+      "payam": "Kimotong",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5491,7 +5945,9 @@ const UNMISS_DATA = {
       "long": 4.585531,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q2"
+      "payam": "Kimotong",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 12,
@@ -5503,19 +5959,37 @@ const UNMISS_DATA = {
       "long": 4.585531,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Kimotong",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 26,
-      "killed": 24,
-      "injured": 2,
+      "total": 19,
+      "killed": 18,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 4.585531,
       "long": 4.585531,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q4"
+      "payam": "Kimotong",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 7,
+      "killed": 6,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.585531,
+      "long": 4.585531,
+      "state": "Eastern Equatoria",
+      "county": "Budi",
+      "payam": "Kimotong",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -5527,35 +6001,41 @@ const UNMISS_DATA = {
       "long": 32.963697,
       "state": "Eastern Equatoria",
       "county": "Lafon",
-      "quarter": "Q1"
+      "payam": "Lohutok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 11,
-      "killed": 3,
-      "injured": 2,
-      "abducted": 0,
-      "crsv": 6,
-      "lat": 4.610787,
-      "long": 28.461016,
-      "state": "Western Equatoria",
-      "county": "Yambio",
-      "quarter": "Q1"
-    },
-    {
-      "total": 10,
+      "total": 5,
       "killed": 1,
-      "injured": 3,
-      "abducted": 2,
-      "crsv": 4,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 3,
       "lat": 4.610787,
       "long": 28.461016,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q2"
+      "payam": "Yambio town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 4,
+      "total": 6,
       "killed": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 3,
+      "lat": 4.610787,
+      "long": 28.461016,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Yambio town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 2,
+      "killed": 0,
       "injured": 1,
       "abducted": 0,
       "crsv": 1,
@@ -5563,7 +6043,51 @@ const UNMISS_DATA = {
       "long": 28.461016,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q3"
+      "payam": "Yambio town",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 8,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 2,
+      "crsv": 3,
+      "lat": 4.610787,
+      "long": 28.461016,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Yambio town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 4.610787,
+      "long": 28.461016,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Yambio town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.610787,
+      "long": 28.461016,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Yambio town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 3,
@@ -5575,7 +6099,9 @@ const UNMISS_DATA = {
       "long": 31.063111,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q4"
+      "payam": "Wonduruba",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -5587,7 +6113,9 @@ const UNMISS_DATA = {
       "long": 33.651088,
       "state": "Eastern Equatoria",
       "county": "Kapoeta South",
-      "quarter": "Q4"
+      "payam": "Pwata",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5599,7 +6127,9 @@ const UNMISS_DATA = {
       "long": 33.27999,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q3"
+      "payam": "Kimotong",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -5611,7 +6141,9 @@ const UNMISS_DATA = {
       "long": 32.08049,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Lirya",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5623,7 +6155,9 @@ const UNMISS_DATA = {
       "long": 32.07946,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q1"
+      "payam": "Lirya",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 14,
@@ -5635,7 +6169,9 @@ const UNMISS_DATA = {
       "long": 32.579,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q3"
+      "payam": "Bur",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 11,
@@ -5647,7 +6183,9 @@ const UNMISS_DATA = {
       "long": 33.264232,
       "state": "Eastern Equatoria",
       "county": "Budi",
-      "quarter": "Q4"
+      "payam": "Kimotong",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -5659,7 +6197,9 @@ const UNMISS_DATA = {
       "long": 32.338,
       "state": "Eastern Equatoria",
       "county": "Lafon",
-      "quarter": "Q2"
+      "payam": "Pachidi",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -5671,19 +6211,65 @@ const UNMISS_DATA = {
       "long": 35.483333,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q3"
+      "payam": "Narus",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 12,
-      "killed": 4,
-      "injured": 8,
+      "total": 2,
+      "killed": 1,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 4.748724,
       "long": 28.702367,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q1"
+      "payam": "Bangasu",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 7,
+      "killed": 1,
+      "injured": 6,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.748724,
+      "long": 28.702367,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Bangasu",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.748724,
+      "long": 28.702367,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Bazungua",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.748724,
+      "long": 28.702367,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Bazungua",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 9,
@@ -5695,7 +6281,9 @@ const UNMISS_DATA = {
       "long": 29.854283,
       "state": "Western Equatoria",
       "county": "Maridi",
-      "quarter": "Q3"
+      "payam": "Mambe",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5707,31 +6295,65 @@ const UNMISS_DATA = {
       "long": 31.608,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q2"
+      "payam": "Rejaf",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 2,
+      "crsv": 1,
       "lat": 4.751,
       "long": 31.608,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Rejaf",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 6,
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 4.751,
+      "long": 31.608,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Rejaf",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 5,
       "killed": 0,
       "injured": 0,
       "abducted": 5,
+      "crsv": 0,
+      "lat": 4.757703,
+      "long": 28.715123,
+      "state": "Western Equatoria",
+      "county": "Yambio",
+      "payam": "Bangasu",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
       "crsv": 1,
       "lat": 4.757703,
       "long": 28.715123,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q3"
+      "payam": "Bangasu",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -5743,7 +6365,9 @@ const UNMISS_DATA = {
       "long": 33.59013,
       "state": "Eastern Equatoria",
       "county": "Kapoeta South",
-      "quarter": "Q1"
+      "payam": "Katiko",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -5755,11 +6379,13 @@ const UNMISS_DATA = {
       "long": 33.59013,
       "state": "Eastern Equatoria",
       "county": "Kapoeta South",
-      "quarter": "Q2"
+      "payam": "Katiko",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 4,
-      "killed": 3,
+      "total": 1,
+      "killed": 0,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -5767,7 +6393,23 @@ const UNMISS_DATA = {
       "long": 33.59013,
       "state": "Eastern Equatoria",
       "county": "Kapoeta south",
-      "quarter": "Q1"
+      "payam": "Katiko",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 3,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.76801,
+      "long": 33.59013,
+      "state": "Eastern Equatoria",
+      "county": "Kapoeta south",
+      "payam": "kariko",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -5779,7 +6421,9 @@ const UNMISS_DATA = {
       "long": 4.77086,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q1"
+      "payam": "Lopeat",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -5791,7 +6435,9 @@ const UNMISS_DATA = {
       "long": 32.7299,
       "state": "Eastern Equatoria",
       "county": "Lafon/Lopa",
-      "quarter": "Q3"
+      "payam": "Imehejek",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -5803,7 +6449,9 @@ const UNMISS_DATA = {
       "long": 29.13648,
       "state": "Western Equatoria",
       "county": "Ibba",
-      "quarter": "Q4"
+      "payam": "Manikakara",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5815,7 +6463,9 @@ const UNMISS_DATA = {
       "long": 29.139,
       "state": "Western Equatoria",
       "county": "Ibba",
-      "quarter": "Q1"
+      "payam": "Madebe",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -5827,11 +6477,27 @@ const UNMISS_DATA = {
       "long": 30.354494,
       "state": "Western Equatoria",
       "county": "Mundri West",
-      "quarter": "Q1"
+      "payam": "Bangolo",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 3,
-      "killed": 2,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.809131,
+      "long": 34.962581,
+      "state": "Eastern Equatoria",
+      "county": "Kapoeta East",
+      "payam": "Narus",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -5839,7 +6505,9 @@ const UNMISS_DATA = {
       "long": 34.962581,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q1"
+      "payam": "Naruz",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5851,7 +6519,9 @@ const UNMISS_DATA = {
       "long": 30.31,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q2"
+      "payam": "Bangolo",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -5863,7 +6533,9 @@ const UNMISS_DATA = {
       "long": 31.604447,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Juba Town",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -5875,7 +6547,9 @@ const UNMISS_DATA = {
       "long": 33.565551,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q3"
+      "payam": "Paringa",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -5887,7 +6561,9 @@ const UNMISS_DATA = {
       "long": 31.75,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q1"
+      "payam": "Billinyang",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -5899,31 +6575,65 @@ const UNMISS_DATA = {
       "long": 31.583423,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q4"
+      "payam": "Juba Town",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 184,
-      "killed": 8,
-      "injured": 176,
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 4.856961,
       "long": 31.600825,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q1"
+      "payam": "Juba town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 22,
-      "killed": 2,
-      "injured": 1,
+      "total": 181,
+      "killed": 6,
+      "injured": 175,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.856961,
+      "long": 31.600825,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Juba town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 20,
+      "killed": 1,
+      "injured": 0,
       "abducted": 0,
       "crsv": 19,
       "lat": 4.856961,
       "long": 31.600825,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q2"
+      "payam": "Juba town",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 2,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.856961,
+      "long": 31.600825,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Juba town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -5935,7 +6645,9 @@ const UNMISS_DATA = {
       "long": 31.600825,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Juba town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -5947,7 +6659,9 @@ const UNMISS_DATA = {
       "long": 33.461822,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q4"
+      "payam": "Mosingo",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -5959,7 +6673,9 @@ const UNMISS_DATA = {
       "long": 31.413553,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Northern Bari",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -5971,7 +6687,9 @@ const UNMISS_DATA = {
       "long": 33.457422,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q3"
+      "payam": "Mosingo",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -5983,11 +6701,13 @@ const UNMISS_DATA = {
       "long": 32.602737,
       "state": "Eastern Equatoria",
       "county": "Lafon/Lopa",
-      "quarter": "Q4"
+      "payam": "Longiro",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 3,
-      "killed": 1,
+      "total": 2,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 2,
@@ -5995,7 +6715,23 @@ const UNMISS_DATA = {
       "long": 29.458155,
       "state": "Western Equatoria",
       "county": "Maridi",
-      "quarter": "Q1"
+      "payam": "Maridi town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.902036,
+      "long": 29.458155,
+      "state": "Western Equatoria",
+      "county": "Maridi",
+      "payam": "Maridi town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -6007,7 +6743,9 @@ const UNMISS_DATA = {
       "long": 29.458155,
       "state": "Western Equatoria",
       "county": "Maridi",
-      "quarter": "Q3"
+      "payam": "Maridi town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 4,
@@ -6019,7 +6757,9 @@ const UNMISS_DATA = {
       "long": 33.464224,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q4"
+      "payam": "Lomeyen",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -6031,7 +6771,9 @@ const UNMISS_DATA = {
       "long": 32.975211,
       "state": "Eastern Equatoria",
       "county": "Lafon",
-      "quarter": "Q1"
+      "payam": "Arilo",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6043,31 +6785,9 @@ const UNMISS_DATA = {
       "long": 32.29784,
       "state": "Eastern Equatoria",
       "county": "Lafon",
-      "quarter": "Q1"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 4.954835,
-      "long": 31.939924,
-      "state": "Central Equatoria",
-      "county": "Juba",
-      "quarter": "Q1"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 4.954835,
-      "long": 31.939924,
-      "state": "Central Equatoria",
-      "county": "Juba",
-      "quarter": "Q2"
+      "payam": "Kurumi",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 20,
@@ -6079,7 +6799,37 @@ const UNMISS_DATA = {
       "long": 31.939924,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q3"
+      "payam": "Mangala",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.954835,
+      "long": 31.939924,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Mangalla",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 4.954835,
+      "long": 31.939924,
+      "state": "Central Equatoria",
+      "county": "Juba",
+      "payam": "Mangalla",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6091,7 +6841,9 @@ const UNMISS_DATA = {
       "long": 31.939924,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q4"
+      "payam": "Mangalla",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 28,
@@ -6103,7 +6855,9 @@ const UNMISS_DATA = {
       "long": 33.368791,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q1"
+      "payam": "Lomeyan",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -6115,7 +6869,9 @@ const UNMISS_DATA = {
       "long": 33.368791,
       "state": "Eastern Equatoria",
       "county": "Kapoeta North",
-      "quarter": "Q2"
+      "payam": "Lomeyan",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 42,
@@ -6127,19 +6883,9 @@ const UNMISS_DATA = {
       "long": 29.71298,
       "state": "Western Equatoria",
       "county": "Maridi",
-      "quarter": "Q4"
-    },
-    {
-      "total": 1,
-      "killed": 0,
-      "injured": 0,
-      "abducted": 1,
-      "crsv": 0,
-      "lat": 5.029,
-      "long": 33.628,
-      "state": "Eastern Equatoria",
-      "county": "kapoeta East",
-      "quarter": "Q2"
+      "payam": "Mambe",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -6151,7 +6897,23 @@ const UNMISS_DATA = {
       "long": 33.628,
       "state": "Eastern Equatoria",
       "county": "kapoeta East",
-      "quarter": "Q3"
+      "payam": "Magos",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 1,
+      "crsv": 0,
+      "lat": 5.029,
+      "long": 33.628,
+      "state": "Eastern Equatoria",
+      "county": "kapoeta East",
+      "payam": "Mogos",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -6163,7 +6925,9 @@ const UNMISS_DATA = {
       "long": 31.688,
       "state": "Central Equatoria",
       "county": "Juba",
-      "quarter": "Q2"
+      "payam": "Ladu",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6175,7 +6939,9 @@ const UNMISS_DATA = {
       "long": 30.73424,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q4"
+      "payam": "Witto",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6187,7 +6953,9 @@ const UNMISS_DATA = {
       "long": 33.983798,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q1"
+      "payam": "Mogoes",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6199,7 +6967,9 @@ const UNMISS_DATA = {
       "long": 33.76,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q3"
+      "payam": "Mogos",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6211,7 +6981,9 @@ const UNMISS_DATA = {
       "long": 30.354,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q1"
+      "payam": "Kediba",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6223,7 +6995,9 @@ const UNMISS_DATA = {
       "long": 33.771,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q2"
+      "payam": "Mogos",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6235,7 +7009,9 @@ const UNMISS_DATA = {
       "long": 27.955,
       "state": "Western Equatoria",
       "county": "Ezo",
-      "quarter": "Q2"
+      "payam": "Yangiri",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -6247,7 +7023,9 @@ const UNMISS_DATA = {
       "long": 30.338451,
       "state": "Western Equatoria",
       "county": "Mundri West",
-      "quarter": "Q3"
+      "payam": "Mundri",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -6259,7 +7037,9 @@ const UNMISS_DATA = {
       "long": 30.4492,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q4"
+      "payam": "Witto",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6271,7 +7051,9 @@ const UNMISS_DATA = {
       "long": 27.467156,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q3"
+      "payam": "Source Yubu",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -6283,19 +7065,9 @@ const UNMISS_DATA = {
       "long": 30.448896,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q1"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 5.343291,
-      "long": 30.448896,
-      "state": "Western Equatoria",
-      "county": "Mundri East",
-      "quarter": "Q2"
+      "payam": "Lui",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -6307,7 +7079,23 @@ const UNMISS_DATA = {
       "long": 30.448896,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q3"
+      "payam": "Lui",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.343291,
+      "long": 30.448896,
+      "state": "Western Equatoria",
+      "county": "Mundri East",
+      "payam": "Lui and Laney",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -6319,19 +7107,9 @@ const UNMISS_DATA = {
       "long": 30.71364,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q3"
-    },
-    {
-      "total": 1,
-      "killed": 0,
-      "injured": 1,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 5.34839,
-      "long": 30.32271,
-      "state": "Western Equatoria",
-      "county": "Mundri West",
-      "quarter": "Q1"
+      "payam": "Kediba",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 7,
@@ -6343,7 +7121,9 @@ const UNMISS_DATA = {
       "long": 27.358875,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q1"
+      "payam": "Source Yubu",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6355,7 +7135,9 @@ const UNMISS_DATA = {
       "long": 30.08914,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q1"
+      "payam": "mundri twon",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -6367,7 +7149,9 @@ const UNMISS_DATA = {
       "long": 30.08914,
       "state": "Western Equatoria",
       "county": "Mundri West",
-      "quarter": "Q1"
+      "payam": "Mundri West town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -6379,19 +7163,9 @@ const UNMISS_DATA = {
       "long": 34.62366,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q3"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 5.473799,
-      "long": 32.659649,
-      "state": "Eastern Equatoria",
-      "county": "Lafon",
-      "quarter": "Q1"
+      "payam": "Kauto",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6403,7 +7177,23 @@ const UNMISS_DATA = {
       "long": 32.659649,
       "state": "Eastern Equatoria",
       "county": "Lafon",
-      "quarter": "Q2"
+      "payam": "Bugilo",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.473799,
+      "long": 32.659649,
+      "state": "Eastern Equatoria",
+      "county": "Lafon",
+      "payam": "Burgilo",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -6415,7 +7205,9 @@ const UNMISS_DATA = {
       "long": 32.665,
       "state": "Eastern Equatoria",
       "county": "Torit",
-      "quarter": "Q1"
+      "payam": "Burgilo",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 23,
@@ -6427,7 +7219,9 @@ const UNMISS_DATA = {
       "long": 34.564912,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q1"
+      "payam": "Kauto",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6439,7 +7233,9 @@ const UNMISS_DATA = {
       "long": 34.564912,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q2"
+      "payam": "Kauto",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -6451,7 +7247,9 @@ const UNMISS_DATA = {
       "long": 34.564912,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q4"
+      "payam": "Kauto",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -6463,7 +7261,9 @@ const UNMISS_DATA = {
       "long": 30.72099,
       "state": "Western Equatoria",
       "county": "Mundri East",
-      "quarter": "Q4"
+      "payam": "Lakamadi",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6475,7 +7275,9 @@ const UNMISS_DATA = {
       "long": 30.33664,
       "state": "Western Equatoria",
       "county": "Mundri West",
-      "quarter": "Q4"
+      "payam": "Amadi",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -6487,7 +7289,9 @@ const UNMISS_DATA = {
       "long": 35.129399,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q1"
+      "payam": "Lotimor",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -6499,7 +7303,9 @@ const UNMISS_DATA = {
       "long": 28.41521,
       "state": "Western Equatoria",
       "county": "Yambio",
-      "quarter": "Q4"
+      "payam": "Nadiangere",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 30,
@@ -6511,7 +7317,9 @@ const UNMISS_DATA = {
       "long": 27.713758,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q1"
+      "payam": "Mupoi",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6523,7 +7331,9 @@ const UNMISS_DATA = {
       "long": 27.713758,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q2"
+      "payam": "Mupoi",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -6535,7 +7345,9 @@ const UNMISS_DATA = {
       "long": 27.713758,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q3"
+      "payam": "Mupoi",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 6,
@@ -6547,7 +7359,9 @@ const UNMISS_DATA = {
       "long": 27.46835,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q4"
+      "payam": "Nabanga",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6559,7 +7373,9 @@ const UNMISS_DATA = {
       "long": 33.972,
       "state": "Eastern Equatoria",
       "county": "Kapoeta East",
-      "quarter": "Q3"
+      "payam": "Kassengor",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6571,11 +7387,41 @@ const UNMISS_DATA = {
       "long": 27.576,
       "state": "Western Bahr el Ghazal",
       "county": "Tambura",
-      "quarter": "Q2"
+      "payam": "Duma",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 6,
-      "killed": 5,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 3,
+      "killed": 2,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -6583,31 +7429,121 @@ const UNMISS_DATA = {
       "long": 27.63806,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q1"
+      "payam": "Tambura",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 13,
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura Town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 3,
       "killed": 2,
-      "injured": 4,
-      "abducted": 6,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 1,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura town",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 8,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 5,
       "crsv": 1,
       "lat": 5.84421,
       "long": 27.63806,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q2"
+      "payam": "Tambura town",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 29,
-      "killed": 14,
-      "injured": 8,
+      "total": 4,
+      "killed": 1,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
+    },
+    {
+      "total": 10,
+      "killed": 2,
+      "injured": 3,
       "abducted": 5,
+      "crsv": 0,
+      "lat": 5.84421,
+      "long": 27.63806,
+      "state": "Western Equatoria",
+      "county": "Tambura",
+      "payam": "Tambura town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 12,
+      "killed": 9,
+      "injured": 1,
+      "abducted": 0,
       "crsv": 2,
       "lat": 5.84421,
       "long": 27.63806,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q3"
+      "payam": "Tambura town",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 4,
@@ -6619,7 +7555,9 @@ const UNMISS_DATA = {
       "long": 27.63806,
       "state": "Western Equatoria",
       "county": "Tambura",
-      "quarter": "Q4"
+      "payam": "Tambura town",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6631,7 +7569,9 @@ const UNMISS_DATA = {
       "long": 27.733333,
       "state": "Western Equatoria",
       "county": "Nagero",
-      "quarter": "Q3"
+      "payam": "Nagero",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 9,
@@ -6643,7 +7583,9 @@ const UNMISS_DATA = {
       "long": 27.691,
       "state": "Western Equatoria",
       "county": "Nagero",
-      "quarter": "Q2"
+      "payam": "Bandala",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -6655,19 +7597,37 @@ const UNMISS_DATA = {
       "long": 34.392649,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q3"
+      "payam": "Boma",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 2,
+      "crsv": 1,
       "lat": 6.1808,
       "long": 34.3915,
       "state": "Jonglei",
       "county": "",
-      "quarter": "Q3"
+      "payam": null,
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 6.1808,
+      "long": 34.3915,
+      "state": "Jonglei",
+      "county": "",
+      "payam": null,
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -6679,11 +7639,27 @@ const UNMISS_DATA = {
       "long": 34.39225,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q4"
+      "payam": "Boma",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 10,
-      "killed": 5,
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.21087,
+      "long": 31.56144,
+      "state": "Jonglei",
+      "county": "Bor South",
+      "payam": "Bor",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 8,
+      "killed": 3,
       "injured": 5,
       "abducted": 0,
       "crsv": 0,
@@ -6691,7 +7667,9 @@ const UNMISS_DATA = {
       "long": 31.56144,
       "state": "Jonglei",
       "county": "Bor South",
-      "quarter": "Q4"
+      "payam": "Bor",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -6703,7 +7681,9 @@ const UNMISS_DATA = {
       "long": 31.68999,
       "state": "Jonglei",
       "county": "Bor South",
-      "quarter": "Q4"
+      "payam": "Makuach",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -6715,7 +7695,9 @@ const UNMISS_DATA = {
       "long": 27.7697,
       "state": "Western Equatoria",
       "county": "Nagero",
-      "quarter": "Q4"
+      "payam": "Nagero",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 14,
@@ -6727,7 +7709,9 @@ const UNMISS_DATA = {
       "long": 30.9646,
       "state": "Lakes",
       "county": "Yirol East",
-      "quarter": "Q3"
+      "payam": "Malek",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -6739,19 +7723,9 @@ const UNMISS_DATA = {
       "long": 31.552,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q2"
-    },
-    {
-      "total": 2,
-      "killed": 1,
-      "injured": 1,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 6.47,
-      "long": 32.006,
-      "state": "Jonglei",
-      "county": "Bor South",
-      "quarter": "Q2"
+      "payam": "Payuel",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -6763,7 +7737,23 @@ const UNMISS_DATA = {
       "long": 32.006,
       "state": "Jonglei",
       "county": "Bor South",
-      "quarter": "Q3"
+      "payam": "Bor town",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.47,
+      "long": 32.006,
+      "state": "Jonglei",
+      "county": "Bor South",
+      "payam": "Makuah",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -6775,7 +7765,9 @@ const UNMISS_DATA = {
       "long": 27.736668,
       "state": "Western Bahr el Ghazal",
       "county": "Nagero",
-      "quarter": "Q1"
+      "payam": "Nagero",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -6787,7 +7779,9 @@ const UNMISS_DATA = {
       "long": 27.736668,
       "state": "Western Equatoria",
       "county": "Nagero",
-      "quarter": "Q1"
+      "payam": "Nagero",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6799,7 +7793,9 @@ const UNMISS_DATA = {
       "long": 27.736668,
       "state": "Western Equatoria",
       "county": "nagero",
-      "quarter": "Q2"
+      "payam": "Nagero central",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -6811,19 +7807,9 @@ const UNMISS_DATA = {
       "long": 29.62784,
       "state": "Lakes",
       "county": "Wulu",
-      "quarter": "Q4"
-    },
-    {
-      "total": 4,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 3,
-      "crsv": 0,
-      "lat": 6.55664,
-      "long": 30.50217,
-      "state": "Lakes",
-      "county": "Yirol West",
-      "quarter": "Q3"
+      "payam": "Wulu",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6835,19 +7821,51 @@ const UNMISS_DATA = {
       "long": 33.28299,
       "state": "Jonglei",
       "county": "verthet",
-      "quarter": "Q1"
+      "payam": "Verthet",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 20,
-      "killed": 4,
+      "total": 9,
+      "killed": 3,
+      "injured": 0,
+      "abducted": 6,
+      "crsv": 0,
+      "lat": 6.634,
+      "long": 32.908,
+      "state": "Jonglei",
+      "county": "Gumuruk",
+      "payam": "Dhomdhometh",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 6,
+      "killed": 1,
       "injured": 2,
-      "abducted": 9,
+      "abducted": 3,
+      "crsv": 0,
+      "lat": 6.634,
+      "long": 32.908,
+      "state": "Jonglei",
+      "county": "Gumuruk",
+      "payam": "Melengenya",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 5,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
       "crsv": 5,
       "lat": 6.634,
       "long": 32.908,
       "state": "Jonglei",
       "county": "Gumuruk",
-      "quarter": "Q1"
+      "payam": "Vulvet",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 35,
@@ -6859,7 +7877,9 @@ const UNMISS_DATA = {
       "long": 32.908,
       "state": "Jonglei",
       "county": "Gumuruk",
-      "quarter": "Q2"
+      "payam": "Vulvet",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6871,7 +7891,9 @@ const UNMISS_DATA = {
       "long": 32.90954,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q4"
+      "payam": "Gumuruk",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -6883,7 +7905,9 @@ const UNMISS_DATA = {
       "long": 30.389,
       "state": "Lakes",
       "county": "Yirol",
-      "quarter": "Q2"
+      "payam": "Adior",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 20,
@@ -6895,7 +7919,9 @@ const UNMISS_DATA = {
       "long": 30.389,
       "state": "Lakes",
       "county": "Yirol East",
-      "quarter": "Q2"
+      "payam": "Adior",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6907,7 +7933,9 @@ const UNMISS_DATA = {
       "long": 30.389,
       "state": "Unity",
       "county": "Yirol East",
-      "quarter": "Q3"
+      "payam": "Adior",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 33,
@@ -6919,7 +7947,9 @@ const UNMISS_DATA = {
       "long": 29.542558,
       "state": "Lakes",
       "county": "Rumbek Centre",
-      "quarter": "Q3"
+      "payam": "Matangai",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6931,7 +7961,9 @@ const UNMISS_DATA = {
       "long": 33.972,
       "state": "Jonglei",
       "county": "Verthet",
-      "quarter": "Q1"
+      "payam": "Labarab",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -6943,7 +7975,9 @@ const UNMISS_DATA = {
       "long": 29.786,
       "state": "Lakes",
       "county": "Rumbek East",
-      "quarter": "Q3"
+      "payam": "Pacong",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 10,
@@ -6955,7 +7989,9 @@ const UNMISS_DATA = {
       "long": 30.124,
       "state": "Lakes",
       "county": "Rumbek East",
-      "quarter": "Q3"
+      "payam": "Paloch",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6967,7 +8003,9 @@ const UNMISS_DATA = {
       "long": 33.12971,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q4"
+      "payam": "Manyang-ngok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -6979,7 +8017,37 @@ const UNMISS_DATA = {
       "long": 33.129204,
       "state": "Jonglei",
       "county": "GPAA",
-      "quarter": "Q1"
+      "payam": "Pibor town",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 6,
+      "killed": 3,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.80639,
+      "long": 29.67675,
+      "state": "Lakes",
+      "county": "Rumbek Centre",
+      "payam": "Jiir",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.80639,
+      "long": 29.67675,
+      "state": "Lakes",
+      "county": "Rumbek Centre",
+      "payam": "Jiir",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -6991,19 +8059,23 @@ const UNMISS_DATA = {
       "long": 29.67675,
       "state": "Lakes",
       "county": "Rumbek Centre",
-      "quarter": "Q2"
+      "payam": "Malek",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 14,
-      "killed": 10,
-      "injured": 4,
+      "total": 6,
+      "killed": 6,
+      "injured": 0,
       "abducted": 0,
       "crsv": 0,
       "lat": 6.80639,
       "long": 29.67675,
       "state": "Lakes",
       "county": "Rumbek Centre",
-      "quarter": "Q4"
+      "payam": "Malek",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -7015,7 +8087,9 @@ const UNMISS_DATA = {
       "long": 29.676949,
       "state": "Lakes",
       "county": "Rumbek Centre",
-      "quarter": "Q3"
+      "payam": "Jiir",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 12,
@@ -7027,7 +8101,9 @@ const UNMISS_DATA = {
       "long": 29.809,
       "state": "Lakes",
       "county": "Rumbek Center",
-      "quarter": "Q2"
+      "payam": "Meen",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7039,7 +8115,9 @@ const UNMISS_DATA = {
       "long": 29.809,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q2"
+      "payam": "Meen",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -7051,7 +8129,9 @@ const UNMISS_DATA = {
       "long": 29.809,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q3"
+      "payam": "Meen",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7063,7 +8143,9 @@ const UNMISS_DATA = {
       "long": 33.074,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q1"
+      "payam": "Wunkok",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 9,
@@ -7075,7 +8157,9 @@ const UNMISS_DATA = {
       "long": 29.514779,
       "state": "Lakes",
       "county": "Cuibet",
-      "quarter": "Q3"
+      "payam": "Abiriu",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7087,43 +8171,135 @@ const UNMISS_DATA = {
       "long": 28.714769,
       "state": "Warrap",
       "county": "Tonj",
-      "quarter": "Q3"
+      "payam": "Tonj",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 71,
-      "killed": 23,
-      "injured": 48,
+      "total": 32,
+      "killed": 11,
+      "injured": 21,
       "abducted": 0,
       "crsv": 0,
       "lat": 6.887287,
       "long": 28.714769,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q1"
+      "payam": "Tonj",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 22,
-      "killed": 13,
-      "injured": 9,
+      "killed": 5,
+      "injured": 17,
       "abducted": 0,
       "crsv": 0,
       "lat": 6.887287,
       "long": 28.714769,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q2"
+      "payam": "Tonj",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 7,
-      "killed": 3,
-      "injured": 3,
+      "total": 19,
+      "killed": 11,
+      "injured": 8,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 4,
+      "killed": 2,
+      "injured": 1,
       "abducted": 1,
       "crsv": 0,
       "lat": 6.887287,
       "long": 28.714769,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q3"
+      "payam": "Tonj",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj Payam",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 16,
+      "killed": 6,
+      "injured": 10,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj South",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 6.887287,
+      "long": 28.714769,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj Town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 9,
@@ -7135,7 +8311,9 @@ const UNMISS_DATA = {
       "long": 32.955,
       "state": "Jonglei",
       "county": "Likuangole",
-      "quarter": "Q1"
+      "payam": "Kongor",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7147,7 +8325,9 @@ const UNMISS_DATA = {
       "long": 29.423,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q2"
+      "payam": "Abiriu",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 10,
@@ -7159,7 +8339,9 @@ const UNMISS_DATA = {
       "long": 29.24703,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q4"
+      "payam": "Citcok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7171,31 +8353,51 @@ const UNMISS_DATA = {
       "long": 28.6445,
       "state": "Jonglei",
       "county": "Rumbek Center",
-      "quarter": "Q1"
-    },
-    {
-      "total": 2,
-      "killed": 0,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 2,
-      "lat": 7.0184,
-      "long": 28.6445,
-      "state": "Lakes",
-      "county": "Rumbek Center",
-      "quarter": "Q1"
+      "payam": "Rumbek town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
       "killed": 0,
-      "injured": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 7.0184,
+      "long": 28.6445,
+      "state": "Lakes",
+      "county": "Rumbek Center",
+      "payam": "Jir",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 7.0184,
+      "long": 28.6445,
+      "state": "Lakes",
+      "county": "Rumbek Center",
+      "payam": "Rumbek town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.02232,
       "long": 29.24645,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q1"
+      "payam": "Tiap Tiap",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 22,
@@ -7207,7 +8409,9 @@ const UNMISS_DATA = {
       "long": 29.24645,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q2"
+      "payam": "Tiap-tiap",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -7219,19 +8423,23 @@ const UNMISS_DATA = {
       "long": 29.24645,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q3"
+      "payam": "Tiap-tiap",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 3,
-      "killed": 1,
-      "injured": 2,
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.02232,
       "long": 29.24645,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q4"
+      "payam": "Tiaptiap",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7243,7 +8451,9 @@ const UNMISS_DATA = {
       "long": 29.24645,
       "state": "Lakes",
       "county": "Cuibet",
-      "quarter": "Q3"
+      "payam": "Tiap-tiap",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7255,7 +8465,9 @@ const UNMISS_DATA = {
       "long": 30.68466,
       "state": "Lakes",
       "county": "Yirol East",
-      "quarter": "Q4"
+      "payam": "Malek",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7267,7 +8479,9 @@ const UNMISS_DATA = {
       "long": 29.993645,
       "state": "Lakes",
       "county": "Rumbek Center",
-      "quarter": "Q1"
+      "payam": "Amokpiny",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 11,
@@ -7279,7 +8493,9 @@ const UNMISS_DATA = {
       "long": 29.993645,
       "state": "Lakes",
       "county": "Rumbek Center",
-      "quarter": "Q2"
+      "payam": "Amongping",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7291,7 +8507,9 @@ const UNMISS_DATA = {
       "long": 33.00756,
       "state": "Jonglei",
       "county": "Pibor",
-      "quarter": "Q4"
+      "payam": "Lekuangole",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7303,7 +8521,9 @@ const UNMISS_DATA = {
       "long": 33.009,
       "state": "Jonglei",
       "county": "",
-      "quarter": "Q3"
+      "payam": null,
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -7315,7 +8535,9 @@ const UNMISS_DATA = {
       "long": 33.009,
       "state": "Jonglei",
       "county": "GPAA",
-      "quarter": "Q2"
+      "payam": "Likuangole",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7327,7 +8549,9 @@ const UNMISS_DATA = {
       "long": 31.481268,
       "state": "Jonglei",
       "county": "Twic",
-      "quarter": "Q1"
+      "payam": "Nyuak",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 10,
@@ -7339,7 +8563,9 @@ const UNMISS_DATA = {
       "long": 29.425,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q2"
+      "payam": "Duony",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 11,
@@ -7351,7 +8577,9 @@ const UNMISS_DATA = {
       "long": 30.77304,
       "state": "Lakes",
       "county": "Yirol East",
-      "quarter": "Q4"
+      "payam": "Malek",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 17,
@@ -7363,7 +8591,9 @@ const UNMISS_DATA = {
       "long": 30.77304,
       "state": "Unity",
       "county": "Yirol East",
-      "quarter": "Q4"
+      "payam": "Adior",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7375,7 +8605,9 @@ const UNMISS_DATA = {
       "long": 32.891516,
       "state": "Jonglei",
       "county": "Likuangole",
-      "quarter": "Q1"
+      "payam": "Likuangole",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7387,7 +8619,9 @@ const UNMISS_DATA = {
       "long": 31.429,
       "state": "Jonglei",
       "county": "Twich East",
-      "quarter": "Q3"
+      "payam": "Lith",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -7399,7 +8633,9 @@ const UNMISS_DATA = {
       "long": 31.40382,
       "state": "Jonglei",
       "county": "Twic East",
-      "quarter": "Q4"
+      "payam": "Panyang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7411,19 +8647,37 @@ const UNMISS_DATA = {
       "long": 34.1,
       "state": "Jonglei",
       "county": "Pochalla North",
-      "quarter": "Q1"
+      "payam": "Borter",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 7,
-      "killed": 1,
-      "injured": 1,
-      "abducted": 5,
+      "total": 4,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 4,
       "crsv": 0,
       "lat": 7.19,
       "long": 34.1,
       "state": "Jonglei",
       "county": "Pochalla North",
-      "quarter": "Q2"
+      "payam": "Burator",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 1,
+      "crsv": 0,
+      "lat": 7.19,
+      "long": 34.1,
+      "state": "Jonglei",
+      "county": "Pochalla North",
+      "payam": "Burtor",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7435,7 +8689,9 @@ const UNMISS_DATA = {
       "long": 29.405,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q3"
+      "payam": "Pagor",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 13,
@@ -7447,31 +8703,121 @@ const UNMISS_DATA = {
       "long": 29.346465,
       "state": "Lakes",
       "county": "Cueibet",
-      "quarter": "Q3"
+      "payam": "Citcok",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 32,
-      "killed": 7,
-      "injured": 24,
+      "total": 14,
+      "killed": 1,
+      "injured": 13,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27341,
+      "long": 28.67114,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Akop",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 14,
+      "killed": 5,
+      "injured": 8,
       "abducted": 1,
       "crsv": 0,
       "lat": 7.27341,
       "long": 28.67114,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q4"
+      "payam": "Magok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 10,
-      "killed": 6,
-      "injured": 4,
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27341,
+      "long": 28.67114,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Magok",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27341,
+      "long": 28.67114,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Ngap",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.27518,
       "long": 28.68187,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q4"
+      "payam": "Mangok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27518,
+      "long": 28.68187,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Mangok",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 4,
+      "killed": 2,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27518,
+      "long": 28.68187,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.27518,
+      "long": 28.68187,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Tonj",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 56,
@@ -7483,7 +8829,9 @@ const UNMISS_DATA = {
       "long": 30.46275,
       "state": "Unity",
       "county": "Panyijiar",
-      "quarter": "Q3"
+      "payam": "Pachienjok",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -7495,7 +8843,9 @@ const UNMISS_DATA = {
       "long": 28.317,
       "state": "Jonglei",
       "county": "Jebel Boma County",
-      "quarter": "Q1"
+      "payam": "Gugu",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -7507,7 +8857,9 @@ const UNMISS_DATA = {
       "long": 32.468,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q2"
+      "payam": "Nyandit",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7519,23 +8871,55 @@ const UNMISS_DATA = {
       "long": 32.468,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q3"
+      "payam": "Nyandit",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 48,
-      "killed": 28,
-      "injured": 20,
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.315,
       "long": 30.461,
       "state": "Unity",
       "county": "Panyijar",
-      "quarter": "Q2"
+      "payam": "Pachienjok",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 2,
+      "total": 46,
+      "killed": 28,
+      "injured": 18,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.315,
+      "long": 30.461,
+      "state": "Unity",
+      "county": "Panyijar",
+      "payam": "Pachinjok",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
       "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.328527,
+      "long": 28.514114,
+      "state": "Western Bahr el Ghazal",
+      "county": "Jur River",
+      "payam": "Kuajiena",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -7543,7 +8927,9 @@ const UNMISS_DATA = {
       "long": 28.514114,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q3"
+      "payam": "Kuajiena",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -7555,7 +8941,9 @@ const UNMISS_DATA = {
       "long": 28.04913,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q4"
+      "payam": "Lelo",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -7567,23 +8955,27 @@ const UNMISS_DATA = {
       "long": 28.931565,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Manyangok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 27,
-      "killed": 16,
-      "injured": 11,
+      "total": 21,
+      "killed": 14,
+      "injured": 7,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.382316,
       "long": 28.931565,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q1"
+      "payam": "Manyangok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 26,
-      "killed": 18,
+      "total": 24,
+      "killed": 16,
       "injured": 8,
       "abducted": 0,
       "crsv": 0,
@@ -7591,7 +8983,23 @@ const UNMISS_DATA = {
       "long": 28.931565,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q2"
+      "payam": "Manyangok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.382316,
+      "long": 28.931565,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Manyangok",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 6,
@@ -7603,7 +9011,23 @@ const UNMISS_DATA = {
       "long": 28.931565,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q3"
+      "payam": "Manyangok",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 6,
+      "killed": 2,
+      "injured": 4,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.382316,
+      "long": 28.931565,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "manyangok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -7615,7 +9039,9 @@ const UNMISS_DATA = {
       "long": 30.43655,
       "state": "Unity",
       "county": "Panyijiar",
-      "quarter": "Q3"
+      "payam": "Tiap",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7627,19 +9053,51 @@ const UNMISS_DATA = {
       "long": 31.200379,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q1"
+      "payam": "Ageer",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 7,
-      "killed": 2,
-      "injured": 5,
+      "total": 3,
+      "killed": 0,
+      "injured": 3,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.433833,
       "long": 31.200379,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q2"
+      "payam": "Ageer",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.433833,
+      "long": 31.200379,
+      "state": "Jonglei",
+      "county": "Duk",
+      "payam": "Pabierol",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.433833,
+      "long": 31.200379,
+      "state": "Jonglei",
+      "county": "Duk",
+      "payam": "Panyang",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7651,7 +9109,9 @@ const UNMISS_DATA = {
       "long": 30.28131,
       "state": "Unity",
       "county": "Panyijiar",
-      "quarter": "Q4"
+      "payam": "Tiap",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -7663,7 +9123,9 @@ const UNMISS_DATA = {
       "long": 31.41173,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q4"
+      "payam": "Ageer",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7675,7 +9137,9 @@ const UNMISS_DATA = {
       "long": 31.413,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q1"
+      "payam": "Poktap",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -7687,7 +9151,9 @@ const UNMISS_DATA = {
       "long": 28.305,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q1"
+      "payam": "Kuajiena",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -7699,19 +9165,37 @@ const UNMISS_DATA = {
       "long": 28.305,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q2"
+      "payam": "Kuajiena",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 2,
+      "crsv": 1,
       "lat": 7.50977,
       "long": 28.27398,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q4"
+      "payam": "Maper",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 7.50977,
+      "long": 28.27398,
+      "state": "Western Bahr el Ghazal",
+      "county": "Jur River",
+      "payam": "Rocrocdong",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 5,
@@ -7723,7 +9207,9 @@ const UNMISS_DATA = {
       "long": 28.617582,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q1"
+      "payam": "Wanhalel",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7735,7 +9221,9 @@ const UNMISS_DATA = {
       "long": 28.617582,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q2"
+      "payam": "Wanhalel",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 9,
@@ -7747,7 +9235,9 @@ const UNMISS_DATA = {
       "long": 28.10511,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q1"
+      "payam": "Rocrocdong",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -7759,7 +9249,9 @@ const UNMISS_DATA = {
       "long": 28.10511,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q2"
+      "payam": "Rocrocdong",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 10,
@@ -7771,7 +9263,9 @@ const UNMISS_DATA = {
       "long": 30.275,
       "state": "Unity",
       "county": "Panyijar",
-      "quarter": "Q1"
+      "payam": "Panyijar town",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -7783,7 +9277,9 @@ const UNMISS_DATA = {
       "long": 29.745,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q1"
+      "payam": "madol",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7795,7 +9291,9 @@ const UNMISS_DATA = {
       "long": 29.496892,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q1"
+      "payam": "Malueth",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -7807,19 +9305,9 @@ const UNMISS_DATA = {
       "long": 32.81038,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q1"
-    },
-    {
-      "total": 5,
-      "killed": 3,
-      "injured": 2,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 7.621,
-      "long": 28.609,
-      "state": "Warrap",
-      "county": "Tonj South",
-      "quarter": "Q1"
+      "payam": "Beielkey",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -7831,23 +9319,41 @@ const UNMISS_DATA = {
       "long": 28.609,
       "state": "Warrap",
       "county": "Tonj South",
-      "quarter": "Q2"
+      "payam": "THiet",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 29,
-      "killed": 18,
-      "injured": 11,
+      "total": 5,
+      "killed": 3,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.621,
+      "long": 28.609,
+      "state": "Warrap",
+      "county": "Tonj South",
+      "payam": "Thiet",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 5,
+      "killed": 4,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.622494,
       "long": 32.3818,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q1"
+      "payam": "Pieri",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 11,
-      "killed": 8,
+      "total": 10,
+      "killed": 7,
       "injured": 3,
       "abducted": 0,
       "crsv": 0,
@@ -7855,7 +9361,37 @@ const UNMISS_DATA = {
       "long": 32.3818,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q2"
+      "payam": "Pieri",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 24,
+      "killed": 14,
+      "injured": 10,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.622494,
+      "long": 32.3818,
+      "state": "Jonglei",
+      "county": "Uror",
+      "payam": "Wechkol",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.622494,
+      "long": 32.3818,
+      "state": "Jonglei",
+      "county": "Uror",
+      "payam": "Wechkol",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7867,7 +9403,9 @@ const UNMISS_DATA = {
       "long": 27.82,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q3"
+      "payam": "Besselia",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7879,7 +9417,9 @@ const UNMISS_DATA = {
       "long": 29.09323,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Magok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7891,7 +9431,9 @@ const UNMISS_DATA = {
       "long": 30.263383,
       "state": "Unity",
       "county": "Panyijiar",
-      "quarter": "Q3"
+      "payam": "Nyal",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7903,7 +9445,9 @@ const UNMISS_DATA = {
       "long": 28.955421,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Palal",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -7915,7 +9459,9 @@ const UNMISS_DATA = {
       "long": 30.103717,
       "state": "Unity",
       "county": "Panyijiar",
-      "quarter": "Q3"
+      "payam": "Mayom",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -7927,19 +9473,9 @@ const UNMISS_DATA = {
       "long": 31.615659,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q1"
-    },
-    {
-      "total": 3,
-      "killed": 2,
-      "injured": 1,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 7.6889,
-      "long": 29.7669,
-      "state": "Jonglei",
-      "county": "Uror",
-      "quarter": "Q1"
+      "payam": "Panyang",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -7951,7 +9487,23 @@ const UNMISS_DATA = {
       "long": 29.7669,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q2"
+      "payam": "Padiak and Tiam",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.6889,
+      "long": 29.7669,
+      "state": "Jonglei",
+      "county": "Uror",
+      "payam": "Padiek",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -7963,31 +9515,79 @@ const UNMISS_DATA = {
       "long": 27.993499,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q3"
+      "payam": "Wau South",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 5,
-      "killed": 2,
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 3,
+      "crsv": 1,
       "lat": 7.70014,
       "long": 27.99093,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q4"
+      "payam": "Ayat East",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 9,
-      "killed": 2,
-      "injured": 7,
+      "total": 3,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 2,
+      "lat": 7.70014,
+      "long": 27.99093,
+      "state": "Western Bahr el Ghazal",
+      "county": "Wau",
+      "payam": "Wau",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.70014,
+      "long": 27.99093,
+      "state": "Western Bahr el Ghazal",
+      "county": "Wau",
+      "payam": "Wau South",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.7007,
       "long": 29.72053,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q4"
+      "payam": "Madol",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 7,
+      "killed": 2,
+      "injured": 5,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.7007,
+      "long": 29.72053,
+      "state": "Lakes",
+      "county": "Rumbek North",
+      "payam": "Maper",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -7999,7 +9599,9 @@ const UNMISS_DATA = {
       "long": 29.7153,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q3"
+      "payam": "Maper town",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 33,
@@ -8011,7 +9613,9 @@ const UNMISS_DATA = {
       "long": 29.721503,
       "state": "Lakes",
       "county": "Rumbek Center",
-      "quarter": "Q2"
+      "payam": "Maper",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8023,7 +9627,9 @@ const UNMISS_DATA = {
       "long": 29.721503,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q1"
+      "payam": "Maper",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8035,7 +9641,9 @@ const UNMISS_DATA = {
       "long": 29.721503,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Makuac",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8047,7 +9655,9 @@ const UNMISS_DATA = {
       "long": 28.035978,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q3"
+      "payam": "Marial Bai",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -8059,7 +9669,9 @@ const UNMISS_DATA = {
       "long": 30.195,
       "state": "Unity",
       "county": "Koch",
-      "quarter": "Q2"
+      "payam": "Nyarel",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8071,7 +9683,9 @@ const UNMISS_DATA = {
       "long": 30.182,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q1"
+      "payam": "Tiam",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8083,19 +9697,37 @@ const UNMISS_DATA = {
       "long": 30.182,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q2"
+      "payam": "Tiam",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 325,
-      "killed": 250,
-      "injured": 75,
+      "total": 187,
+      "killed": 116,
+      "injured": 71,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.712797,
       "long": 29.215942,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Makuac and Wunlit",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 313,
+      "killed": 245,
+      "injured": 68,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.712797,
+      "long": 29.215942,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Wunlit",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 230,
@@ -8107,23 +9739,55 @@ const UNMISS_DATA = {
       "long": 29.215942,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
+      "payam": "Wunlit",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 190,
-      "killed": 118,
-      "injured": 72,
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.712797,
       "long": 29.215942,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q3"
+      "payam": "Wunlit",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 31,
-      "killed": 7,
+      "total": 12,
+      "killed": 5,
+      "injured": 7,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.712797,
+      "long": 29.215942,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "wunlit",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.716472,
+      "long": 27.979813,
+      "state": "Western Bahr el Ghazal",
+      "county": "Wau",
+      "payam": "Wau town",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 29,
+      "killed": 5,
       "injured": 24,
       "abducted": 0,
       "crsv": 0,
@@ -8131,19 +9795,37 @@ const UNMISS_DATA = {
       "long": 27.979813,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q1"
+      "payam": "Wau town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 6,
+      "total": 5,
       "killed": 1,
       "injured": 2,
       "abducted": 0,
-      "crsv": 3,
+      "crsv": 2,
       "lat": 7.716472,
       "long": 27.979813,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q2"
+      "payam": "Wau town",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 7.716472,
+      "long": 27.979813,
+      "state": "Western Bahr el Ghazal",
+      "county": "Wau",
+      "payam": "Wau town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 3,
@@ -8155,19 +9837,9 @@ const UNMISS_DATA = {
       "long": 27.979813,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q3"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 7.71829,
-      "long": 26.4984,
-      "state": "Western Bahr el Ghazal",
-      "county": "Raga",
-      "quarter": "Q3"
+      "payam": "Wau town",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -8179,7 +9851,9 @@ const UNMISS_DATA = {
       "long": 29.34629,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -8191,7 +9865,9 @@ const UNMISS_DATA = {
       "long": 29.753466,
       "state": "Lakes",
       "county": "Rumbek North",
-      "quarter": "Q3"
+      "payam": "Madol",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8203,7 +9879,9 @@ const UNMISS_DATA = {
       "long": 31.692,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q4"
+      "payam": "Panyang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -8215,7 +9893,9 @@ const UNMISS_DATA = {
       "long": 31.39597,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q4"
+      "payam": "Padiet",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8227,7 +9907,9 @@ const UNMISS_DATA = {
       "long": 29.453,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Malual Chum",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8239,7 +9921,9 @@ const UNMISS_DATA = {
       "long": 31.874023,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q3"
+      "payam": "Wuror",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8251,7 +9935,9 @@ const UNMISS_DATA = {
       "long": 31.77,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q3"
+      "payam": "Tiam",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8263,7 +9949,9 @@ const UNMISS_DATA = {
       "long": 33.00555,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q4"
+      "payam": "Bilkey",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -8275,7 +9963,9 @@ const UNMISS_DATA = {
       "long": 31.335492,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q1"
+      "payam": "Padiet",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8287,7 +9977,9 @@ const UNMISS_DATA = {
       "long": 31.335492,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q2"
+      "payam": "Padiet",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -8299,11 +9991,13 @@ const UNMISS_DATA = {
       "long": 30.890677,
       "state": "Jonglei",
       "county": "Ayod",
-      "quarter": "Q3"
+      "payam": "Pajiek",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 5,
-      "killed": 4,
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -8311,7 +10005,23 @@ const UNMISS_DATA = {
       "long": 27.333785,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q1"
+      "payam": "Bazia/Kpaile",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 4,
+      "killed": 4,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.831928,
+      "long": 27.333785,
+      "state": "Western Bahr el Ghazal",
+      "county": "Wau",
+      "payam": "Kpaile",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -8323,7 +10033,9 @@ const UNMISS_DATA = {
       "long": 29.05744,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Akop",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 17,
@@ -8335,7 +10047,9 @@ const UNMISS_DATA = {
       "long": 31.906,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q1"
+      "payam": "Boung",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -8347,7 +10061,9 @@ const UNMISS_DATA = {
       "long": 32.809748,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q1"
+      "payam": "Dengjok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -8359,7 +10075,9 @@ const UNMISS_DATA = {
       "long": 32.809748,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q2"
+      "payam": "Dengjok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8371,7 +10089,9 @@ const UNMISS_DATA = {
       "long": 29.28228,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Wun-liit",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8383,7 +10103,9 @@ const UNMISS_DATA = {
       "long": 31.550065,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q1"
+      "payam": "Pagak",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8395,7 +10117,9 @@ const UNMISS_DATA = {
       "long": 31.550065,
       "state": "Jonglei",
       "county": "Duk",
-      "quarter": "Q2"
+      "payam": "Pagak",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 12,
@@ -8407,7 +10131,9 @@ const UNMISS_DATA = {
       "long": 28.800248,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Kirik",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 10,
@@ -8419,11 +10145,13 @@ const UNMISS_DATA = {
       "long": 28.800248,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Kirik",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 4,
-      "killed": 3,
+      "total": 3,
+      "killed": 2,
       "injured": 0,
       "abducted": 1,
       "crsv": 0,
@@ -8431,7 +10159,23 @@ const UNMISS_DATA = {
       "long": 28.800248,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Kirik",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.899466,
+      "long": 28.800248,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Kirik",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 12,
@@ -8443,7 +10187,9 @@ const UNMISS_DATA = {
       "long": 31.887,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q1"
+      "payam": "Yuai",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8455,7 +10201,9 @@ const UNMISS_DATA = {
       "long": 31.887,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q2"
+      "payam": "Yuai",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8467,7 +10215,9 @@ const UNMISS_DATA = {
       "long": 29.547429,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Makuac",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -8479,7 +10229,9 @@ const UNMISS_DATA = {
       "long": 29.547429,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
+      "payam": "Makuac",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8491,7 +10243,9 @@ const UNMISS_DATA = {
       "long": 29.547429,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q3"
+      "payam": "Makuac",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 36,
@@ -8503,19 +10257,37 @@ const UNMISS_DATA = {
       "long": 28.51365,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Ngabagok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 121,
-      "killed": 56,
-      "injured": 65,
+      "total": 119,
+      "killed": 55,
+      "injured": 64,
       "abducted": 0,
       "crsv": 0,
       "lat": 7.91063,
       "long": 28.51365,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
+      "payam": "Ngabagok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.91063,
+      "long": 28.51365,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Ngabagok",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -8527,11 +10299,13 @@ const UNMISS_DATA = {
       "long": 28.51365,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q3"
+      "payam": "Ngabagok",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 2,
-      "killed": 2,
+      "total": 1,
+      "killed": 1,
       "injured": 0,
       "abducted": 0,
       "crsv": 0,
@@ -8539,7 +10313,23 @@ const UNMISS_DATA = {
       "long": 29.56038,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Makuac",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.91654,
+      "long": 29.56038,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Makuac",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -8551,7 +10341,9 @@ const UNMISS_DATA = {
       "long": 31.91949,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q4"
+      "payam": "Payai",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -8563,19 +10355,37 @@ const UNMISS_DATA = {
       "long": 28.16403,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q4"
+      "payam": "Rocrocdong",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 2,
+      "total": 1,
       "killed": 0,
       "injured": 0,
       "abducted": 0,
-      "crsv": 2,
+      "crsv": 1,
       "lat": 7.95,
       "long": 25.283333,
       "state": "Western Bahr el Ghazal",
       "county": "Raga",
-      "quarter": "Q3"
+      "payam": "Raga",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 1,
+      "lat": 7.95,
+      "long": 25.283333,
+      "state": "Western Bahr el Ghazal",
+      "county": "Raga",
+      "payam": "Raga",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 4,
@@ -8587,7 +10397,9 @@ const UNMISS_DATA = {
       "long": 29.309441,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q1"
+      "payam": "Palieng",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -8599,7 +10411,9 @@ const UNMISS_DATA = {
       "long": 29.309441,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
+      "payam": "Palieng",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8611,19 +10425,51 @@ const UNMISS_DATA = {
       "long": 29.309441,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q3"
+      "payam": "Palieng",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 9,
+      "total": 5,
       "killed": 4,
-      "injured": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.97075,
+      "long": 29.26175,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 7.97075,
+      "long": 29.26175,
+      "state": "Warrap",
+      "county": "Tonj East",
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 0,
+      "injured": 0,
       "abducted": 3,
       "crsv": 0,
       "lat": 7.97075,
       "long": 29.26175,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Wun-liit",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 20,
@@ -8635,7 +10481,9 @@ const UNMISS_DATA = {
       "long": 29.17564,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Magok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8647,7 +10495,9 @@ const UNMISS_DATA = {
       "long": 29.27941,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -8659,7 +10509,9 @@ const UNMISS_DATA = {
       "long": 28.516058,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Awuul",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8671,19 +10523,37 @@ const UNMISS_DATA = {
       "long": 27.998,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q2"
+      "payam": "Thurkueng",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 3,
+      "total": 2,
       "killed": 1,
-      "injured": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.021331,
       "long": 29.182663,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Marial-lou",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.021331,
+      "long": 29.182663,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Marial-lou",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -8695,7 +10565,9 @@ const UNMISS_DATA = {
       "long": 28.147983,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q3"
+      "payam": "Pathuon West",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8707,7 +10579,9 @@ const UNMISS_DATA = {
       "long": 32.02976,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q4"
+      "payam": "Pieri",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8719,7 +10593,9 @@ const UNMISS_DATA = {
       "long": 32.136886,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q3"
+      "payam": "Waat",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8731,11 +10607,83 @@ const UNMISS_DATA = {
       "long": 29.39386,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Paweng",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 4,
-      "killed": 4,
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.08998,
+      "long": 28.63648,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Alabek",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.08998,
+      "long": 28.63648,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Awuul",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 7,
+      "killed": 5,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.08998,
+      "long": 28.63648,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Kirik",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.08998,
+      "long": 28.63648,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Marial-lou",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.08998,
+      "long": 28.63648,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Rual-bet",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
       "injured": 0,
       "abducted": 0,
       "crsv": 0,
@@ -8743,31 +10691,9 @@ const UNMISS_DATA = {
       "long": 28.63648,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
-    },
-    {
-      "total": 8,
-      "killed": 1,
-      "injured": 4,
-      "abducted": 3,
-      "crsv": 0,
-      "lat": 8.08998,
-      "long": 28.63648,
-      "state": "Warrap",
-      "county": "Tonj North",
-      "quarter": "Q3"
-    },
-    {
-      "total": 16,
-      "killed": 8,
-      "injured": 8,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 8.08998,
-      "long": 28.63648,
-      "state": "Warrap",
-      "county": "Tonj North",
-      "quarter": "Q4"
+      "payam": "Toch North",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -8779,7 +10705,9 @@ const UNMISS_DATA = {
       "long": 29.5184,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q4"
+      "payam": "Paweng",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -8791,7 +10719,9 @@ const UNMISS_DATA = {
       "long": 32.61197,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q1"
+      "payam": "Diro",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8803,7 +10733,9 @@ const UNMISS_DATA = {
       "long": 32.61197,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q2"
+      "payam": "Diror",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8815,7 +10747,9 @@ const UNMISS_DATA = {
       "long": 28.486,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q2"
+      "payam": "Kuac South",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8827,11 +10761,27 @@ const UNMISS_DATA = {
       "long": 28.486,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q3"
+      "payam": "Kuac south",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 17,
-      "killed": 15,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.1236,
+      "long": 31.4098,
+      "state": "Jonglei",
+      "county": "Ayod",
+      "payam": "Ayod",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 16,
+      "killed": 14,
       "injured": 2,
       "abducted": 0,
       "crsv": 0,
@@ -8839,7 +10789,9 @@ const UNMISS_DATA = {
       "long": 31.4098,
       "state": "Jonglei",
       "county": "Ayod",
-      "quarter": "Q4"
+      "payam": "Gogrial",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -8851,7 +10803,9 @@ const UNMISS_DATA = {
       "long": 30.020517,
       "state": "Unity",
       "county": "Mayendit",
-      "quarter": "Q3"
+      "payam": "Bor",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 57,
@@ -8863,19 +10817,37 @@ const UNMISS_DATA = {
       "long": 28.621141,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Awul",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 5,
-      "killed": 3,
-      "injured": 2,
+      "total": 3,
+      "killed": 2,
+      "injured": 1,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.133677,
       "long": 28.621141,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Awul",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.133677,
+      "long": 28.621141,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Awul",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 6,
@@ -8887,7 +10859,9 @@ const UNMISS_DATA = {
       "long": 28.621141,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Awul",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 13,
@@ -8899,7 +10873,9 @@ const UNMISS_DATA = {
       "long": 28.621141,
       "state": "Warrap",
       "county": "Tonj north",
-      "quarter": "Q2"
+      "payam": "Awul",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -8911,7 +10887,9 @@ const UNMISS_DATA = {
       "long": 30.00502,
       "state": "Unity",
       "county": "Mayendit",
-      "quarter": "Q4"
+      "payam": "Mareang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8923,7 +10901,9 @@ const UNMISS_DATA = {
       "long": 29.303,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q2"
+      "payam": "Paweng",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 164,
@@ -8935,7 +10915,9 @@ const UNMISS_DATA = {
       "long": 29.303,
       "state": "Warrap",
       "county": "Tonj East",
-      "quarter": "Q3"
+      "payam": "Paweng",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -8947,7 +10929,9 @@ const UNMISS_DATA = {
       "long": 27.661,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q1"
+      "payam": "Kangi",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -8959,19 +10943,51 @@ const UNMISS_DATA = {
       "long": 27.661,
       "state": "Western Bahr el Ghazal",
       "county": "Jur River",
-      "quarter": "Q3"
+      "payam": "Kangi",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 28,
-      "killed": 13,
-      "injured": 15,
+      "total": 20,
+      "killed": 12,
+      "injured": 8,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.154655,
       "long": 28.954121,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Rualbet",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 5,
+      "killed": 0,
+      "injured": 5,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.154655,
+      "long": 28.954121,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Rualbet",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.154655,
+      "long": 28.954121,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Rualbet",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -8983,7 +10999,9 @@ const UNMISS_DATA = {
       "long": 28.954121,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Rualbet",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -8995,7 +11013,9 @@ const UNMISS_DATA = {
       "long": 28.954121,
       "state": "Warrap",
       "county": "Tonj north",
-      "quarter": "Q2"
+      "payam": "Rualbet",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 9,
@@ -9007,7 +11027,9 @@ const UNMISS_DATA = {
       "long": 32.207565,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q1"
+      "payam": "Walgak",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -9019,7 +11041,9 @@ const UNMISS_DATA = {
       "long": 32.207565,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q2"
+      "payam": "Walgak",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -9031,7 +11055,9 @@ const UNMISS_DATA = {
       "long": 32.207565,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q3"
+      "payam": "Walgak",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -9043,7 +11069,9 @@ const UNMISS_DATA = {
       "long": 32.243087,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q4"
+      "payam": "Walgak",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9055,7 +11083,9 @@ const UNMISS_DATA = {
       "long": 32.04891,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q4"
+      "payam": "Motot",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -9067,19 +11097,37 @@ const UNMISS_DATA = {
       "long": 32.368159,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q4"
+      "payam": "Buong",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 21,
-      "killed": 12,
-      "injured": 9,
+      "total": 5,
+      "killed": 2,
+      "injured": 3,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.201657,
       "long": 28.293314,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q1"
+      "payam": "Pathuon West",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 16,
+      "killed": 10,
+      "injured": 6,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.201657,
+      "long": 28.293314,
+      "state": "Warrap",
+      "county": "Gogrial East",
+      "payam": "Pathuon west",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -9091,7 +11139,9 @@ const UNMISS_DATA = {
       "long": 32.133637,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q1"
+      "payam": "Waat",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -9103,7 +11153,23 @@ const UNMISS_DATA = {
       "long": 31.42,
       "state": "Jonglei",
       "county": "Akobo",
-      "quarter": "Q3"
+      "payam": "Kaikuiny",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 9,
+      "killed": 9,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.226931,
+      "long": 29.397888,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Akop and Marial Lou",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 15,
@@ -9115,7 +11181,9 @@ const UNMISS_DATA = {
       "long": 29.397888,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Marial-Lou",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -9127,11 +11195,13 @@ const UNMISS_DATA = {
       "long": 29.397888,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Marial-Lou",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 13,
-      "killed": 13,
+      "total": 1,
+      "killed": 1,
       "injured": 0,
       "abducted": 0,
       "crsv": 0,
@@ -9139,7 +11209,23 @@ const UNMISS_DATA = {
       "long": 29.397888,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Marial-Lou",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 3,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.226931,
+      "long": 29.397888,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Marial-lou",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9151,7 +11237,9 @@ const UNMISS_DATA = {
       "long": 29.397888,
       "state": "Warrap",
       "county": "Tonj north",
-      "quarter": "Q2"
+      "payam": "Marial-Lou",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9163,7 +11251,9 @@ const UNMISS_DATA = {
       "long": 28.3876,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q4"
+      "payam": "Pathuon West",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9175,7 +11265,9 @@ const UNMISS_DATA = {
       "long": 30.23958,
       "state": "Unity",
       "county": "Leer",
-      "quarter": "Q4"
+      "payam": "Nyieth",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 9,
@@ -9187,7 +11279,9 @@ const UNMISS_DATA = {
       "long": 32.037288,
       "state": "Jonglei",
       "county": "Uror",
-      "quarter": "Q1"
+      "payam": "Motot",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9199,7 +11293,9 @@ const UNMISS_DATA = {
       "long": 31.504928,
       "state": "Jonglei",
       "county": "Ayod",
-      "quarter": "Q1"
+      "payam": "Ayod",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -9211,7 +11307,9 @@ const UNMISS_DATA = {
       "long": 28.623246,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q3"
+      "payam": "Pathuon East",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 30,
@@ -9223,7 +11321,9 @@ const UNMISS_DATA = {
       "long": 31.29162,
       "state": "Jonglei",
       "county": "Ayod",
-      "quarter": "Q4"
+      "payam": "Korwach",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9235,7 +11335,9 @@ const UNMISS_DATA = {
       "long": 28.57876,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q4"
+      "payam": "Pathuon West",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9247,7 +11349,9 @@ const UNMISS_DATA = {
       "long": 31.37,
       "state": "Jonglei",
       "county": "Ayod",
-      "quarter": "Q1"
+      "payam": "Wau",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 6,
@@ -9259,7 +11363,9 @@ const UNMISS_DATA = {
       "long": 28.483,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q1"
+      "payam": "Kuajok Town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -9271,7 +11377,9 @@ const UNMISS_DATA = {
       "long": 30.173,
       "state": "Unity",
       "county": "Leer",
-      "quarter": "Q2"
+      "payam": "Kai Gai",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -9283,7 +11391,9 @@ const UNMISS_DATA = {
       "long": 29.06554,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q4"
+      "payam": "Akop",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9295,7 +11405,9 @@ const UNMISS_DATA = {
       "long": 30.11734,
       "state": "Unity",
       "county": "Leer",
-      "quarter": "Q4"
+      "payam": "Juong Kang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9307,7 +11419,9 @@ const UNMISS_DATA = {
       "long": 30.195,
       "state": "Unity",
       "county": "Leer",
-      "quarter": "Q3"
+      "payam": "Bow",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -9319,7 +11433,9 @@ const UNMISS_DATA = {
       "long": 30.214,
       "state": "Unity",
       "county": "Koch",
-      "quarter": "Q1"
+      "payam": "Thoria",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9331,7 +11447,9 @@ const UNMISS_DATA = {
       "long": 28.72,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Aliek",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9343,7 +11461,9 @@ const UNMISS_DATA = {
       "long": 28.72,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Aliek",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9355,11 +11475,27 @@ const UNMISS_DATA = {
       "long": 28.72,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Aliek",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 3,
-      "killed": 2,
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.378096,
+      "long": 28.397363,
+      "state": "Warrap",
+      "county": "Gogrial East",
+      "payam": "Toch North",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 1,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -9367,7 +11503,9 @@ const UNMISS_DATA = {
       "long": 28.397363,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q3"
+      "payam": "Toch North",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -9379,7 +11517,9 @@ const UNMISS_DATA = {
       "long": 28.08524,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q4"
+      "payam": "Kuac North",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 39,
@@ -9391,19 +11531,37 @@ const UNMISS_DATA = {
       "long": 29.279975,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Akop",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 19,
+      "total": 17,
       "killed": 14,
-      "injured": 5,
+      "injured": 3,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.413534,
       "long": 29.279975,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Akop",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 0,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.413534,
+      "long": 29.279975,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "Akop",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 62,
@@ -9415,19 +11573,37 @@ const UNMISS_DATA = {
       "long": 29.279975,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q3"
+      "payam": "Akop",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 24,
-      "killed": 20,
-      "injured": 4,
+      "total": 11,
+      "killed": 8,
+      "injured": 3,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.413534,
       "long": 29.279975,
       "state": "Warrap",
       "county": "Tonj north",
-      "quarter": "Q2"
+      "payam": "AKop",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 13,
+      "killed": 12,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.413534,
+      "long": 29.279975,
+      "state": "Warrap",
+      "county": "Tonj north",
+      "payam": "Akop",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9439,7 +11615,9 @@ const UNMISS_DATA = {
       "long": 25.664017,
       "state": "Western Bahr el Ghazal",
       "county": "Raga",
-      "quarter": "Q3"
+      "payam": "Raga",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -9451,7 +11629,9 @@ const UNMISS_DATA = {
       "long": 31.83048,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q4"
+      "payam": "Pading",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9463,7 +11643,9 @@ const UNMISS_DATA = {
       "long": 25.67937,
       "state": "Western Bahr el Ghazal",
       "county": "Raga",
-      "quarter": "Q4"
+      "payam": "Raga",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -9475,7 +11657,9 @@ const UNMISS_DATA = {
       "long": 30.103,
       "state": "Unity",
       "county": "Koch",
-      "quarter": "Q2"
+      "payam": "Ngony",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9487,7 +11671,9 @@ const UNMISS_DATA = {
       "long": 32.291615,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q1"
+      "payam": "Thol",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 29,
@@ -9499,7 +11685,9 @@ const UNMISS_DATA = {
       "long": 32.06189,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q4"
+      "payam": "Mankien",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -9511,7 +11699,9 @@ const UNMISS_DATA = {
       "long": 32.06,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q2"
+      "payam": "Lankien",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -9523,7 +11713,9 @@ const UNMISS_DATA = {
       "long": 31.936791,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q3"
+      "payam": "Pulturuk",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9535,11 +11727,13 @@ const UNMISS_DATA = {
       "long": 28.09847,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q4"
+      "payam": "Gogrial",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 9,
-      "killed": 9,
+      "total": 2,
+      "killed": 2,
       "injured": 0,
       "abducted": 0,
       "crsv": 0,
@@ -9547,7 +11741,23 @@ const UNMISS_DATA = {
       "long": 28.07418,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q4"
+      "payam": "Pathuon East",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 7,
+      "killed": 7,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.55091,
+      "long": 28.07418,
+      "state": "Warrap",
+      "county": "Gogrial West",
+      "payam": "Toch West",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 10,
@@ -9559,19 +11769,23 @@ const UNMISS_DATA = {
       "long": 28.589126,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q3"
+      "payam": "Nyang",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 23,
-      "killed": 20,
-      "injured": 3,
+      "total": 15,
+      "killed": 15,
+      "injured": 0,
       "abducted": 0,
       "crsv": 0,
       "lat": 8.584674,
       "long": 29.048366,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q1"
+      "payam": "Alabek",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 34,
@@ -9583,7 +11797,23 @@ const UNMISS_DATA = {
       "long": 29.048366,
       "state": "Warrap",
       "county": "Tonj North",
-      "quarter": "Q2"
+      "payam": "Alabek",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 8,
+      "killed": 5,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 8.584674,
+      "long": 29.048366,
+      "state": "Warrap",
+      "county": "Tonj North",
+      "payam": "alabek",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -9595,7 +11825,9 @@ const UNMISS_DATA = {
       "long": 29.981208,
       "state": "Unity",
       "county": "Koch",
-      "quarter": "Q1"
+      "payam": "Koch town",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 37,
@@ -9607,7 +11839,9 @@ const UNMISS_DATA = {
       "long": 33.027361,
       "state": "Upper Nile",
       "county": "Nassir",
-      "quarter": "Q1"
+      "payam": "Nasir",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 36,
@@ -9619,7 +11853,9 @@ const UNMISS_DATA = {
       "long": 33.027361,
       "state": "Upper Nile",
       "county": "Nassir",
-      "quarter": "Q2"
+      "payam": "Nasir",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -9631,7 +11867,9 @@ const UNMISS_DATA = {
       "long": 28.417,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q1"
+      "payam": "Meeth-Aker village",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -9643,7 +11881,9 @@ const UNMISS_DATA = {
       "long": 28.417,
       "state": "Warrap",
       "county": "Gogrial east",
-      "quarter": "Q1"
+      "payam": "Meeth-Aker village",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -9655,7 +11895,9 @@ const UNMISS_DATA = {
       "long": 29.234,
       "state": "Warrap",
       "county": "Tonj north",
-      "quarter": "Q2"
+      "payam": "Paweng",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9667,7 +11909,9 @@ const UNMISS_DATA = {
       "long": 28.149,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q2"
+      "payam": "Alek",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9679,7 +11923,9 @@ const UNMISS_DATA = {
       "long": 27.342,
       "state": "Northern Bahr el Ghazal",
       "county": "Aweil Centre",
-      "quarter": "Q3"
+      "payam": "Awiil",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 55,
@@ -9691,7 +11937,9 @@ const UNMISS_DATA = {
       "long": 27.387728,
       "state": "Northern Bahr el Ghazal",
       "county": "Aweil Center",
-      "quarter": "Q1"
+      "payam": "Aweil town",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 5,
@@ -9703,7 +11951,9 @@ const UNMISS_DATA = {
       "long": 29.5988,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q4"
+      "payam": "Wangbuor I",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9715,7 +11965,9 @@ const UNMISS_DATA = {
       "long": 28.8215,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q4"
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9727,7 +11979,9 @@ const UNMISS_DATA = {
       "long": 29.322,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q1"
+      "payam": "Riak",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9739,7 +11993,9 @@ const UNMISS_DATA = {
       "long": 28.27009,
       "state": "Warrap",
       "county": "Gogrial West",
-      "quarter": "Q4"
+      "payam": "Paliang",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -9751,7 +12007,9 @@ const UNMISS_DATA = {
       "long": 32.48721,
       "state": "Jonglei",
       "county": "Nyirol",
-      "quarter": "Q4"
+      "payam": "Chuil",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 5,
@@ -9763,7 +12021,9 @@ const UNMISS_DATA = {
       "long": 28.616667,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q3"
+      "payam": "Aweeng",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9775,7 +12035,9 @@ const UNMISS_DATA = {
       "long": 29.564,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q2"
+      "payam": "Toch North",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9787,7 +12049,9 @@ const UNMISS_DATA = {
       "long": 29.564,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q3"
+      "payam": "Toch North",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -9799,7 +12063,9 @@ const UNMISS_DATA = {
       "long": 31.3,
       "state": "Jonglei",
       "county": "Pigi",
-      "quarter": "Q3"
+      "payam": "Alam",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -9811,7 +12077,9 @@ const UNMISS_DATA = {
       "long": 28.30207,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q4"
+      "payam": "Wunrok",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -9823,19 +12091,37 @@ const UNMISS_DATA = {
       "long": 29.640983,
       "state": "Unity",
       "county": "Rubkotne",
-      "quarter": "Q3"
+      "payam": "Budaang",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 51,
+      "total": 50,
       "killed": 18,
-      "injured": 33,
+      "injured": 32,
       "abducted": 0,
       "crsv": 0,
       "lat": 9.019,
       "long": 29.535,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q2"
+      "payam": "Toch West",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.019,
+      "long": 29.535,
+      "state": "Warrap",
+      "county": "Gogrial East",
+      "payam": "Toch West",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -9847,7 +12133,9 @@ const UNMISS_DATA = {
       "long": 29.68,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q1"
+      "payam": "Nhialdiu",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -9859,11 +12147,27 @@ const UNMISS_DATA = {
       "long": 29.68,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q3"
+      "payam": "Nhialdiu",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 3,
+      "total": 2,
       "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.03066,
+      "long": 28.84983,
+      "state": "Warrap",
+      "county": "Gogrial East",
+      "payam": "Pathuon East",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -9871,7 +12175,9 @@ const UNMISS_DATA = {
       "long": 28.84983,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q4"
+      "payam": "Pathuon East",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -9883,7 +12189,9 @@ const UNMISS_DATA = {
       "long": 28.93485,
       "state": "Warrap",
       "county": "Gogrial East",
-      "quarter": "Q4"
+      "payam": "Toch East",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -9895,7 +12203,9 @@ const UNMISS_DATA = {
       "long": 9.033584,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Turalei",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -9907,7 +12217,9 @@ const UNMISS_DATA = {
       "long": 9.033584,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q3"
+      "payam": "Turalei",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 47,
@@ -9919,19 +12231,37 @@ const UNMISS_DATA = {
       "long": 9.033584,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q4"
+      "payam": "Turalei",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 23,
+      "total": 20,
       "killed": 10,
-      "injured": 13,
+      "injured": 10,
       "abducted": 0,
       "crsv": 0,
       "lat": 9.033584,
       "long": 28.460769,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q1"
+      "payam": "Turalei",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 0,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.033584,
+      "long": 28.460769,
+      "state": "Warrap",
+      "county": "Twic",
+      "payam": "Turalei",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -9943,7 +12273,9 @@ const UNMISS_DATA = {
       "long": 28.460769,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Turalei",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 21,
@@ -9955,7 +12287,9 @@ const UNMISS_DATA = {
       "long": 32.536,
       "state": "Upper Nile",
       "county": "Ulang",
-      "quarter": "Q3"
+      "payam": "Doma",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -9967,7 +12301,9 @@ const UNMISS_DATA = {
       "long": 29.09424,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q4"
+      "payam": "Mankien",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 12,
@@ -9979,7 +12315,9 @@ const UNMISS_DATA = {
       "long": 29.404,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q2"
+      "payam": "Wangkei",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 38,
@@ -9991,7 +12329,9 @@ const UNMISS_DATA = {
       "long": 30.882,
       "state": "Jonglei",
       "county": "Fangak",
-      "quarter": "Q2"
+      "payam": "Old Fangak",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 5,
@@ -10003,7 +12343,9 @@ const UNMISS_DATA = {
       "long": 30.882,
       "state": "Jonglei",
       "county": "Fangak",
-      "quarter": "Q3"
+      "payam": "Old Fangak",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -10015,7 +12357,9 @@ const UNMISS_DATA = {
       "long": 29.45282,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q4"
+      "payam": "Wangkei",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -10027,7 +12371,9 @@ const UNMISS_DATA = {
       "long": 28.797,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q3"
+      "payam": "Bieh",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -10039,7 +12385,9 @@ const UNMISS_DATA = {
       "long": 29.06,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Aweng",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -10051,19 +12399,9 @@ const UNMISS_DATA = {
       "long": 29.784,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q2"
-    },
-    {
-      "total": 1,
-      "killed": 1,
-      "injured": 0,
-      "abducted": 0,
-      "crsv": 0,
-      "lat": 9.16177,
-      "long": 28.35981,
-      "state": "Warrap",
-      "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Panhiany",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 5,
@@ -10075,7 +12413,9 @@ const UNMISS_DATA = {
       "long": 28.35981,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q4"
+      "payam": "Aweeng",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -10087,7 +12427,9 @@ const UNMISS_DATA = {
       "long": 29.91399,
       "state": "Unity",
       "county": "Guit",
-      "quarter": "Q4"
+      "payam": "Wathnyona",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 3,
@@ -10099,7 +12441,9 @@ const UNMISS_DATA = {
       "long": 29.692,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q2"
+      "payam": "Barmalual",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -10111,7 +12455,9 @@ const UNMISS_DATA = {
       "long": 28.33048,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q1"
+      "payam": "Wunrok",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 3,
@@ -10123,7 +12469,9 @@ const UNMISS_DATA = {
       "long": 28.33048,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Wunrok",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -10135,7 +12483,9 @@ const UNMISS_DATA = {
       "long": 29.8545,
       "state": "Unity",
       "county": "Guit",
-      "quarter": "Q3"
+      "payam": "Kuerguini",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -10147,11 +12497,27 @@ const UNMISS_DATA = {
       "long": 26.867,
       "state": "Northern Bahr el Ghazal",
       "county": "Aweil North",
-      "quarter": "Q2"
+      "payam": "Gok Machar town",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
-      "total": 3,
+      "total": 2,
       "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.22547,
+      "long": 29.16507,
+      "state": "Unity",
+      "county": "Mayom",
+      "payam": "Kuerbuone",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 0,
       "injured": 0,
       "abducted": 0,
       "crsv": 1,
@@ -10159,7 +12525,9 @@ const UNMISS_DATA = {
       "long": 29.16507,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q4"
+      "payam": "Ruathnyibuol",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 7,
@@ -10171,7 +12539,9 @@ const UNMISS_DATA = {
       "long": 29.188,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q2"
+      "payam": "Kuerbona",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 135,
@@ -10183,7 +12553,9 @@ const UNMISS_DATA = {
       "long": 32.15374,
       "state": "Upper Nile",
       "county": "Baliet",
-      "quarter": "Q4"
+      "payam": "Adong",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -10195,19 +12567,37 @@ const UNMISS_DATA = {
       "long": 29.8004,
       "state": "Unity",
       "county": "Rubkotne",
-      "quarter": "Q4"
+      "payam": "Bentiu Town",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 10,
-      "killed": 5,
-      "injured": 5,
+      "total": 4,
+      "killed": 2,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 9.253021,
       "long": 28.68379,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q3"
+      "payam": "Ajak-Kuac",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 6,
+      "killed": 3,
+      "injured": 3,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.253021,
+      "long": 28.68379,
+      "state": "Warrap",
+      "county": "Twic",
+      "payam": "Ajak-kuac",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 15,
@@ -10219,7 +12609,9 @@ const UNMISS_DATA = {
       "long": 29.885,
       "state": "Unity",
       "county": "Guit",
-      "quarter": "Q3"
+      "payam": "Kuerguini",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -10231,7 +12623,9 @@ const UNMISS_DATA = {
       "long": 28.697601,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q1"
+      "payam": "Ajak Kuac",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -10243,7 +12637,9 @@ const UNMISS_DATA = {
       "long": 28.697601,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q2"
+      "payam": "Ajak Kuac",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -10255,7 +12651,9 @@ const UNMISS_DATA = {
       "long": 28.697601,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q3"
+      "payam": "Ajak Kuac",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -10267,19 +12665,51 @@ const UNMISS_DATA = {
       "long": 29.659401,
       "state": "Unity",
       "county": "Rubkotne",
-      "quarter": "Q3"
+      "payam": "Dhorbor",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 9,
-      "killed": 5,
-      "injured": 4,
+      "total": 4,
+      "killed": 2,
+      "injured": 2,
       "abducted": 0,
       "crsv": 0,
       "lat": 9.28994,
       "long": 28.71028,
       "state": "Warrap",
       "county": "Twic",
-      "quarter": "Q4"
+      "payam": "Ajak-kuac",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 1,
+      "injured": 2,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.28994,
+      "long": 28.71028,
+      "state": "Warrap",
+      "county": "Twic",
+      "payam": "Kuach",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 2,
+      "killed": 2,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.28994,
+      "long": 28.71028,
+      "state": "Warrap",
+      "county": "Twic",
+      "payam": "Kuach",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -10291,7 +12721,9 @@ const UNMISS_DATA = {
       "long": 29.379,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q1"
+      "payam": "Budang",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -10303,7 +12735,9 @@ const UNMISS_DATA = {
       "long": 29.379,
       "state": "Unity",
       "county": "Rubkona",
-      "quarter": "Q2"
+      "payam": "Budang",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 4,
@@ -10315,7 +12749,9 @@ const UNMISS_DATA = {
       "long": 29.26787,
       "state": "Unity",
       "county": "Mayom",
-      "quarter": "Q4"
+      "payam": "Wangbuor I",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 2,
@@ -10327,7 +12763,9 @@ const UNMISS_DATA = {
       "long": 31.551,
       "state": "Jonglei",
       "county": "Pigi",
-      "quarter": "Q3"
+      "payam": "Canal",
+      "quarter": "Q3",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -10339,35 +12777,83 @@ const UNMISS_DATA = {
       "long": 28.87501,
       "state": "Unity",
       "county": "Abiemnom",
-      "quarter": "Q1"
+      "payam": "Abiemnom",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 86,
-      "killed": 36,
-      "injured": 25,
+      "total": 25,
+      "killed": 0,
+      "injured": 0,
       "abducted": 0,
       "crsv": 25,
       "lat": 9.395027,
       "long": 28.87501,
       "state": "Unity",
       "county": "Abiemnom",
-      "quarter": "Q2"
+      "payam": "Abiemnom",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
-      "total": 15,
-      "killed": 5,
-      "injured": 10,
+      "total": 1,
+      "killed": 0,
+      "injured": 1,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.395027,
+      "long": 28.87501,
+      "state": "Unity",
+      "county": "Abiemnom",
+      "payam": "Awila",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 60,
+      "killed": 36,
+      "injured": 24,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.395027,
+      "long": 28.87501,
+      "state": "Unity",
+      "county": "Abiemnom",
+      "payam": "Ruom-yar",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
+    },
+    {
+      "total": 10,
+      "killed": 4,
+      "injured": 6,
       "abducted": 0,
       "crsv": 0,
       "lat": 9.395027,
       "long": 28.87501,
       "state": "Unity",
       "county": "RAA",
-      "quarter": "Q2"
+      "payam": "Abiemnom",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 4,
-      "killed": 3,
+      "total": 5,
+      "killed": 1,
+      "injured": 4,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.395027,
+      "long": 28.87501,
+      "state": "Unity",
+      "county": "RAA",
+      "payam": "RAA",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 3,
+      "killed": 2,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -10375,7 +12861,23 @@ const UNMISS_DATA = {
       "long": 28.82103,
       "state": "Unity",
       "county": "Abiemnhom",
-      "quarter": "Q4"
+      "payam": "Abiemnhom",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 1,
+      "killed": 1,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.39567,
+      "long": 28.82103,
+      "state": "Unity",
+      "county": "Abiemnhom",
+      "payam": "Abiemnhom",
+      "quarter": "Q4",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 5,
@@ -10387,7 +12889,9 @@ const UNMISS_DATA = {
       "long": 29.737,
       "state": "Unity",
       "county": "Mayendit",
-      "quarter": "Q1"
+      "payam": "Phak Port",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 62,
@@ -10399,7 +12903,9 @@ const UNMISS_DATA = {
       "long": 31.126,
       "state": "Jonglei",
       "county": "Fangak",
-      "quarter": "Q2"
+      "payam": "New Fangak",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 18,
@@ -10411,7 +12917,9 @@ const UNMISS_DATA = {
       "long": 31.04574,
       "state": "Upper Nile",
       "county": "Panyikang",
-      "quarter": "Q4"
+      "payam": "Tonga",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 3,
@@ -10423,7 +12931,9 @@ const UNMISS_DATA = {
       "long": 26.835,
       "state": "Northern Bahr el Ghazal",
       "county": "Aweil North",
-      "quarter": "Q3"
+      "payam": "Kiir Adem town",
+      "quarter": "Q3",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 4,
@@ -10435,7 +12945,9 @@ const UNMISS_DATA = {
       "long": 31.659195,
       "state": "Upper Nile",
       "county": "Malakal",
-      "quarter": "Q2"
+      "payam": "Malakal",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 8,
@@ -10447,7 +12959,9 @@ const UNMISS_DATA = {
       "long": 31.659195,
       "state": "Upper Nile",
       "county": "malakal",
-      "quarter": "Q1"
+      "payam": "Malakal",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 2,
@@ -10459,7 +12973,9 @@ const UNMISS_DATA = {
       "long": 30.35,
       "state": "Unity",
       "county": "Pariang",
-      "quarter": "Q3"
+      "payam": "Jamjang",
+      "quarter": "Q3",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 4,
@@ -10471,7 +12987,9 @@ const UNMISS_DATA = {
       "long": 29.776,
       "state": "Unity",
       "county": "Alieny",
-      "quarter": "Q1"
+      "payam": "Nyonglieth (Kumagone)",
+      "quarter": "Q1",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 4,
@@ -10483,7 +13001,9 @@ const UNMISS_DATA = {
       "long": 29.773,
       "state": "Unity",
       "county": "Alieny",
-      "quarter": "Q2"
+      "payam": "Tor",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 2,
@@ -10495,11 +13015,13 @@ const UNMISS_DATA = {
       "long": 29.982,
       "state": "Unity",
       "county": "RAA",
-      "quarter": "Q2"
+      "payam": "Pariang",
+      "quarter": "Q2",
+      "perpetrator": "Community-based Militias"
     },
     {
-      "total": 18,
-      "killed": 17,
+      "total": 14,
+      "killed": 13,
       "injured": 1,
       "abducted": 0,
       "crsv": 0,
@@ -10507,7 +13029,23 @@ const UNMISS_DATA = {
       "long": 29.95645,
       "state": "Warrap",
       "county": "Pariang",
-      "quarter": "Q4"
+      "payam": "Wun-liit",
+      "quarter": "Q4",
+      "perpetrator": "Community-based Militias"
+    },
+    {
+      "total": 4,
+      "killed": 4,
+      "injured": 0,
+      "abducted": 0,
+      "crsv": 0,
+      "lat": 9.91681,
+      "long": 29.95645,
+      "state": "Warrap",
+      "county": "Pariang",
+      "payam": "Wun-liit",
+      "quarter": "Q4",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -10519,7 +13057,9 @@ const UNMISS_DATA = {
       "long": 29.949369,
       "state": "Unity",
       "county": "Alieny",
-      "quarter": "Q1"
+      "payam": "Alieny",
+      "quarter": "Q1",
+      "perpetrator": "Community-based Militias"
     },
     {
       "total": 1,
@@ -10531,7 +13071,9 @@ const UNMISS_DATA = {
       "long": 29.949369,
       "state": "Unity",
       "county": "Alieny",
-      "quarter": "Q2"
+      "payam": "Alilang",
+      "quarter": "Q2",
+      "perpetrator": "Unidentified/Opportunistic"
     },
     {
       "total": 1,
@@ -10543,7 +13085,9 @@ const UNMISS_DATA = {
       "long": 32.262,
       "state": "Upper Nile",
       "county": "Panyikang",
-      "quarter": "Q2"
+      "payam": "Panyikang",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -10555,7 +13099,9 @@ const UNMISS_DATA = {
       "long": 28.010223,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q1"
+      "payam": "Bagarri",
+      "quarter": "Q1",
+      "perpetrator": "Conventional Parties"
     },
     {
       "total": 1,
@@ -10567,7 +13113,9 @@ const UNMISS_DATA = {
       "long": 28.010223,
       "state": "Western Bahr el Ghazal",
       "county": "Wau",
-      "quarter": "Q2"
+      "payam": "Baggari",
+      "quarter": "Q2",
+      "perpetrator": "Conventional Parties"
     }
   ],
   "sgbv": {
@@ -10607,35 +13155,6 @@ const UNMISS_DATA = {
       "Q4": 58
     },
     "q4_by_state": {
-      "Unity": {
-        "total": 2,
-        "gender": {
-          "male": 0,
-          "female": 1,
-          "boys": 0,
-          "girls": 1
-        },
-        "medical_care": {
-          "yes": 1,
-          "no": 1
-        },
-        "psychosocial": {
-          "yes": 1,
-          "no": 1
-        },
-        "reported": {
-          "yes": 1,
-          "no": 1
-        },
-        "arrested": {
-          "yes": 1,
-          "no": 1
-        },
-        "pregnancy": {
-          "yes": 0,
-          "no": 2
-        }
-      },
       "Jonglei": {
         "total": 7,
         "gender": {
@@ -10663,64 +13182,6 @@ const UNMISS_DATA = {
         "pregnancy": {
           "yes": 0,
           "no": 6
-        }
-      },
-      "Western Bahr el Ghazal": {
-        "total": 2,
-        "gender": {
-          "male": 0,
-          "female": 0,
-          "boys": 0,
-          "girls": 2
-        },
-        "medical_care": {
-          "yes": 2,
-          "no": 0
-        },
-        "psychosocial": {
-          "yes": 0,
-          "no": 2
-        },
-        "reported": {
-          "yes": 2,
-          "no": 0
-        },
-        "arrested": {
-          "yes": 0,
-          "no": 2
-        },
-        "pregnancy": {
-          "yes": 1,
-          "no": 1
-        }
-      },
-      "Lakes": {
-        "total": 2,
-        "gender": {
-          "male": 0,
-          "female": 1,
-          "boys": 0,
-          "girls": 1
-        },
-        "medical_care": {
-          "yes": 1,
-          "no": 1
-        },
-        "psychosocial": {
-          "yes": 0,
-          "no": 2
-        },
-        "reported": {
-          "yes": 1,
-          "no": 1
-        },
-        "arrested": {
-          "yes": 0,
-          "no": 2
-        },
-        "pregnancy": {
-          "yes": 0,
-          "no": 2
         }
       },
       "Central Equatoria": {
@@ -10779,6 +13240,93 @@ const UNMISS_DATA = {
         "pregnancy": {
           "yes": 3,
           "no": 31
+        }
+      },
+      "Lakes": {
+        "total": 2,
+        "gender": {
+          "male": 0,
+          "female": 1,
+          "boys": 0,
+          "girls": 1
+        },
+        "medical_care": {
+          "yes": 1,
+          "no": 1
+        },
+        "psychosocial": {
+          "yes": 0,
+          "no": 2
+        },
+        "reported": {
+          "yes": 1,
+          "no": 1
+        },
+        "arrested": {
+          "yes": 0,
+          "no": 2
+        },
+        "pregnancy": {
+          "yes": 0,
+          "no": 2
+        }
+      },
+      "Unity": {
+        "total": 2,
+        "gender": {
+          "male": 0,
+          "female": 1,
+          "boys": 0,
+          "girls": 1
+        },
+        "medical_care": {
+          "yes": 1,
+          "no": 1
+        },
+        "psychosocial": {
+          "yes": 1,
+          "no": 1
+        },
+        "reported": {
+          "yes": 1,
+          "no": 1
+        },
+        "arrested": {
+          "yes": 1,
+          "no": 1
+        },
+        "pregnancy": {
+          "yes": 0,
+          "no": 2
+        }
+      },
+      "Western Bahr el Ghazal": {
+        "total": 2,
+        "gender": {
+          "male": 0,
+          "female": 0,
+          "boys": 0,
+          "girls": 2
+        },
+        "medical_care": {
+          "yes": 2,
+          "no": 0
+        },
+        "psychosocial": {
+          "yes": 0,
+          "no": 2
+        },
+        "reported": {
+          "yes": 2,
+          "no": 0
+        },
+        "arrested": {
+          "yes": 0,
+          "no": 2
+        },
+        "pregnancy": {
+          "yes": 1,
+          "no": 1
         }
       }
     },
@@ -10948,6 +13496,632 @@ const UNMISS_DATA = {
         "long": 29.30182,
         "state": "Unity",
         "county": "Abiemnhom",
+        "total": 1
+      }
+    ],
+    "all_locations": [
+      {
+        "lat": 3.642496,
+        "long": 32.057217,
+        "state": "Eastern Equatoria",
+        "county": "Magwi",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 3.68661,
+        "long": 30.77616,
+        "state": "Central Equatoria",
+        "county": "Morobo",
+        "quarter": "Q2",
+        "total": 3
+      },
+      {
+        "lat": 3.68661,
+        "long": 30.77616,
+        "state": "Central Equatoria",
+        "county": "Morobo",
+        "quarter": "Q3",
+        "total": 2
+      },
+      {
+        "lat": 3.895678,
+        "long": 30.754458,
+        "state": "Central Equatoria",
+        "county": "Yei River",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 3.975335,
+        "long": 30.592858,
+        "state": "Central Equatoria",
+        "county": "Yei river",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 4.028106,
+        "long": 30.383358,
+        "state": "Central Equatoria",
+        "county": "Yei River",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.028106,
+        "long": 30.383358,
+        "state": "Central Equatoria",
+        "county": "Yei river",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 4.075802,
+        "long": 30.751168,
+        "state": "Central Equatoria",
+        "county": "Yei River",
+        "quarter": "Q1",
+        "total": 14
+      },
+      {
+        "lat": 4.075802,
+        "long": 30.751168,
+        "state": "Central Equatoria",
+        "county": "Yei River",
+        "quarter": "Q2",
+        "total": 7
+      },
+      {
+        "lat": 4.075802,
+        "long": 30.751168,
+        "state": "Central Equatoria",
+        "county": "Yei river",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 4.075802,
+        "long": 30.751168,
+        "state": "Central Equatoria",
+        "county": "Yei river",
+        "quarter": "Q3",
+        "total": 2
+      },
+      {
+        "lat": 4.075802,
+        "long": 30.751168,
+        "state": "Unity",
+        "county": "Yei River",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.092332,
+        "long": 30.676506,
+        "state": "Central Equatoria",
+        "county": "Yei",
+        "quarter": "Q4",
+        "total": 9
+      },
+      {
+        "lat": 4.09417,
+        "long": 30.67569,
+        "state": "Central Equatoria",
+        "county": "Yei",
+        "quarter": "Q2",
+        "total": 4
+      },
+      {
+        "lat": 4.09417,
+        "long": 30.67569,
+        "state": "Central Equatoria",
+        "county": "Yei",
+        "quarter": "Q3",
+        "total": 7
+      },
+      {
+        "lat": 4.12794,
+        "long": 32.29964,
+        "state": "Eastern Equatoria",
+        "county": "Magwi",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 4.12794,
+        "long": 32.29964,
+        "state": "Eastern Equatoria",
+        "county": "Magwi",
+        "quarter": "Q3",
+        "total": 4
+      },
+      {
+        "lat": 4.39919,
+        "long": 28.20958,
+        "state": "Western Equatoria",
+        "county": "Nzara",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.56807,
+        "long": 28.39767,
+        "state": "Western Equatoria",
+        "county": "Yambio",
+        "quarter": "Q3",
+        "total": 24
+      },
+      {
+        "lat": 4.56807,
+        "long": 28.39767,
+        "state": "Western Equatoria",
+        "county": "Yambio",
+        "quarter": "Q4",
+        "total": 34
+      },
+      {
+        "lat": 4.610787,
+        "long": 28.461016,
+        "state": "Western Equatoria",
+        "county": "Yambio",
+        "quarter": "Q1",
+        "total": 11
+      },
+      {
+        "lat": 4.610787,
+        "long": 28.461016,
+        "state": "Western Equatoria",
+        "county": "Yambio",
+        "quarter": "Q2",
+        "total": 28
+      },
+      {
+        "lat": 4.751,
+        "long": 31.608,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.751,
+        "long": 31.608,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 4.84592,
+        "long": 31.59592,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.84592,
+        "long": 31.59592,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q3",
+        "total": 10
+      },
+      {
+        "lat": 4.84592,
+        "long": 31.59592,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q4",
+        "total": 2
+      },
+      {
+        "lat": 4.856961,
+        "long": 31.600825,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 4.856961,
+        "long": 31.600825,
+        "state": "Central Equatoria",
+        "county": "Juba",
+        "quarter": "Q2",
+        "total": 3
+      },
+      {
+        "lat": 5.60958,
+        "long": 27.46835,
+        "state": "Western Equatoria",
+        "county": "Tambura",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 5.60958,
+        "long": 27.46835,
+        "state": "Western Equatoria",
+        "county": "Tambura",
+        "quarter": "Q3",
+        "total": 3
+      },
+      {
+        "lat": 6.21087,
+        "long": 31.56144,
+        "state": "Jonglei",
+        "county": "Bor South",
+        "quarter": "Q1",
+        "total": 14
+      },
+      {
+        "lat": 6.21087,
+        "long": 31.56144,
+        "state": "Jonglei",
+        "county": "Bor South",
+        "quarter": "Q2",
+        "total": 3
+      },
+      {
+        "lat": 6.21087,
+        "long": 31.56144,
+        "state": "Jonglei",
+        "county": "Bor South",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 6.21087,
+        "long": 31.56144,
+        "state": "Jonglei",
+        "county": "Bor South",
+        "quarter": "Q4",
+        "total": 3
+      },
+      {
+        "lat": 6.36881,
+        "long": 31.59958,
+        "state": "Jonglei",
+        "county": "Bor South",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 6.39397,
+        "long": 27.7697,
+        "state": "Western Equatoria",
+        "county": "Nagero",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 6.55664,
+        "long": 30.50217,
+        "state": "Lakes",
+        "county": "Yirol West",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 6.55664,
+        "long": 30.50217,
+        "state": "Lakes",
+        "county": "Yirol West",
+        "quarter": "Q3",
+        "total": 3
+      },
+      {
+        "lat": 6.61469,
+        "long": 32.93175,
+        "state": "Jonglei",
+        "county": "Pibor",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 6.63506,
+        "long": 32.90954,
+        "state": "Jonglei",
+        "county": "Pibor",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 6.66734,
+        "long": 32.81761,
+        "state": "Jonglei",
+        "county": "Pibor",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 6.72587,
+        "long": 29.75872,
+        "state": "Lakes",
+        "county": "Rumbek East",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 6.76504,
+        "long": 29.75275,
+        "state": "Lakes",
+        "county": "Rumbek East",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 6.80639,
+        "long": 29.67675,
+        "state": "Lakes",
+        "county": "Rumbek Centre",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 6.80639,
+        "long": 29.67675,
+        "state": "Lakes",
+        "county": "Rumbek Centre",
+        "quarter": "Q2",
+        "total": 5
+      },
+      {
+        "lat": 6.80639,
+        "long": 29.67675,
+        "state": "Lakes",
+        "county": "Rumbek Centre",
+        "quarter": "Q3",
+        "total": 4
+      },
+      {
+        "lat": 7.01469,
+        "long": 29.24703,
+        "state": "Lakes",
+        "county": "Cueibet",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 7.01469,
+        "long": 29.24703,
+        "state": "Lakes",
+        "county": "Cueibet",
+        "quarter": "Q3",
+        "total": 2
+      },
+      {
+        "lat": 7.0184,
+        "long": 28.6445,
+        "state": "Lakes",
+        "county": "Rumbek",
+        "quarter": "Q1",
+        "total": 2
+      },
+      {
+        "lat": 7.05067,
+        "long": 33.00756,
+        "state": "Jonglei",
+        "county": "Pibor",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 7.05067,
+        "long": 33.00756,
+        "state": "Jonglei",
+        "county": "Pibor",
+        "quarter": "Q3",
+        "total": 3
+      },
+      {
+        "lat": 7.06331,
+        "long": 29.09385,
+        "state": "Lakes",
+        "county": "Cueibet",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 7.50977,
+        "long": 28.27398,
+        "state": "Western Bahr el Ghazal",
+        "county": "Jur River",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 7.70014,
+        "long": 27.99093,
+        "state": "Western Bahr el Ghazal",
+        "county": "Wau",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 7.70014,
+        "long": 27.99093,
+        "state": "Western Bahr el Ghazal",
+        "county": "Wau",
+        "quarter": "Q3",
+        "total": 2
+      },
+      {
+        "lat": 7.70014,
+        "long": 27.99093,
+        "state": "Western Bahr el Ghazal",
+        "county": "Wau",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 7.716472,
+        "long": 27.979813,
+        "state": "Western Bahr el Ghazal",
+        "county": "Wau",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 7.74977,
+        "long": 31.39597,
+        "state": "Jonglei",
+        "county": "Duk",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 7.90714,
+        "long": 31.888,
+        "state": "Jonglei",
+        "county": "Uror",
+        "quarter": "Q2",
+        "total": 2
+      },
+      {
+        "lat": 8.08998,
+        "long": 28.63648,
+        "state": "Warrap",
+        "county": "Tonj North",
+        "quarter": "Q1",
+        "total": 0
+      },
+      {
+        "lat": 8.1236,
+        "long": 31.4098,
+        "state": "Jonglei",
+        "county": "Ayod",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 8.17936,
+        "long": 32.1529,
+        "state": "Jonglei",
+        "county": "Nyirol",
+        "quarter": "Q2",
+        "total": 2
+      },
+      {
+        "lat": 8.278,
+        "long": 28.483,
+        "state": "Warrap",
+        "county": "Kuajok",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 8.32189,
+        "long": 30.09619,
+        "state": "Unity",
+        "county": "Leer",
+        "quarter": "Q1",
+        "total": 1
+      },
+      {
+        "lat": 8.32189,
+        "long": 30.09619,
+        "state": "Unity",
+        "county": "Leer",
+        "quarter": "Q3",
+        "total": 1
+      },
+      {
+        "lat": 8.45297,
+        "long": 31.83048,
+        "state": "Jonglei",
+        "county": "Nyirol",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 8.59317,
+        "long": 29.99529,
+        "state": "Unity",
+        "county": "Koch",
+        "quarter": "Q1",
+        "total": 2
+      },
+      {
+        "lat": 8.684,
+        "long": 28.599,
+        "state": "Warrap",
+        "county": "Gogrial West",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 8.762774,
+        "long": 27.387728,
+        "state": "Northern Bahr el Ghazal",
+        "county": "Aweil Center",
+        "quarter": "Q2",
+        "total": 1
+      },
+      {
+        "lat": 8.76934,
+        "long": 27.39621,
+        "state": "Northern Bahr el Ghazal",
+        "county": "Aweil West",
+        "quarter": "Q1",
+        "total": 2
+      },
+      {
+        "lat": 8.76934,
+        "long": 27.39621,
+        "state": "Northern Bahr el Ghazal",
+        "county": "Aweil West",
+        "quarter": "Q3",
+        "total": 4
+      },
+      {
+        "lat": 9.07655,
+        "long": 27.55038,
+        "state": "Northern Bahr el Ghazal",
+        "county": "Aweil East",
+        "quarter": "Q1",
+        "total": 2
+      },
+      {
+        "lat": 9.16256,
+        "long": 29.91399,
+        "state": "Unity",
+        "county": "Guit",
+        "quarter": "Q1",
+        "total": 7
+      },
+      {
+        "lat": 9.24809,
+        "long": 29.8004,
+        "state": "Unity",
+        "county": "Rubkotne",
+        "quarter": "Q4",
+        "total": 1
+      },
+      {
+        "lat": 9.28942,
+        "long": 29.78951,
+        "state": "Unity",
+        "county": "Rubkotne",
+        "quarter": "Q1",
+        "total": 2
+      },
+      {
+        "lat": 9.28942,
+        "long": 29.78951,
+        "state": "Unity",
+        "county": "Rubkotne",
+        "quarter": "Q2",
+        "total": 3
+      },
+      {
+        "lat": 9.68295,
+        "long": 29.30182,
+        "state": "Unity",
+        "county": "Abiemnhom",
+        "quarter": "Q4",
         "total": 1
       }
     ]

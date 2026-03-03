@@ -6,6 +6,7 @@
 <title>SGBV Analysis – UNMISS HRD Q4 2025</title>
 <link rel="stylesheet" href="css/style.css"/>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="js/data.js" defer></script>
 <script src="js/utils.js" defer></script>
 <script src="js/sgbv.js" defer></script>
@@ -14,24 +15,24 @@
 
 <nav class="navbar">
   <a class="navbar-brand" href="index.html">
-    <img src="assets/logo.png" alt="UNMISS HRD"/>
+    <img src="assets/logo.png" alt="UNMISS HRD Logo"/>
     <div class="brand-text">
       <span class="brand-title">UNMISS Human Rights Division</span>
-      <span class="brand-sub">Violence Against Civilians — 2025 Dashboard</span>
+      <span class="brand-sub">Violence Affecting Civilians — 2025 Dashboard</span>
     </div>
   </a>
   <div class="navbar-divider"></div>
   <div class="nav-links">
-    <a class="nav-link" href="index.html">📊 Overview</a>
+    <a class="nav-link" href="index.html">📋 Overview</a>
     <a class="nav-link" href="gender.html">⚧ Gender</a>
     <a class="nav-link" href="perpetrators.html">🎯 Perpetrators</a>
     <a class="nav-link" href="geographic.html">📍 Geographic</a>
-    <a class="nav-link active" href="sgbv.html">🔴 SGBV</a>
+    <a class="nav-link active" href="sgbv.html">🛡 SGBV</a>
     <div class="dropdown">
       <a class="nav-link" href="maps.html">🗺 Maps ▾</a>
       <div class="dropdown-menu"><div class="dropdown-menu-inner">
         <a class="dropdown-item" href="maps.html#casualty">Casualty Map</a>
-        <a class="dropdown-item" href="maps.html#sgbv">🔴 SGBV Map</a>
+        <a class="dropdown-item" href="maps.html#sgbv">🛡 SGBV Map</a>
       </div></div>
     </div>
   </div>
@@ -39,7 +40,7 @@
 
 <div class="page-header">
   <div class="container page-header-inner">
-    <div class="page-tag">🔴 Sexual & Gender-Based Violence</div>
+    <div class="page-tag">🛡 Sexual & Gender-Based Violence</div>
     <h1 class="page-title">SGBV — <span>Deep Dive Analysis</span></h1>
     <p class="page-subtitle">
       Analysis of sexual and gender-based violence (SGBV) cases documented by UNMISS HRD in 2025,
@@ -59,12 +60,12 @@
   <!-- SGBV KPIs -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(244,114,182,0.12)">🔴</span>
+      <span class="section-icon" style="background:rgba(244,114,182,0.12)">🛡</span>
       Q4 2025 — SGBV Key Figures
     </div>
     <div class="grid grid-kpi" style="grid-template-columns:repeat(auto-fit,minmax(185px,1fr))">
       <div class="kpi-card sgbv fade-up stagger-1">
-        <div class="kpi-icon">🔴</div>
+        <div class="kpi-icon">🛡</div>
         <div class="kpi-label">SGBV Survivors Q4</div>
         <div class="kpi-value" id="kpi-sgbv-q4">0</div>
         <div class="kpi-sub" id="kpi-sgbv-q4-chg"></div>
@@ -107,7 +108,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV vs CRSV — Q4 2025</div>
-            <div class="chart-subtitle">Documented sexual violence: SGBV standalone vs CRSV</div>
+            <div class="chart-subtitle">Compares SGBV cases (documented via separate methodology) with CRSV (conflict-related sexual violence from main casualty data). Note: these are tracked separately to avoid double-counting.</div>
           </div>
           <span class="chart-badge q4">Q4</span>
         </div>
@@ -117,7 +118,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV vs CRSV — All Quarters</div>
-            <div class="chart-subtitle">Quarterly comparison of both forms of sexual violence</div>
+            <div class="chart-subtitle">Bar chart comparing SGBV and CRSV case counts across Q1–Q4 2025. Tracks whether sexual violence (both forms) is rising or falling over the year.</div>
           </div>
         </div>
         <div id="chart-sgbv-crsv-quarterly" class="plotly-chart"></div>
@@ -126,7 +127,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV Survivor Gender Breakdown</div>
-            <div class="chart-subtitle">Women · Girls · Men · Boys — Q4 2025</div>
+            <div class="chart-subtitle">Pie or bar chart showing how SGBV survivors in Q4 break down by gender (women, girls, men, boys). SGBV disproportionately affects women and girls; this quantifies the distribution.</div>
           </div>
         </div>
         <div id="chart-sgbv-gender" class="plotly-chart"></div>
@@ -145,7 +146,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV by State — Q4 2025</div>
-            <div class="chart-subtitle">Which states have the most documented SGBV?</div>
+            <div class="chart-subtitle">Bar chart ranking states by number of documented SGBV cases in Q4. Identifies geographic hotspots; note SGBV is significantly underreported due to stigma and access barriers.</div>
           </div>
         </div>
         <div id="chart-sgbv-state" class="plotly-chart"></div>
@@ -154,7 +155,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV by Perpetrator Group</div>
-            <div class="chart-subtitle">Who commits SGBV?</div>
+            <div class="chart-subtitle">Shows which perpetrator group (militias, conventional parties, unidentified) is attributed to most SGBV cases. Helps target accountability and prevention efforts.</div>
           </div>
         </div>
         <div id="chart-sgbv-perp" class="plotly-chart"></div>
@@ -165,14 +166,14 @@
   <!-- State CRSV vs SGBV -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(129,140,248,0.12)">🗺</span>
+      <span class="section-icon" style="background:rgba(77,166,232,0.12)">🗺</span>
       CRSV vs SGBV by State
     </div>
     <div class="chart-wrap">
       <div class="chart-header">
         <div>
           <div class="chart-title">CRSV and SGBV Cases by State — Q4 2025</div>
-          <div class="chart-subtitle">Compare reported CRSV (from main casualty data) with SGBV standalone cases per state</div>
+          <div class="chart-subtitle">Grouped bar chart comparing CRSV (from main casualty database) and SGBV (separate SGBV database) per state. Use to see where each form of sexual violence concentrates and how they relate.</div>
         </div>
         <span class="chart-badge q4">Q4 2025</span>
       </div>
@@ -191,7 +192,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Medical Care Access</div>
-            <div class="chart-subtitle">% of SGBV survivors who received medical care</div>
+            <div class="chart-subtitle">Shows the percentage of Q4 SGBV survivors who received medical care. Low access indicates barriers to health services for survivors—a critical protection gap.</div>
           </div>
         </div>
         <div id="chart-medical" class="plotly-chart"></div>
@@ -200,7 +201,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Psychosocial Support</div>
-            <div class="chart-subtitle">% who received psychosocial support services</div>
+            <div class="chart-subtitle">Percentage of SGBV survivors who received psychosocial or mental health support. Tracks access to trauma-informed care—essential for recovery.</div>
           </div>
         </div>
         <div id="chart-psychosocial" class="plotly-chart"></div>
@@ -209,7 +210,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Report to Authority</div>
-            <div class="chart-subtitle">% who reported to authorities</div>
+            <div class="chart-subtitle">Percentage of SGBV survivors who reported the incident to authorities. Low rates reflect barriers to justice (stigma, fear, lack of trust) and underreporting of sexual violence.</div>
           </div>
         </div>
         <div id="chart-reported" class="plotly-chart"></div>
@@ -220,7 +221,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Perpetrators Arrested</div>
-            <div class="chart-subtitle">Accountability indicator — % cases where perpetrator was arrested</div>
+            <div class="chart-subtitle">Percentage of SGBV cases where the perpetrator was arrested. Key accountability indicator—low rates suggest impunity for sexual violence.</div>
           </div>
         </div>
         <div id="chart-arrested" class="plotly-chart"></div>
@@ -229,7 +230,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Resulting Pregnancies</div>
-            <div class="chart-subtitle">% of cases resulting in pregnancy — a critical protection indicator</div>
+            <div class="chart-subtitle">Percentage of SGBV cases that resulted in pregnancy. A critical protection indicator—pregnancy from rape requires specialised support and highlights need for access to reproductive health services.</div>
           </div>
         </div>
         <div id="chart-pregnancy" class="plotly-chart"></div>
@@ -240,7 +241,7 @@
   <!-- Support services radar + state breakdown -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(56,189,248,0.12)">📊</span>
+      <span class="section-icon" style="background:rgba(0,158,219,0.12)">📊</span>
       Services Access — All Support Indicators
     </div>
     <div class="grid grid-2">
@@ -248,7 +249,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Support Services Overview — Q4 2025</div>
-            <div class="chart-subtitle">All five support indicators side by side</div>
+            <div class="chart-subtitle">Bar chart comparing the five key support indicators—medical care, psychosocial support, reporting, arrests, pregnancies—to assess survivor access to services and accountability.</div>
           </div>
         </div>
         <div id="chart-services-bar" class="plotly-chart"></div>
@@ -257,7 +258,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">SGBV Quarterly Trend — 2025</div>
-            <div class="chart-subtitle">Monthly and quarterly trend across all four quarters</div>
+            <div class="chart-subtitle">Line or bar chart showing SGBV case counts over time (monthly or quarterly). Tracks whether documented SGBV is increasing—bearing in mind reporting rates may also be changing.</div>
           </div>
         </div>
         <div id="chart-sgbv-trend" class="plotly-chart"></div>
@@ -275,7 +276,7 @@
       <div class="chart-header">
         <div>
           <div class="chart-title">SGBV Cases by State and Quarter — 2025</div>
-          <div class="chart-subtitle">Identify states where SGBV increased or decreased across quarters</div>
+          <div class="chart-subtitle">Heatmap with states as rows and quarters as columns. Colour intensity = SGBV case count. Identifies states where SGBV spiked or declined across the year.</div>
         </div>
         <span class="chart-badge yearly">Full Year</span>
       </div>
@@ -293,7 +294,7 @@
       <div class="chart-header">
         <div>
           <div class="chart-title">Medical Care & Reporting Rate per State</div>
-          <div class="chart-subtitle">Where are survivors least likely to access services or report violence?</div>
+          <div class="chart-subtitle">Scatter or grouped chart showing medical care access and reporting rates by state. Identifies states where survivors face the greatest barriers to services and justice—priorities for intervention.</div>
         </div>
       </div>
       <div id="chart-state-services" class="plotly-chart"></div>
@@ -303,7 +304,7 @@
   <!-- Insights -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(56,189,248,0.12)">💡</span>
+      <span class="section-icon" style="background:rgba(0,158,219,0.12)">💡</span>
       SGBV Analysis Insights
     </div>
     <div class="grid grid-2">
@@ -317,8 +318,14 @@
 
 <footer>
   <div class="container footer-inner">
-    <p>© 2025 <strong>UNMISS Human Rights Division</strong> · Violence Against Civilians Dashboard</p>
+    <p>© 2025 UNMISS Human Rights Division. All rights reserved. Data and methodology © UNMISS HRD. When citing or reproducing this data, please attribute to UNMISS Human Rights Division.</p>
     <p>Data: UNMISS HRD Incident Database 2025 · SGBV significantly underreported due to social stigma & access constraints</p>
+    <p class="footer-downloads">
+      <a href="#" class="footer-dl-link" id="dl-all-json">Download all data (JSON)</a>
+      <span class="footer-dl-sep">·</span>
+      <a href="#" class="footer-dl-link" id="dl-q4-csv">Download Q4 summary (CSV)</a>
+    </p>
+    <p>For queries: <a href="mailto:islam50@un.org">Mafizul Islam</a>, UNMISS HRD · Developed by UNMISS HRD</p>
   </div>
 </footer>
 </body>

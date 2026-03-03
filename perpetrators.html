@@ -6,6 +6,7 @@
 <title>Perpetrators – UNMISS HRD Q4 2025</title>
 <link rel="stylesheet" href="css/style.css"/>
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" defer></script>
 <script src="js/data.js" defer></script>
 <script src="js/utils.js" defer></script>
 <script src="js/perpetrators.js" defer></script>
@@ -14,24 +15,24 @@
 
 <nav class="navbar">
   <a class="navbar-brand" href="index.html">
-    <img src="assets/logo.png" alt="UNMISS HRD"/>
+    <img src="assets/logo.png" alt="UNMISS HRD Logo"/>
     <div class="brand-text">
       <span class="brand-title">UNMISS Human Rights Division</span>
-      <span class="brand-sub">Violence Against Civilians — 2025 Dashboard</span>
+      <span class="brand-sub">Violence Affecting Civilians — 2025 Dashboard</span>
     </div>
   </a>
   <div class="navbar-divider"></div>
   <div class="nav-links">
-    <a class="nav-link" href="index.html">📊 Overview</a>
+    <a class="nav-link" href="index.html">📋 Overview</a>
     <a class="nav-link" href="gender.html">⚧ Gender</a>
     <a class="nav-link active" href="perpetrators.html">🎯 Perpetrators</a>
     <a class="nav-link" href="geographic.html">📍 Geographic</a>
-    <a class="nav-link" href="sgbv.html">🔴 SGBV</a>
+    <a class="nav-link" href="sgbv.html">🛡 SGBV</a>
     <div class="dropdown">
       <a class="nav-link" href="maps.html">🗺 Maps ▾</a>
       <div class="dropdown-menu"><div class="dropdown-menu-inner">
         <a class="dropdown-item" href="maps.html#casualty">Casualty Map</a>
-        <a class="dropdown-item" href="maps.html#sgbv">🔴 SGBV Map</a>
+        <a class="dropdown-item" href="maps.html#sgbv">🛡 SGBV Map</a>
       </div></div>
     </div>
   </div>
@@ -46,7 +47,7 @@
       conventional parties to the armed conflict, and unidentified/opportunistic armed elements.
     </p>
     <div class="page-meta">
-      <div class="meta-item">🏴 <strong>Groups:</strong> 3 Major Actor Categories</div>
+      <div class="meta-item">📊 <strong>Groups:</strong> 3 Major Actor Categories</div>
       <div class="meta-item">📅 <strong>Period:</strong> Q4 2025 + Quarterly Comparison</div>
     </div>
   </div>
@@ -58,7 +59,7 @@
   <!-- Perpetrator KPIs -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(251,191,36,0.12)">🏴</span>
+      <span class="section-icon" style="background:rgba(251,191,36,0.12)">📊</span>
       Q4 2025 — Victims by Perpetrator Group
     </div>
     <div class="grid grid-kpi" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
@@ -69,20 +70,20 @@
         <div class="kpi-sub">Killed · Injured · Abducted · CRSV</div>
       </div>
       <div class="kpi-card militia fade-up stagger-2">
-        <div class="kpi-icon">⚔</div>
-        <div class="kpi-label">Community Militias</div>
+        <div class="kpi-icon">📊</div>
+        <div class="kpi-label">Community-based Militias</div>
         <div class="kpi-value" id="kpi-militia">0</div>
         <div class="kpi-sub"><span id="kpi-militia-pct"></span> of total Q4 victims</div>
       </div>
       <div class="kpi-card conventional fade-up stagger-3">
-        <div class="kpi-icon">🪖</div>
+        <div class="kpi-icon">👥</div>
         <div class="kpi-label">Conventional Parties</div>
         <div class="kpi-value" id="kpi-conventional">0</div>
         <div class="kpi-sub"><span id="kpi-conventional-pct"></span> of total Q4 victims</div>
       </div>
       <div class="kpi-card opportunistic fade-up stagger-4">
-        <div class="kpi-icon">🕵</div>
-        <div class="kpi-label">Unidentified / Opportunistic</div>
+        <div class="kpi-icon">👥</div>
+        <div class="kpi-label">Unidentified/Opportunistic</div>
         <div class="kpi-value" id="kpi-opportunistic">0</div>
         <div class="kpi-sub"><span id="kpi-opportunistic-pct"></span> of total Q4 victims</div>
       </div>
@@ -100,7 +101,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Share by Perpetrator Group</div>
-            <div class="chart-subtitle">% of all Q4 civilian casualties</div>
+            <div class="chart-subtitle">Donut chart showing what percentage of Q4 civilian casualties are attributable to community militias, conventional parties, or unidentified/opportunistic armed elements.</div>
           </div>
           <span class="chart-badge q4">Q4</span>
         </div>
@@ -111,7 +112,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Violation Type by Perpetrator</div>
-            <div class="chart-subtitle">How each actor causes harm — killed vs injured vs abducted vs CRSV</div>
+            <div class="chart-subtitle">Grouped bars showing how many victims each perpetrator group caused for each violation type. Reveals whether militias, for example, cause more killings than abductions, and how actors differ.</div>
           </div>
         </div>
         <div id="chart-perp-violation-grouped" class="plotly-chart"></div>
@@ -121,7 +122,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Violation Profile — % per Actor</div>
-            <div class="chart-subtitle">Normalised harm profile for each perpetrator group</div>
+            <div class="chart-subtitle">Stacked bars normalised to 100% for each perpetrator. Shows each actor's harm mix—e.g. whether militias primarily kill vs abduct. Use to compare harm profiles across actors.</div>
           </div>
         </div>
         <div id="chart-perp-violation-pct" class="plotly-chart"></div>
@@ -132,7 +133,7 @@
   <!-- State heatmap + Treemap -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(129,140,248,0.12)">🗺</span>
+      <span class="section-icon" style="background:rgba(77,166,232,0.12)">🗺</span>
       Geographic Attribution — Q4 2025
     </div>
     <div class="grid grid-2">
@@ -140,7 +141,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims by State — Stacked by Perpetrator</div>
-            <div class="chart-subtitle">Which actor is dominant in each state?</div>
+            <div class="chart-subtitle">States ranked by total victims, with segments showing which perpetrator group caused harm in each. Identifies geographic strongholds of militias vs conventional parties vs unidentified actors.</div>
           </div>
         </div>
         <div id="chart-state-perp-stacked" class="plotly-chart"></div>
@@ -149,7 +150,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">State × Perpetrator Heatmap</div>
-            <div class="chart-subtitle">Victim counts — state rows, perpetrator columns</div>
+            <div class="chart-subtitle">Heatmap with states as rows and perpetrator groups as columns. Cell colour intensity = victim count. Quickly shows which actor dominates in each state and where violence is concentrated.</div>
           </div>
         </div>
         <div id="chart-state-perp-heatmap" class="plotly-chart"></div>
@@ -166,8 +167,8 @@
     <div class="chart-wrap">
       <div class="chart-header">
         <div>
-          <div class="chart-title">Hierarchical View: State → Perpetrator → Victims</div>
-          <div class="chart-subtitle">Size proportional to number of Q4 victims. Click to drill down.</div>
+<div class="chart-title">Hierarchical View: State → Perpetrator → Victims</div>
+            <div class="chart-subtitle">Treemap where box size = victim count. Top level = states; drill down to see perpetrator breakdown within each. Interactive—click to zoom into a state or perpetrator group.</div>
         </div>
         <span class="chart-badge q4">Q4 2025</span>
       </div>
@@ -186,7 +187,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Victims per Perpetrator — All Quarters</div>
-            <div class="chart-subtitle">How each actor's impact evolved Q1 through Q4</div>
+            <div class="chart-subtitle">Grouped bar chart comparing each perpetrator group's victim count across Q1–Q4. Tracks whether militia, conventional, or unidentified violence is rising or falling over 2025.</div>
           </div>
         </div>
         <div id="chart-perp-quarterly-grouped" class="plotly-chart"></div>
@@ -195,7 +196,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Perpetrator % Share Across Quarters</div>
-            <div class="chart-subtitle">Normalised — has the dominant actor changed?</div>
+            <div class="chart-subtitle">Stacked bars showing the proportion of total victims attributable to each perpetrator group per quarter. Reveals if the dominant actor (militias vs conventional vs unidentified) has shifted.</div>
           </div>
         </div>
         <div id="chart-perp-quarterly-pct" class="plotly-chart"></div>
@@ -212,22 +213,22 @@
     <div class="grid grid-3">
       <div class="chart-wrap">
         <div class="chart-header">
-          <div class="chart-title">Community Militias — Top States</div>
-          <div class="chart-subtitle">Q4 2025</div>
+          <div class="chart-title">Community-based Militias — Top States</div>
+          <div class="chart-subtitle">States where community-based militias caused the most civilian harm in Q4 2025. Bars show victim count per state for militia-attributed incidents.</div>
         </div>
         <div id="chart-militia-states" class="plotly-chart"></div>
       </div>
       <div class="chart-wrap">
         <div class="chart-header">
           <div class="chart-title">Conventional Parties — Top States</div>
-          <div class="chart-subtitle">Q4 2025</div>
+          <div class="chart-subtitle">States where conventional parties to the conflict caused the most civilian harm in Q4. Identifies areas of heaviest conventional-actor violence.</div>
         </div>
         <div id="chart-conventional-states" class="plotly-chart"></div>
       </div>
       <div class="chart-wrap">
         <div class="chart-header">
           <div class="chart-title">Unidentified/Opportunistic — Top States</div>
-          <div class="chart-subtitle">Q4 2025</div>
+          <div class="chart-subtitle">States where unidentified or opportunistic armed elements caused the most harm in Q4. These incidents lack clear actor attribution.</div>
         </div>
         <div id="chart-opportunistic-states" class="plotly-chart"></div>
       </div>
@@ -245,7 +246,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Gender × Perpetrator — Absolute Counts</div>
-            <div class="chart-subtitle">Men, Women, Boys, Girls per actor group</div>
+            <div class="chart-subtitle">Grouped bars showing how many men, women, boys, and girls were victimised by each perpetrator group. Reveals which actors target which gender groups.</div>
           </div>
         </div>
         <div id="chart-perp-gender" class="plotly-chart"></div>
@@ -254,7 +255,7 @@
         <div class="chart-header">
           <div>
             <div class="chart-title">Women + Children % by Perpetrator</div>
-            <div class="chart-subtitle">What share of each actor's victims are female or child?</div>
+            <div class="chart-subtitle">Bar chart showing the percentage of each perpetrator group's victims who are women, girls, or boys. Highlights which actors disproportionately harm the most vulnerable groups.</div>
           </div>
         </div>
         <div id="chart-perp-vulnerable" class="plotly-chart"></div>
@@ -265,7 +266,7 @@
   <!-- Insights -->
   <div class="section">
     <div class="section-title">
-      <span class="section-icon" style="background:rgba(56,189,248,0.12)">💡</span>
+      <span class="section-icon" style="background:rgba(0,158,219,0.12)">💡</span>
       Perpetrator Analysis Insights
     </div>
     <div class="grid grid-2">
@@ -279,8 +280,14 @@
 
 <footer>
   <div class="container footer-inner">
-    <p>© 2025 <strong>UNMISS Human Rights Division</strong> · Violence Against Civilians Dashboard</p>
+    <p>© 2025 UNMISS Human Rights Division. All rights reserved. Data and methodology © UNMISS HRD. When citing or reproducing this data, please attribute to UNMISS Human Rights Division.</p>
     <p>Data: UNMISS HRD Incident Database 2025 · Non-exhaustive; likely underrepresents actual harm</p>
+    <p class="footer-downloads">
+      <a href="#" class="footer-dl-link" id="dl-all-json">Download all data (JSON)</a>
+      <span class="footer-dl-sep">·</span>
+      <a href="#" class="footer-dl-link" id="dl-q4-csv">Download Q4 summary (CSV)</a>
+    </p>
+    <p>For queries: <a href="mailto:islam50@un.org">Mafizul Islam</a>, UNMISS HRD · Developed by UNMISS HRD</p>
   </div>
 </footer>
 </body>

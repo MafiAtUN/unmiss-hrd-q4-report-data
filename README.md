@@ -1,4 +1,4 @@
-# UNMISS HRD – Q4 2025 Violence Against Civilians Dashboard
+# UNMISS HRD – Q4 2025 Violence Affecting Civilians Dashboard
 
 An interactive data visualization companion to the UNMISS Human Rights Division quarterly brief on violence affecting civilians in South Sudan (October–December 2025).
 

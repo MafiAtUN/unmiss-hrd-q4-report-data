@@ -21,8 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const q3sgbv = s.quarterly['Q3'] || 0;
   setEl('kpi-sgbv-q4-chg', `${changePct(sq4.total, q3sgbv)} vs Q3`);
-  setEl('kpi-sgbv-women-pct', `${sq4.total?((sq4.gender?.female||0)/sq4.total*100).toFixed(1):0}% of SGBV survivors`);
-  setEl('kpi-sgbv-girls-pct', `${sq4.total?((sq4.gender?.girls||0)/sq4.total*100).toFixed(1):0}% of SGBV survivors`);
+  setEl('kpi-sgbv-women-pct', sq4.total ? pct(sq4.gender?.female||0, sq4.total) + ' of SGBV survivors' : '0% of SGBV survivors');
+  setEl('kpi-sgbv-girls-pct', sq4.total ? pct(sq4.gender?.girls||0, sq4.total) + ' of SGBV survivors' : '0% of SGBV survivors');
 
   // ── SGBV vs CRSV donut ────────────────────────────────────
   Plotly.newPlot('chart-sgbv-crsv-donut', [
@@ -90,13 +90,13 @@ document.addEventListener('DOMContentLoaded', () => {
     ...baseLayout({height:340}),
     margin:{t:20,r:60,b:30,l:165},
     yaxis:{automargin:true, tickfont:{size:11}},
-    xaxis:{gridcolor:'rgba(99,132,200,0.1)'},
+    xaxis:{gridcolor:'rgba(0,158,219,0.12)'},
   }, plotlyConfig);
 
   // ── SGBV by perpetrator ───────────────────────────────────
   const sgPerp = PERPS.map(p => s.q4_by_perpetrator[p]||0);
   Plotly.newPlot('chart-sgbv-perp', [
-    donutTrace(PERPS.map(pShort), sgPerp, PERPS.map(pColor), 0.5)
+    donutTrace(PERPS, sgPerp, PERPS.map(pColor), 0.5)
   ], {
     ...pieLayout(340),
     legend:{orientation:'v',x:1.02,y:0.5,font:{size:10}},
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const svcYes = svcKeys.map(k => sq4[k]?.yes || 0);
   const svcNo  = svcKeys.map(k => sq4[k]?.no  || 0);
   const svcTotal= svcYes.map((y,i) => Math.max(y+svcNo[i],1));
-  const svcPct  = svcYes.map((y,i) => +(y/svcTotal[i]*100).toFixed(1));
+  const svcPct  = svcYes.map((y,i) => pctNum(y, svcTotal[i]));
 
   Plotly.newPlot('chart-services-bar', [
     {
@@ -237,11 +237,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const ssNames = stateServiceData.map(([n])=>n);
   const medPct  = stateServiceData.map(([,v])=>{
     const yes=v.medical_care?.yes||0, no=v.medical_care?.no||0;
-    return (yes+no)>0?+(yes/(yes+no)*100).toFixed(1):0;
+    return (yes+no)>0?pctNum(yes, yes+no):0;
   });
   const repPct  = stateServiceData.map(([,v])=>{
     const yes=v.reported?.yes||0, no=v.reported?.no||0;
-    return (yes+no)>0?+(yes/(yes+no)*100).toFixed(1):0;
+    return (yes+no)>0?pctNum(yes, yes+no):0;
   });
   Plotly.newPlot('chart-state-services', [
     {
@@ -265,10 +265,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // ── Insights ──────────────────────────────────────────────
   const topSgbvState = sgbvStateNames[0] || '—';
   const topSgbvTotal = s.q4_by_state[topSgbvState]?.total || 0;
-  const femaleGirlPct = sq4.total ? (((sg.female||0)+(sg.girls||0))/sq4.total*100).toFixed(1) : '—';
-  const medPctNat = sq4.total ? (sq4.medical_care?.yes||0)/sq4.total*100 : 0;
-  const repPctNat = sq4.total ? (sq4.reported?.yes||0)/sq4.total*100 : 0;
-  const arrPctNat = sq4.total ? (sq4.arrested?.yes||0)/sq4.total*100 : 0;
+  const femaleGirlPct = sq4.total ? pctRound((sg.female||0)+(sg.girls||0), sq4.total) : '—';
+  const medPctNat = sq4.total ? pctRound(sq4.medical_care?.yes||0, sq4.total) : 0;
+  const repPctNat = sq4.total ? pctRound(sq4.reported?.yes||0, sq4.total) : 0;
+  const arrPctNat = sq4.total ? pctRound(sq4.arrested?.yes||0, sq4.total) : 0;
 
   setEl('insight-sgbv-1', `<ul class="insight-list">
     <li>Q4 2025 saw <strong class="highlight">${fmt(sq4.total)} SGBV survivors</strong> documented — a ${changePct(sq4.total, q3sgbv)} change from Q3 (${fmt(q3sgbv)}).</li>
@@ -278,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
   </ul>`);
 
   setEl('insight-sgbv-2', `<ul class="insight-list">
-    <li>Only <strong class="highlight">${medPctNat.toFixed(1)}%</strong> of Q4 SGBV survivors received medical care — a critical protection gap in a resource-constrained context.</li>
-    <li>Only <strong class="highlight">${repPctNat.toFixed(1)}%</strong> reported violence to authorities, and only <strong class="highlight">${arrPctNat.toFixed(1)}%</strong> of cases resulted in perpetrator arrest — reflecting near-total impunity.</li>
+    <li>Only <strong class="highlight">${medPctNat}%</strong> of Q4 SGBV survivors received medical care — a critical protection gap in a resource-constrained context.</li>
+    <li>Only <strong class="highlight">${repPctNat}%</strong> reported violence to authorities, and only <strong class="highlight">${arrPctNat}%</strong> of cases resulted in perpetrator arrest — reflecting near-total impunity.</li>
     <li>${fmt(sq4.pregnancy?.yes||0)} cases resulted in pregnancy — a severe and lasting harm requiring comprehensive response services.</li>
     <li>Combined SGBV + CRSV victims in Q4: <strong class="highlight">${fmt(sq4.total + q4.crsv)}</strong> — but actual figures are likely much higher given systematic underreporting.</li>
   </ul>`);
