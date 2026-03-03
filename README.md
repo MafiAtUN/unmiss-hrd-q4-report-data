@@ -15,7 +15,7 @@ An interactive data visualization companion to the UNMISS Human Rights Division 
 
 ## Data
 
-Source: `Yearly 2025.xlsx` — UNMISS HRD Incident Database 2025.
+Source: `documents/Yearly 2025 updates.xlsx` — UNMISS HRD Incident Database 2025. The `documents/` folder (Excel, PDF, DOCX) is local-only and not uploaded to GitHub.
 
 Three sheets used:
 - **Matrix** — 1,481 rows of casualty data (Killed · Injured · Abducted · CRSV) with state, county, payam, gender and perpetrator fields
@@ -26,7 +26,7 @@ Three sheets used:
 
 ```bash
 cd "Q4 report"
-python3 extract_data.py   # regenerates js/data.js from Yearly 2025.xlsx
+python3 extract_data.py   # regenerates js/data.js from documents/Yearly 2025 updates.xlsx
 ```
 
 Requires: `pandas openpyxl` — install with `pip3 install pandas openpyxl`
