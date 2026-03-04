@@ -69,13 +69,51 @@
     color:var(--text-muted); cursor:pointer; font-family:inherit;
   }
   .map-dl-btn:hover { background:rgba(0,158,219,0.15); color:var(--accent); }
-  /* South Sudan boundary — subtle glow for better visibility */
-  .ss-boundary-layer path {
-    filter: drop-shadow(0 0 4px rgba(0,158,219,0.4));
+  .map-disclaimer-modal {
+    position: fixed; inset: 0; z-index: 2000;
+    background: rgba(12,31,58,0.97); display: flex; align-items: center; justify-content: center;
+    padding: 24px;
   }
+  .map-disclaimer-modal.hidden { display: none; }
+  .map-disclaimer-modal-inner {
+    max-width: 580px; max-height: 85vh; overflow-y: auto;
+    background: var(--bg-card2); border: 1px solid var(--border);
+    border-radius: 14px; padding: 28px 32px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+  .map-disclaimer-modal h2 {
+    font-size: 18px; color: var(--accent); margin-bottom: 16px;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  .map-disclaimer-modal-text {
+    font-size: 13px; line-height: 1.7; color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .map-disclaimer-modal-text p { margin-bottom: 12px; }
+  .map-disclaimer-modal-btn {
+    display: block; width: 100%;
+    padding: 14px 24px; font-size: 14px; font-weight: 600;
+    background: var(--accent); color: #000;
+    border: none; border-radius: 8px;
+    cursor: pointer; font-family: inherit;
+  }
+  .map-disclaimer-modal-btn:hover { background: #4da6e8; }
 </style>
 </head>
 <body>
+
+<div id="map-disclaimer-modal" class="map-disclaimer-modal" role="dialog" aria-labelledby="disclaimer-title" aria-modal="true">
+  <div class="map-disclaimer-modal-inner">
+    <h2 id="disclaimer-title">Map Disclaimer — United Nations</h2>
+    <div class="map-disclaimer-modal-text">
+      <p><strong>The designations employed and the presentation of material on this map do not imply the expression of any opinion whatsoever on the part of the Secretariat of the United Nations concerning the legal status of any country, territory, city or area or of its authorities, or concerning the delimitation of its frontiers or boundaries.</strong></p>
+      <p>Boundaries, names and designations shown on this map do not imply official endorsement or acceptance by the United Nations. Dotted or dashed lines represent approximate or disputed border lines.</p>
+      <p>The data presented is for informational and advocacy purposes only. It is non-exhaustive and likely underrepresents the actual scale of harm. UNMISS HRD investigations were constrained by limited resources, access denials, and fear of reprisals.</p>
+      <p>By proceeding, you acknowledge that you have read and understood this disclaimer.</p>
+    </div>
+    <button type="button" class="map-disclaimer-modal-btn" id="map-disclaimer-ack">I understand</button>
+  </div>
+</div>
 
 <nav class="navbar">
   <a class="navbar-brand" href="index.html">
@@ -95,8 +133,8 @@
     <div class="dropdown">
       <a class="nav-link active" href="maps.html">🗺 Maps ▾</a>
       <div class="dropdown-menu"><div class="dropdown-menu-inner">
-        <a class="dropdown-item active" href="maps.html#casualty">Casualty Map</a>
-        <a class="dropdown-item" href="maps.html#perp">Perpetrator Map</a>
+        <a class="dropdown-item active" href="maps.html#casualty">👥 Casualty Map</a>
+        <a class="dropdown-item" href="maps.html#perp">🎯 Perpetrator Map</a>
         <a class="dropdown-item" href="maps.html#sgbv">🛡 SGBV Map</a>
       </div></div>
     </div>
@@ -124,8 +162,8 @@
 
   <!-- Map tabs -->
   <div class="map-tabs">
-    <button class="map-tab-btn active" onclick="showMapTab('casualty',this)">Casualty Map</button>
-    <button class="map-tab-btn" onclick="showMapTab('perp-panel',this)">Perpetrator Map</button>
+    <button class="map-tab-btn active" onclick="showMapTab('casualty',this)">👥 Casualty Map</button>
+    <button class="map-tab-btn" onclick="showMapTab('perp-panel',this)">🎯 Perpetrator Map</button>
     <button class="map-tab-btn" onclick="showMapTab('sgbv-panel',this)">🛡 SGBV Map</button>
   </div>
 
@@ -413,10 +451,24 @@ function syncMapTabFromHash() {
   else { panelId = 'casualty'; tabIdx = 0; dropIdx = 0; }
   showMapTab(panelId, tabs[tabIdx]);
   dropItems.forEach((d, i) => d.classList.toggle('active', i === dropIdx));
+  // Prevent browser from scrolling to hash target — keep page at top
+  requestAnimationFrame(() => window.scrollTo(0, 0));
+  setTimeout(() => window.scrollTo(0, 0), 50);
 }
 
 // Handle hash on page load and when hash changes (dropdown clicks, back/forward)
 window.addEventListener('DOMContentLoaded', () => {
+  const STORAGE_KEY = 'unmiss_map_disclaimer_ack';
+  const modal = document.getElementById('map-disclaimer-modal');
+  const btn = document.getElementById('map-disclaimer-ack');
+  if (sessionStorage.getItem(STORAGE_KEY)) {
+    if (modal) modal.classList.add('hidden');
+  } else if (modal && btn) {
+    btn.onclick = function() {
+      sessionStorage.setItem(STORAGE_KEY, '1');
+      modal.classList.add('hidden');
+    };
+  }
   syncMapTabFromHash();
   // Make dropdown links switch tab when already on maps page
   document.querySelectorAll('.dropdown-item[href*="maps.html"]').forEach(a => {

@@ -38,27 +38,6 @@ function inSouthSudan(lat, lng) {
   return SS_BOUNDS.contains([lat, lng]);
 }
 
-// South Sudan boundary — subtle fill + visible border for country prominence
-const SS_BOUNDARY_STYLE = {
-  fillColor: '#009EDB',
-  fillOpacity: 0.09,
-  color: '#4da6e8',
-  weight: 2.5,
-  opacity: 0.7,
-  className: 'ss-boundary-layer',
-};
-function addSouthSudanBoundary(map) {
-  fetch('assets/south-sudan.geojson')
-    .then(r => r.json())
-    .then(geojson => {
-      L.geoJSON(geojson, {
-        style: () => SS_BOUNDARY_STYLE,
-        interactive: false,
-      }).addTo(map);
-    })
-    .catch(() => {});
-}
-
 let casualtyMap  = null;
 let sgbvMap      = null;
 let perpMap      = null;
@@ -167,7 +146,6 @@ function buildCasualtyMap() {
   casualtyMap = L.map('map', { center: MAP_CENTER, zoom: MAP_ZOOM });
   window._casualtyMap = casualtyMap;
   L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(casualtyMap);
-  addSouthSudanBoundary(casualtyMap);
 
   // State boundary labels (lightweight: just text markers at centroids)
   Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
@@ -292,7 +270,6 @@ function buildSGBVMap() {
   sgbvMap = L.map('sgbv-map', { center: MAP_CENTER, zoom: MAP_ZOOM });
   window._sgbvMap = sgbvMap;
   L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(sgbvMap);
-  addSouthSudanBoundary(sgbvMap);
 
   // State labels
   Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
@@ -441,7 +418,6 @@ function buildPerpetratorMap() {
   perpMap = L.map('perp-map', { center: MAP_CENTER, zoom: MAP_ZOOM });
   window._perpMap = perpMap;
   L.tileLayer(TILE_URL, { attribution: TILE_ATTR, subdomains:'abcd', maxZoom:18 }).addTo(perpMap);
-  addSouthSudanBoundary(perpMap);
 
   Object.entries(STATE_CENTROIDS).forEach(([name, pos]) => {
     L.marker([pos.lat, pos.lng], {
