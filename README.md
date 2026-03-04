@@ -2,6 +2,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-009EDB?style=flat-square&logo=github)](https://mafiatun.github.io/unmiss-hrd-q4-report-data/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Static](https://img.shields.io/badge/Static-HTML%2FCSS%2FJS-34d399?style=flat-square)](https://developer.mozilla.org/en-US/docs/Web)
 
 Interactive data visualization companion to the UNMISS Human Rights Division quarterly brief on violence affecting civilians in South Sudan (October–December 2025).
 
