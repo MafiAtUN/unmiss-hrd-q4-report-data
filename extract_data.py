@@ -206,10 +206,14 @@ def agg_full(sub):
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # BUILD DATA DICTIONARY (output structure for UNMISS_DATA)
+# ─────────────────────────────────────────────────────────────────────────────
+# Aggregates from Matrix + SGBV + Yearly trend sheets into a single JSON-serializable
+# dict consumed by js/data.js. Keys: q4, quarterly, q4_by_state, q4_by_perpetrator,
+# q4_by_county, q4_by_payam, q4_locations, all_locations, sgbv, crsv_sgbv, yearly_trend.
 # ═══════════════════════════════════════════════════════════════════════════════
 data = {}
 
-# Q4 2025 overview totals and gender breakdown──
+# Q4 2025 overview totals and gender breakdown
 data['q4'] = agg_full(df_q4)
 
 # Quarterly summaries (Q1–Q4) for trend charts

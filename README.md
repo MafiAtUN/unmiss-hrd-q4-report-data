@@ -130,11 +130,25 @@ No build step required — pure static HTML/CSS/JS.
 
 ---
 
+## Project Structure
+
+| Path | Description |
+|------|-------------|
+| `index.html`, `gender.html`, etc. | Dashboard pages |
+| `js/data.js` | Auto-generated data (run `extract_data.py`) |
+| `js/utils.js` | Shared utilities, colours, Plotly config |
+| `js/overview.js`, `js/gender.js`, etc. | Page-specific chart logic |
+| `js/maps.js` | Leaflet maps (casualty, perpetrator, SGBV) |
+| `css/style.css` | Shared stylesheet |
+| `extract_data.py` | Excel → `data.js` extraction script |
+
+See **[DOCUMENTATION.md](DOCUMENTATION.md)** for detailed technical documentation, data flow, and extension guide.
+
+---
+
 ## Notes
 
 Data is non-exhaustive and likely underrepresents the actual scale of harm. UNMISS HRD investigations were constrained by limited resources, access denials, and fear of reprisals. SGBV is significantly underreported due to social stigma.
-
----
 
 ---
 
