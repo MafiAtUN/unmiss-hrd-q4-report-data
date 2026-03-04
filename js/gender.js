@@ -7,6 +7,8 @@
    quarterly gender trends, children (boys/girls) breakdowns.
 
    Depends: D, C, utils
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   const d  = D;

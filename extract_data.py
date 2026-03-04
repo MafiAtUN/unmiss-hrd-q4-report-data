@@ -2,6 +2,11 @@
 """
 UNMISS HRD 2025 Data Extraction Script
 
+Author:   Mafizul Islam
+Email:    islam50@un.org
+GitHub:   https://github.com/MafiAtUN
+LinkedIn: https://www.linkedin.com/in/mafizul/
+
 Reads incident data from documents/Yearly 2025 updates.xlsx and generates
 js/data.js — a JavaScript module consumed by the Q4 Violence Dashboard.
 
@@ -84,6 +89,8 @@ def int_safe(v):
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # LOAD AND NORMALIZE MATRIX SHEET (main casualty data)
+# Columns: Month, Forms of Violations, Total Victims, Male/Female/Boys/Girls,
+# State, Location, Lat, Long, Payam, County, Perpetrator, Quarter
 # ═══════════════════════════════════════════════════════════════════════════════
 xl = pd.ExcelFile(EXCEL_PATH)
 df_raw = pd.read_excel(xl, sheet_name='Matrix')
@@ -407,6 +414,7 @@ os.makedirs(os.path.join(OUTPUT_DIR, 'assets'), exist_ok=True)
 output = f"""// UNMISS HRD Q4 2025 – Auto-generated data file (do not edit manually)
 // Generated: {datetime.now().strftime('%Y-%m-%d %H:%M')}
 // Source: documents/Yearly 2025 updates.xlsx — run python3 extract_data.py to regenerate
+// Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
 //
 // Structure: q4, quarterly, q4_by_state, q4_by_perpetrator, q4_by_county, q4_by_payam,
 // q4_locations, all_locations, sgbv, crsv_sgbv, monthly_2025, yearly_trend

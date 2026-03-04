@@ -7,6 +7,8 @@
    county violation breakdown, bubble chart, data table, insights.
 
    Depends: D, C, utils (sortedStates, topCounties, topPayams)
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   const d  = D;

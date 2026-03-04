@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+  UNMISS HRD Q4 2025 – Maps Page
+  Three Leaflet map tabs: Casualty, Perpetrator, SGBV. Hash anchors (#casualty,
+  #perp, #sgbv) at top for deep links. Script: js/maps.js
+-->
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -98,6 +103,7 @@
     cursor: pointer; font-family: inherit;
   }
   .map-disclaimer-modal-btn:hover { background: #4da6e8; }
+  .map-hash-anchor { display: block; height: 0; overflow: hidden; }
 </style>
 </head>
 <body>
@@ -159,16 +165,20 @@
 
 <main class="main">
 <div class="container">
+  <!-- Hash anchors at top so #casualty, #perp, #sgbv scroll to page start (not map area) -->
+  <span id="casualty" class="map-hash-anchor" aria-hidden="true"></span>
+  <span id="perp" class="map-hash-anchor" aria-hidden="true"></span>
+  <span id="sgbv" class="map-hash-anchor" aria-hidden="true"></span>
 
   <!-- Map tabs -->
   <div class="map-tabs">
-    <button class="map-tab-btn active" onclick="showMapTab('casualty',this)">👥 Casualty Map</button>
+    <button class="map-tab-btn active" onclick="showMapTab('casualty-panel',this)">👥 Casualty Map</button>
     <button class="map-tab-btn" onclick="showMapTab('perp-panel',this)">🎯 Perpetrator Map</button>
     <button class="map-tab-btn" onclick="showMapTab('sgbv-panel',this)">🛡 SGBV Map</button>
   </div>
 
   <!-- Casualty Map -->
-  <div class="map-panel active" id="casualty">
+  <div class="map-panel active" id="casualty-panel">
     <div class="map-controls">
       <span class="filter-label">Quarter:</span>
       <select class="map-select" id="cas-quarter-filter" onchange="updateCasualtyMap()">
@@ -423,21 +433,18 @@ function showMapTab(id, btn) {
   document.querySelectorAll('.map-tab-btn').forEach(b=>b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   if (btn) btn.classList.add('active');
-  // Invalidate map sizes after display
   setTimeout(()=>{
-    if(id==='casualty' && window._casualtyMap) window._casualtyMap.invalidateSize();
+    if(id==='casualty-panel' && window._casualtyMap) window._casualtyMap.invalidateSize();
     if(id==='perp-panel' && window._perpMap) window._perpMap.invalidateSize();
     if(id==='sgbv-panel' && window._sgbvMap) { window._sgbvMap.invalidateSize(); }
   }, 80);
-  // Build maps lazily on first show
   if (id==='perp-panel' && !window._perpMap && typeof buildPerpetratorMap === 'function') {
     setTimeout(buildPerpetratorMap, 100);
   }
   if (id==='sgbv-panel' && !window._sgbvMap && typeof buildSGBVMap === 'function') {
     setTimeout(buildSGBVMap, 100);
   }
-  // Update browser hash
-  const hashMap = { casualty: '#casualty', 'perp-panel': '#perp', 'sgbv-panel': '#sgbv' };
+  const hashMap = { 'casualty-panel': '#casualty', 'perp-panel': '#perp', 'sgbv-panel': '#sgbv' };
   history.replaceState(null, '', hashMap[id] || '#casualty');
 }
 
@@ -448,12 +455,9 @@ function syncMapTabFromHash() {
   let panelId, tabIdx, dropIdx;
   if (hash === '#perp') { panelId = 'perp-panel'; tabIdx = 1; dropIdx = 1; }
   else if (hash === '#sgbv') { panelId = 'sgbv-panel'; tabIdx = 2; dropIdx = 2; }
-  else { panelId = 'casualty'; tabIdx = 0; dropIdx = 0; }
+  else { panelId = 'casualty-panel'; tabIdx = 0; dropIdx = 0; }
   showMapTab(panelId, tabs[tabIdx]);
   dropItems.forEach((d, i) => d.classList.toggle('active', i === dropIdx));
-  // Prevent browser from scrolling to hash target — keep page at top
-  requestAnimationFrame(() => window.scrollTo(0, 0));
-  setTimeout(() => window.scrollTo(0, 0), 50);
 }
 
 // Handle hash on page load and when hash changes (dropdown clicks, back/forward)

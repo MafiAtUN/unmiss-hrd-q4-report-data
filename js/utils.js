@@ -10,6 +10,8 @@
    - Formatting: pct, fmt, changeVsQ3, changePct
    - Chart helpers: donutTrace, stackedBarTraces, hBarLayout, etc.
    - Init: highlightNav, initCounters, initFooterDownloads
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 
 // ── Colour System (UN-friendly: UN Blue #009EDB) ──────────────

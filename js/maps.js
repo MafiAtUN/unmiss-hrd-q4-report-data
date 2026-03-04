@@ -9,6 +9,8 @@
    Offset logic avoids overlapping markers at same location.
 
    Depends: D, Leaflet (L), utils (fmt, pColor)
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 
 // State centroid fallbacks (used when lat/long missing in incident data)
@@ -615,7 +617,7 @@ function downloadMapData(type) {
 // ── Init on load ──────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   // Build casualty map if casualty panel is active (default)
-  if (document.getElementById('casualty')?.classList.contains('active')) {
+  if (document.getElementById('casualty-panel')?.classList.contains('active')) {
     buildCasualtyMap();
   }
   // If page was loaded with #sgbv hash, showMapTab already handles buildSGBVMap
@@ -626,7 +628,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const dlSgbv = document.getElementById('dl-sgbv-map');
   if (dlCas) {
     dlCas.onclick = () => {
-      const wrap = document.querySelector('#casualty .map-wrapper');
+      const wrap = document.querySelector('#casualty-panel .map-wrapper');
       if (wrap) captureMapAsPNG(wrap, 'unmiss-q4-casualty-map');
     };
   }

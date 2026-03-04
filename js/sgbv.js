@@ -7,6 +7,8 @@
    SGBV trend, state×quarter heatmap, services by state, insights.
 
    Depends: D, C, utils (D.sgbv, D.crsv_sgbv)
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   const d    = D;

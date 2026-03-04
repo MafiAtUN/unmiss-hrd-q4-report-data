@@ -6,6 +6,19 @@ Interactive data visualization companion to the UNMISS Human Rights Division qua
 
 ---
 
+## Table of Contents
+
+- [Live Demo](#live-demo)
+- [Overview](#overview)
+- [Project Structure](#project-structure)
+- [Data & Architecture](#data--architecture)
+- [Setup](#setup--regenerate-data)
+- [Development](#development)
+- [Deployment](#github-pages-deployment)
+- [License](#license)
+
+---
+
 ## Live Demo
 
 **→ [View Dashboard (GitHub Pages)](https://mafiatun.github.io/unmiss-hrd-q4-report-data/)**
@@ -20,7 +33,7 @@ Interactive data visualization companion to the UNMISS Human Rights Division qua
 | **Period** | Q4 2025 (October – December) |
 | **Location** | South Sudan |
 | **Data source** | UNMISS HRD Incident Database 2025 |
-| **License** | © 2025 UNMISS HRD · For advocacy and awareness |
+| **License** | [MIT](LICENSE) · Mafizul Islam |
 
 ---
 
@@ -37,9 +50,39 @@ Interactive data visualization companion to the UNMISS Human Rights Division qua
 
 ---
 
-## Data
+## Project Structure
 
-Source: `documents/Yearly 2025 updates.xlsx` — UNMISS HRD Incident Database 2025. The `documents/` folder (Excel, PDF, DOCX) is local-only and not uploaded to GitHub.
+```
+Q4 report/
+├── index.html          # Overview page (KPIs, trends, summaries)
+├── gender.html         # Gender-disaggregated analysis
+├── perpetrators.html   # Perpetrator attribution analysis
+├── geographic.html     # State → County → Payam hotspots
+├── sgbv.html           # Sexual & gender-based violence analysis
+├── maps.html           # Interactive Leaflet maps (casualty, perpetrator, SGBV)
+├── extract_data.py     # Data pipeline: Excel → js/data.js
+├── js/
+│   ├── data.js        # Auto-generated: UNMISS_DATA (do not edit)
+│   ├── utils.js       # Shared: colours, Plotly config, download helpers, D accessors
+│   ├── overview.js    # Overview page charts
+│   ├── gender.js      # Gender page charts
+│   ├── geographic.js   # Geographic page charts
+│   ├── perpetrators.js # Perpetrators page charts
+│   ├── sgbv.js        # SGBV page charts
+│   └── maps.js        # Leaflet maps, markers, popups, filters
+├── css/
+│   └── style.css      # Dark theme, UN palette, responsive layout
+├── assets/             # Logo, GeoJSON (south-sudan.geojson)
+└── documents/          # Local only: Excel, PDF, DOCX (gitignored)
+```
+
+---
+
+## Data & Architecture
+
+**Data source:** `documents/Yearly 2025 updates.xlsx` — UNMISS HRD Incident Database 2025. The `documents/` folder is local-only and not uploaded to GitHub.
+
+**Data flow:** `extract_data.py` reads Excel sheets → aggregates by quarter, state, perpetrator, county, payam → writes `js/data.js` with `UNMISS_DATA` global. All HTML pages load `data.js` and `utils.js`; page-specific scripts (`overview.js`, `gender.js`, etc.) render Plotly charts and populate DOM from `D` (alias for `UNMISS_DATA`).
 
 **Sheets used:**
 - **Matrix** — Casualty data (Killed · Injured · Abducted · CRSV) with state, county, payam, gender and perpetrator fields
@@ -55,6 +98,16 @@ cd "Q4 report"
 pip3 install pandas openpyxl
 python3 extract_data.py   # regenerates js/data.js from documents/Yearly 2025 updates.xlsx
 ```
+
+---
+
+## Development
+
+- **Local preview:** Open `index.html` directly in a browser, or run a simple server: `python3 -m http.server 8000` then visit `http://localhost:8000`
+- **Data changes:** Edit `documents/Yearly 2025 updates.xlsx` and run `python3 extract_data.py` to regenerate `js/data.js`
+- **Chart changes:** Edit the corresponding `js/*.js` file (e.g. `overview.js` for Overview page)
+- **Styling:** Edit `css/style.css`; uses CSS variables (`:root`) for colours and spacing
+- **Maps:** `js/maps.js` handles Leaflet setup, marker clustering, popups; `maps.html` includes hash anchors for deep links (`#casualty`, `#perp`, `#sgbv`)
 
 ---
 
@@ -97,4 +150,6 @@ To complete the repo metadata, go to your repo on GitHub → **About** (top righ
 
 ---
 
-© 2025 UNMISS Human Rights Division · For advocacy and awareness purposes
+**License:** [MIT](LICENSE) · Copyright (c) 2025 [Mafizul Islam](https://github.com/MafiAtUN) · [LinkedIn](https://www.linkedin.com/in/mafizul/) · [islam50@un.org](mailto:islam50@un.org)
+
+UNMISS HRD data used for advocacy and awareness purposes.

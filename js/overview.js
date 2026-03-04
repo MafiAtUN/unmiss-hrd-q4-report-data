@@ -7,6 +7,8 @@
    quarterly perpetrator/gender bars, and insight summaries.
 
    Depends: D (UNMISS_DATA), C, utils (pct, fmt, donutTrace, etc.)
+
+   Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
 

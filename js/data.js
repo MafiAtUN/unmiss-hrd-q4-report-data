@@ -1,6 +1,10 @@
-// UNMISS HRD Q4 2025 – Auto-generated data file
-// Generated: 2026-03-03 10:39
-// Source: Yearly 2025 updates.xlsx
+// UNMISS HRD Q4 2025 – Auto-generated data file (do not edit manually)
+// Generated: 2026-03-04 21:16
+// Source: documents/Yearly 2025 updates.xlsx — run python3 extract_data.py to regenerate
+// Author: Mafizul Islam | https://github.com/MafiAtUN | https://www.linkedin.com/in/mafizul/ | islam50@un.org
+//
+// Structure: q4, quarterly, q4_by_state, q4_by_perpetrator, q4_by_county, q4_by_payam,
+// q4_locations, all_locations, sgbv, crsv_sgbv, monthly_2025, yearly_trend
 const UNMISS_DATA = {
   "q4": {
     "total": 830,
