@@ -1,6 +1,7 @@
 # UNMISS HRD – Q4 2025 Violence Affecting Civilians Dashboard
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Demo-009EDB?style=flat-square&logo=github)](https://mafiatun.github.io/unmiss-hrd-q4-report-data/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 Interactive data visualization companion to the UNMISS Human Rights Division quarterly brief on violence affecting civilians in South Sudan (October–December 2025).
 
